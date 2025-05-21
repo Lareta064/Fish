@@ -1,0 +1,48 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Типографика
+
+				.container-dashboard__content
+					.title-wrapper
+						.h2 Классы
+					p .img-cover - для изображения
+					p .img-contain - для изображения
+					p .scroll-sm - дает ширину до правого края и горизонтальный скролл на экранах меньше 768
+					p .flex, .flex-center 
+					p .column-center
+					p .grid-two-columns - задает по 2 колонки от 768 и по две колонки меньше 768
+					p .grid-four-columns - задает по три колонки от 768 и по две колонки меньше 768
+					p .grid-six-columns - задает по 6 колонок от 768 и по две колонки меньше 768
+					p .column-gap-10
+					p .grid-four-columns - задает по 4 колонки от 768 и по две колонки меньше 768
+					p .title-wrapper - задает в колонку по центру тексты в заголовке секции
+					p .gap-88 - колонка с просветом в 88пикс
+					p .gap-110 - колонка с просветом в110пикс
+					p .grey-bg - серый блок с закруглением
+					p .section-grey
+					p .mb-40 
+					p .d-none - скрывает компонент
+					p .pos-relative
+					p .grid-gap-32  страница Корзины
+					p .block-sm
+					p .hide-sm
+					

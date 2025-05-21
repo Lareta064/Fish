@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.vl-benefits{
+			aspect-ratio: 1280/598;
+			width: 100%;
+			max-width: 1280px;
+			margin-inline: auto;
+			background-image: url('https://i.postimg.cc/fR8JDPWd/Group-84.png');
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: relative;
+			border:1px solid red;
+		}
+		.vl-benefits-item{
+			font-size: 18px;
+			text-align: center;
+			max-width: 256px;
+			position: absolute;
+			z-index: 2;
+			box-shadow: 10px 10px rgb(19, 190, 76);
+		}
+		.vl-benefits-item .bullit-item{
+			width: 13%;
+			aspect-ratio:1;
+			display: block;
+			border-radius: 50%;
+			background-color: black;
+			position: absolute;
+			z-index: 2;
+		}
+		.vl-benefits-item:first-child{
+			bottom: 10.3%;
+			left: 4.45%;
+		}
+		.vl-benefits-item:first-child .bullit-item{
+			position: absolute;
+			right: -13%;
+			top: 11%;
+		}
+		.vl-benefits-item:first-child:before{
+			content:'';
+			width: 20.7%;
+			aspect-ratio: 53/60;
+			background-color: white;
+			position: absolute;
+			right:0;
+			    bottom: -15px;
+    			z-index: -1;
+    		transform: rotate(-8.63deg);
+		}
+		.vl-benefits-item:nth-child(2){
+
+		}
+		@media(max-width: 1279px){
+			.vl-benefits-item{
+			font-size: 1.4vw;
+			text-align: center;
+			max-width: 20vw;
+			position: absolute;
+			z-index: 2;
+		}
+		}
+	</style>
+</head>
+<body>
+	<div class="vl-benefits">
+		<!-- <div class="vl-benefits-img">
+			<img src="https://i.postimg.cc/fR8JDPWd/Group-84.png"  width="1280" height="598" alt="">
+			
+		</div> -->
+		<div class="vl-benefits-list">
+			<div class="vl-benefits-item">
+				Гарантируем профессиональный подход на всех стадиях терапии
+				<span class="bullit-item"></span>
+			</div>
+			<div class="vl-benefits-item">
+				Гарантируем профессиональный подход на всех стадиях терапии
+			</div>
+			<div class="vl-benefits-item">
+				Гарантируем профессиональный подход на всех стадиях терапии
+			</div>
+			<div class="vl-benefits-item">
+				Гарантируем профессиональный подход на всех стадиях терапии
+			</div>
+			<div class="vl-benefits-item">
+				Гарантируем профессиональный подход на всех стадиях терапии
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
