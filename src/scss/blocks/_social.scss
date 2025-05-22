@@ -1,0 +1,24 @@
+.social, .social-link{
+	display: flex;
+	column-gap: remy(17);
+	align-items: center;
+}
+.social-link{
+	justify-content: center;
+	flex-shrink: 0;
+}
+.social-block__title{
+	
+	font-size: remy(27);
+	line-height: 1;
+	letter-spacing: 0.03em;
+	color: var(--color-chernyy);
+}
+.social.social--bg{
+	.social-link{
+		width: remy(30);
+		height: remy(30);
+		border-radius: 50%;
+		background-color: #fff;
+	}
+}

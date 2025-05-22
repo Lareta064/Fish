@@ -1,1 +1,29 @@
 @use "var" as *;
+.icon-menu{
+	display: inline-block;
+	width: remy(18);
+	height: remy(16);
+	position: relative;
+	span, span:after, span:before{
+		height: 1px;
+		position: absolute;
+		background-color: var(--color-smuglyy);
+		left: 0;
+		width: 100%;
+		display: inline-block;
+	}
+	span{
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	span:after, span:before{content:'';}
+	span:after{top: remy(-5);}
+	span:before{bottom: remy(-5);}
+}
+svg.svg-cart{
+	display: inline-block;
+	width:remy(26);
+	height: remy(22);
+	color: var(--color-smuglyy);
+	fill: transparent;
+}
