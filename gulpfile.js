@@ -74,7 +74,12 @@ gulp.task("server", function () {
         open: true
     });
 });
-
+gulp.task("pug:ui", function () {
+    console.log("🔁 PUG UI пересобирается...");
+    return gulp.src("./src/pug/ui/**/*.pug")
+        .pipe(pug({ pretty: true }))
+        .pipe(gulp.dest("./build/ui"));
+});
 // Watch
 gulp.task("watch", function () {
     console.log("👁 Watch запущен...");
@@ -118,11 +123,16 @@ gulp.task("watch", function () {
         console.log("📁 WOFF/WOFF2 скопированы");
         browserSync.reload(); done();
     }));
+    gulp.watch("./src/pug/ui/**/*.pug", gulp.series("pug:ui", function (done) {
+    console.log("📄 UI PUG изменён");
+    browserSync.reload();
+    done();
+}));
 });
 
 // Default
 gulp.task("default", gulp.series(
     "clean:build",
-    gulp.parallel("pug", "scss", "copy:js", "copy:libs", "img", "fonts"),
+    gulp.parallel("pug","pug:ui", "scss", "copy:js", "copy:libs", "img", "fonts"),
     gulp.parallel("server", "watch")
 ));

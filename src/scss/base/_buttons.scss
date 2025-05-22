@@ -1,2 +1,36 @@
 @use "var" as *;
+.btn, .btn-outline, .btn-light{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 1rem;
+	height: remy(52);
+	border-radius: remy(30);
+	border: 1px solid var(--color-smuglyy-yarkiy);
+	line-height: 1;
+	letter-spacing: 0.06em;
+	padding-inline: remy(30);
+	color: var(--color-belyy);
+	background: var(--color-smuglyy-yarkiy);
 
+}
+.btn-outline{
+	background: var(--color-belyy);
+	color: var(--color-smuglyy-yarkiy);
+}
+.btn-light{
+	background: var(--color-smuglyy-yarkiy-opac);
+	border: 0;
+	font-weight: 500;
+	font-size: 14px;
+	
+	text-align: center;
+	color: #f8fafc;
+}
+.btn-44{
+	font-weight: 500;
+    font-size: remy(14);
+	height: remy(44);
+}

@@ -6,6 +6,18 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Philosopher';
+    src: local('Philosopher-Regular'), local('Philosopher-Regular'), url('../fonts/Philosopher-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Philosopher';
+    src: local('Philosopher-Bold'), local('Philosopher-Bold'), url('../fonts/Philosopher-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
     font-family: 'Lato';
     src: local('Lato Medium'), local('Lato-Medium'), url('../fonts/latomedium.woff2') format('woff2'), url('../fonts/latomedium.woff') format('woff');
     font-weight: 500;
@@ -40,10 +52,21 @@
 	box-sizing: border-box;
 	
 }
-:root{
-	--font-family:'Lato';
-}
+:root {
+	--color-temnyy-siniy: #011e64;
+	--color-smuglyy: #243f86;
+	--color-yarko-siniy-s-logo: #002a85;
+	--color-smuglyy-yarkiy: #2243a0;
+	--color-smuglyy-yarkiy-opac:rgba(34, 67, 160, .5);
+	--color-svetlyy-: #ccd3e9;
+	--color-chernyy: #0e1526;
+	--color-belyy: #fff;
+	--color-seryy: #bfbfbf;
+	--color-tekst-seryy: #6f6f6f;
 
+	--font-family: "Lato", sans-serif;
+    --second-family: "Philosopher", sans-serif;
+}
 html {
 	scroll-behavior: smooth;
 }
@@ -122,4 +145,8 @@ address{font-style: normal;}
 input::placeholder, textarea::placeholder, textarea::placeholder{
 	font-family: inherit;
 	font-size: inherit;
+}
+
+.container{
+	width: 1520;
 }

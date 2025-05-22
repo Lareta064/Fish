@@ -1,7 +1,7 @@
 //- ===== colors ======
 
 @function remy($pxsize) {
-	@return calc(($pxsize/16)+px);
+  @return ($pxsize / 16) * 1rem;
 }
 
 @function size($pxsize) {
