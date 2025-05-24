@@ -1,6 +1,9 @@
+.social{
+	font-size: remy(10);
+}
 .social, .social-link{
 	display: flex;
-	column-gap: remy(17);
+	column-gap: 1.7em;
 	align-items: center;
 }
 .social-link{
@@ -8,16 +11,16 @@
 	flex-shrink: 0;
 }
 .social-block__title{
-	
-	font-size: remy(27);
+	font-size: 2.7em;
+	margin-bottom: .6em;
 	line-height: 1;
 	letter-spacing: 0.03em;
 	color: var(--color-chernyy);
 }
 .social.social--bg{
 	.social-link{
-		width: remy(30);
-		height: remy(30);
+		width: 3em;
+		height: 3em;
 		border-radius: 50%;
 		background-color: #fff;
 	}

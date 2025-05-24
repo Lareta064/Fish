@@ -1,0 +1,59 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Карточки
+
+				.container-dashboard__content
+					+benefit-card-ui('b1', '36 часов от моря до прилавка')
+					pre.
+						+benefit-card-ui('b1', '36 часов от моря до прилавка')
+					hr
+					+step-card-ui('al1','1 шаг', 'выберете продукты и добавьте их в корзину')
+					pre.
+						+step-card-ui('al2','2 шаг', 'выберете продукты и добавьте их в корзину')
+					hr
+					+benefit-info('Забота о здоровье', 'Рыба и морепродкуты это богатый источник витаминов, минералов, питательных веществ ')
+					pre.
+						+benefit-info('Забота о здоровье', 'Рыба и морепродкуты это богатый источник витаминов, минералов, питательных веществ ')
+					br
+					.product-card
+						.product-card__img
+							img.img-cover(src='../img/products/product1.webp', srcset='../img/products/product1@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+						.product-card__body
+							.product-card__title Мидии 40/60, неочищенные
+							.price-block
+								.price-block__old.fs-15 349 &#8381;
+								.price-block__val 349 &#8381; #[span.fs-15 / 100 г.]
+							
+							.product-card__footer
+								p.fs-10 Купили 781 раз
+								
+								button.cart-btn
+									svg.svg-cart
+										use(href='../img/sprite.svg#svg-cart')
+					pre.
+						+product-card('product2', 'old')
+					br
+					+product-card('product3')
+					pre.
+						+product-card('product3')
+					br
+					

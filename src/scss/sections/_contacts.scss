@@ -1,0 +1,55 @@
+.address-card{
+	font-size: remy(10);
+	font-family: var(--font-family);
+	font-weight: 400;
+	border-radius: 1.8em;
+	padding: 1.1em;
+	background: var(--color-svetlyy-);
+	address{
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 2.1em;
+		line-height: 1.22;
+		letter-spacing: 0.03em;
+		margin-bottom: .5em;
+		
+	}
+	.contact-link{
+		font-size: 1.9em;
+		line-height: 1.25;
+		letter-spacing: -0.02em;
+		color: var(--color-chernyy);
+	}
+	.work-mode{
+		font-size: 1em;
+		margin-top: 2em;
+		.fs-21{
+			font-weight: 700;
+			font-size: 2.1em;
+			line-height: 1.22;
+			letter-spacing: 0.03em;
+			color: var(--color-smuglyy-yarkiy);
+			margin-bottom: .5em;
+		}
+		.fs-19{
+			font-weight: 400;
+			font-size: 1.9em;
+			line-height: 1.25;
+			letter-spacing: -0.02em;
+			column-gap: .5em;
+		}
+	}
+}
+.geo-app{
+	column-gap: remy(20);
+}
+.contacts-content.flex-col{
+	font-size: remy(10);
+	row-gap: 4em;
+}
+.contact-link{
+	font-weight: 400;
+	font-size: remy(17);
+	color: var(--color-chernyy);
+	margin-bottom: 5px;
+}

@@ -33,3 +33,21 @@ mixin step-card-ui(img, title, txt)
 		.step-card__txt
 			.h-23 #{title}
 			p #{txt}
+
+mixin product-card(img, old)
+	.product-card
+		.product-card__img
+			img.img-cover(src='../img/products/'+img+'.webp', srcset='../img/products/'+img+'@2x.webp 2x' width='' height='' alt='img')
+		.product-card__body
+			.product-card__title Мидии 40/60, неочищенные
+			.price-block
+				if old	
+					.price-block__old.fs-15 349 &#8381;
+				.price-block__val 349 &#8381; #[span.fs-15 / 100 г.]
+			
+			.product-card__footer
+				p.fs-10 Купили 781 раз
+				
+				button.cart-btn
+					svg.svg-cart
+						use(href='../img/sprite.svg#svg-cart')

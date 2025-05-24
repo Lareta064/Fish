@@ -57,12 +57,14 @@
 	--color-smuglyy: #243f86;
 	--color-yarko-siniy-s-logo: #002a85;
 	--color-smuglyy-yarkiy: #2243a0;
-	--color-smuglyy-yarkiy-opac:rgba(34, 67, 160, .5);
 	--color-svetlyy-: #ccd3e9;
 	--color-chernyy: #0e1526;
 	--color-belyy: #fff;
 	--color-seryy: #bfbfbf;
 	--color-tekst-seryy: #6f6f6f;
+	--temno-siniy: #132439;
+	--goluboy: #e6edf6;
+	--svetlo-siniy: #4d6583;
 
 	--font-family: "Lato", sans-serif;
     --second-family: "Philosopher", sans-serif;
@@ -116,6 +118,7 @@ img {
 .img-cover,.img-contain{
 	width: 100%;
 	height: 100%;
+	object-fit: cover;
 }
 .img-contain{
 	object-fit: contain;
