@@ -1,0 +1,35 @@
+
+mixin benefit-card(img, txt)
+	.benefit-item
+		.benefit-item__icon
+			img(src='./img/icons/'+ img +'.webp', srcset='./img/icons/'+ img +'@2x.webp 2x' width='62' height='62' alt='img')
+		.benefit-item__txt
+			p !{txt}
+
+mixin benefit-card-ui(img, txt)
+	.benefit-item
+		.benefit-item__icon
+			img(src='../img/icons/'+ img +'.webp', srcset='../img/icons/'+ img +'@2x.webp 2x' width='62' height='62' alt='img')
+		.benefit-item__txt.fw-700
+			p !{txt}
+
+mixin benefit-info(title, txt)
+	.benefit-info
+		.h-20 !{title}
+		p !{txt}
+
+mixin step-card(img, title, txt)
+	.step-card
+		.step-card__icon
+			img(src='./img/icons/'+ img +'.webp', srcset='./img/icons/'+ img +'@2x.webp 2x'  height='82' alt='img')
+		.step-card__txt
+			.h-23 #{title}
+			p #{txt}
+			
+mixin step-card-ui(img, title, txt)
+	.step-card
+		.step-card__icon
+			img(src='../img/icons/'+ img +'.webp', srcset='../img/icons/'+ img +'@2x.webp 2x'  height='82' alt='img')
+		.step-card__txt
+			.h-23 #{title}
+			p #{txt}

@@ -1,0 +1,41 @@
+.step-card{
+	border-radius: remy(15);
+	background: #eff3ff;
+	padding: remy(36) remy(14);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	row-gap:remy(8);
+	&__icon{
+		height: remy(82);
+		flex-shrink: 0;
+		display: flex;
+		justify-content: center;
+		img{
+			height: 100%;
+			width: auto;
+		}
+	}
+	&__txt{
+		flex-grow: 1;
+		font-weight: 400;
+		font-size: remy(20);
+		line-height: 1;
+		letter-spacing: -0.02em;
+		text-align: center;
+		color: var(--color-chernyy);
+	}
+	.h-23{
+		font-weight: 900;
+		font-size: remy(23);
+		letter-spacing: 0.03em;
+		margin-bottom: 4px;
+	}
+	@media (max-width: 767px) {
+		padding: remy(28) remy(11);
+		font-size: remy(15);
+		&__icon{height: remy(65);}
+		.h-23{font-size: remy(18);}
+
+	}
+}

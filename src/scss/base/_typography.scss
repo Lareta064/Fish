@@ -1,4 +1,15 @@
 
-@use "var" as *;
+.h2{
+	font-family: var(--second-family);
+	font-weight: 700;
+	font-size: remy(60);
+	line-height: 0.83;
+	color: var(--color-temnyy-siniy);
+	@media (max-width: 767px) {
+		font-size: remy(40);
+		line-height: 1;
+		letter-spacing: -0.01em;
+	}
+}
 
 .fw-700{font-weight: 700;}
