@@ -66,6 +66,7 @@
 	--goluboy: #e6edf6;
 	--svetlo-siniy: #4d6583;
 
+	--baseFs: #{$baseFs};
 	--font-family: "Lato", sans-serif;
     --second-family: "Philosopher", sans-serif;
 }
@@ -82,6 +83,7 @@ body {
 	color: var(--color-chernyy);
 	-webkit-font-smoothing: subpixel-antialiased;
 	-moz-osx-font-smoothing: auto;
+	font-size: var(--baseFs);
 }
 .lock{
 	overflow: hidden; 

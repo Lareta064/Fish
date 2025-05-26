@@ -4,6 +4,7 @@
 	font-weight: 400;
 	border-radius: 1.8em;
 	padding: 1.1em;
+	padding-bottom: 2em;
 	background: var(--color-svetlyy-);
 	address{
 		font-family: var(--font-family);
@@ -11,7 +12,7 @@
 		font-size: 2.1em;
 		line-height: 1.22;
 		letter-spacing: 0.03em;
-		margin-bottom: .5em;
+		margin-bottom: 3px;
 		
 	}
 	.contact-link{
@@ -22,7 +23,7 @@
 	}
 	.work-mode{
 		font-size: 1em;
-		margin-top: 2em;
+		margin-top: 1.4em;
 		.fs-21{
 			font-weight: 700;
 			font-size: 2.1em;
@@ -52,4 +53,23 @@
 	font-size: remy(17);
 	color: var(--color-chernyy);
 	margin-bottom: 5px;
+}
+.stores-contacts-grid{
+	display: flex;
+	font-size: remy(10);
+	column-gap: 3em;
+	justify-content: space-between;
+    
+}
+.contacts-content{
+	width: 100%;
+	max-width: 36.5em;
+	flex-shrink: 0;
+}
+.contacts-map-content{
+	flex-grow: 1;
+	max-width: 102.7em;
+	&>*+*{
+		margin-top: 3em;
+	}
 }

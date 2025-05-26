@@ -6,6 +6,15 @@
 }
 .flex-center-y{align-items: center;}
 .flex-col{flex-direction: column; &>*{width:100%;}}
+
+*.scroll-x{
+	overflow: hidden;
+	overflow-x: auto;
+	@media (max-width: 767px) {
+		width: calc(50% + 50vw);
+		&>*:last-child{margin-right: 16px;}
+	}
+}
 	
 
 
