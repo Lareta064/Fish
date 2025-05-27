@@ -1,0 +1,17 @@
+.grid-two-columns{
+	display: flex;
+	column-gap: remy(20);
+	height:50px;
+}
+.grid-two-columns .grid-content {
+	flex:1;
+	display: flex;
+	column-gap: remy(32);
+	.grid-content-aside{
+		flex-shrink: 0;
+		width: remy(240);
+	}
+	.grid-content-body{flex: 1;}
+}
+
+.grid-two-columns .grid-aside{width: remy(364);flex-shrink:0;}

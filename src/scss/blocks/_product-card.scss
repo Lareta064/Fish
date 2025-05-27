@@ -67,6 +67,11 @@
 		font-size: 1.8em;
 		line-height: 1.22;
 		letter-spacing: 0.03em;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		overflow: hidden;
+
 	}
 	&__footer{
 		display: flex;

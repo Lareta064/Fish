@@ -1,10 +1,11 @@
 /*vendore*/
 .w-100{width: 100%!important;}
-.flex, .flex-center-y, .flex-col{
+.flex, .flex-center-y,  .flex-center-x,  .flex-center, .flex-col{
 	display: flex;
 	gap:remy(8);
 }
-.flex-center-y{align-items: center;}
+  .flex-center, .flex-center-x{justify-content: center;}
+ .flex-center, .flex-center-y{align-items: center;}
 .flex-col{flex-direction: column; &>*{width:100%;}}
 
 *.scroll-x{

@@ -4,7 +4,9 @@
 	
 	&__icon{
 		height: remy(62);
+		aspect-ratio: 1;
 		text-align: center;
+		margin-inline: auto;
 		margin-bottom: remy(20);
 		img{display: inline-block;}
 	}

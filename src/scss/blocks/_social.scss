@@ -9,6 +9,11 @@
 .social-link{
 	justify-content: center;
 	flex-shrink: 0;
+	height: remy(34);
+	img{
+		height: 100%;
+		width: auto;
+	}
 }
 .social-block__title{
 	font-size: 2.7em;
@@ -23,5 +28,7 @@
 		height: 3em;
 		border-radius: 50%;
 		background-color: #fff;
+		padding-block: remy(8);
+		
 	}
 }

@@ -54,9 +54,9 @@
 }
 :root {
 	--color-temnyy-siniy: #011e64;
-	--color-smuglyy: #243f86;
+	--color-smuglyy: #132439;
 	--color-yarko-siniy-s-logo: #002a85;
-	--color-smuglyy-yarkiy: #2243a0;
+	--color-smuglyy-yarkiy: #132439;
 	--color-svetlyy-: #ccd3e9;
 	--color-chernyy: #0e1526;
 	--color-belyy: #fff;
@@ -84,6 +84,9 @@ body {
 	-webkit-font-smoothing: subpixel-antialiased;
 	-moz-osx-font-smoothing: auto;
 	font-size: var(--baseFs);
+	@media (max-width: 1699px) {
+		font-size: size(16);
+	}
 }
 .lock{
 	overflow: hidden; 
@@ -155,5 +158,11 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 }
 
 .container{
-	width: 1520;
+	width: remy(1560);
+
+	margin:0 auto;
+	padding-inline: remy(20);
+    @media (max-width: 1699px) {
+		width: size(1560);
+	}
 }
