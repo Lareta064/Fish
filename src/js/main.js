@@ -1,88 +1,47 @@
 document.addEventListener("DOMContentLoaded", function () {
     let bodyEl = document.body;
-    let headerBlock = document.querySelector('header.header');
-    const hasDropItem = document.querySelector('#has-drop');
-    const dropMenu =  document.querySelector('#drop-menu');
-    // HEADER SUBMENU
-    if(hasDropItem){
-      
-
-      hasDropItem.addEventListener('click', ()=>{
-          if(dropMenu.classList.contains('active')){
-            dropMenu.classList.remove('active');
-            headerBlock.classList.remove('show-after');
-          }else{
-            dropMenu.classList.add('active');
-            headerBlock.classList.add('show-after');
-          }
-      });
-    }
-
-    // MOBILE MENU
-    const mobileMenuIcon = document.querySelector('#menu-toggle');
-    const mobileMenuBlock = document.querySelector('#moble-menu');
    
-    
-    if(mobileMenuIcon){
-      
-      function hideMobileMenu(){
-        mobileMenuIcon.classList.remove('active');
-        mobileMenuBlock.classList.remove('active');
-        bodyEl.classList.remove('lock');
-      }
-      mobileMenuIcon.addEventListener('click', ()=>{
-        if(mobileMenuIcon.classList.contains('active')){
-          hideMobileMenu();
-        }else{
-          mobileMenuIcon.classList.add('active');
-          mobileMenuBlock.classList.add('active');
-          bodyEl.classList.add('lock');
-        }
-      });
-     
-      mobileMenuBlock.addEventListener('click', (e)=>{
-        if(e.target == e.currentTarget){
-          hideMobileMenu();
-        }
-      });
-      dropMenu.querySelectorAll('A').forEach((item)=>{
-        item.addEventListener('click', ()=>{
-          hideMobileMenu();
-        });
-      });
-    }
+    // СЧЕТЧИК
+    const counters = document.querySelectorAll('.counter');
 
-    //HEADER FIXED DESKTOP
-    const headerTop = document.querySelector('#header-fixed');
-    window.addEventListener('scroll', function(){
-        if(this.innerWidth >= 768){
-            if(this.pageYOffset > 200){
-                headerTop.classList.add('header--slim');
-            }
-            else{
-                headerTop.classList.remove('header--slim');
-            }
+    // Перебираем каждый блок счетчика
+    counters.forEach((counter) => {
+      const minusButton = counter.querySelector('.counter-minus'); // Кнопка уменьшения
+      const plusButton = counter.querySelector('.counter-plus'); // Кнопка увеличения
+      const counterValue = counter.querySelector('.counter-value'); // Текущее значение (span)
+
+      // Инициализируем значение (из текста span)
+      let currentValue = parseInt(counterValue.textContent, 10) || 0;
+
+      // Обновляем состояние кнопки уменьшения
+      const updateMinusButtonState = () => {
+        if (currentValue <= 0) {
+          minusButton.setAttribute('disabled', 'disabled');
+        } else {
+          minusButton.removeAttribute('disabled');
         }
-    });
-    // passw show
-    const passInputs = document.querySelectorAll('.form-item-passw');
-    if(passInputs.length>0){
-      passInputs.forEach((item)=>{
-        const itemBtn = item.querySelector('.show-passw');
-        const itemInp = item.querySelector('INPUT');
-        if(itemBtn){
-          itemBtn.addEventListener('click',()=>{
-            if(itemBtn.classList.contains('active')){
-              itemBtn.classList.remove('active');
-              itemInp.setAttribute('type','password');
-            }else{
-              itemBtn.classList.add('active');
-              itemInp.setAttribute('type','text');
-            }
-          })
+      };
+
+      // Устанавливаем начальное состояние кнопки
+      updateMinusButtonState();
+
+      // Обработчик клика на кнопку уменьшения
+      minusButton.addEventListener('click', () => {
+        if (currentValue > 0) {
+          currentValue -= 1; // Уменьшаем значение
+          counterValue.textContent = currentValue; // Обновляем текст в span
+          updateMinusButtonState(); // Обновляем состояние кнопки
         }
       });
-    }
+
+      // Обработчик клика на кнопку увеличения
+      plusButton.addEventListener('click', () => {
+        currentValue += 1; // Увеличиваем значение
+        counterValue.textContent = currentValue; // Обновляем текст в span
+        updateMinusButtonState(); // Обновляем состояние кнопки
+      });
+    
+    
     // INPUT TYPE="FILE"
     const fileInputs = document.querySelectorAll(".fileUploadInput");
 

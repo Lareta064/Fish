@@ -1,4 +1,4 @@
-.cart-status-empty{
+.basket-status-empty{
 	row-gap:remy(25);
 	.cart-status__icon{
 		display: flex;
@@ -14,7 +14,7 @@
 .benefits-info.flex-col{
 	row-gap: remy(25);
 }
-.cart-status{
+.basket-status{
 	padding: remy(20) remy(29);
 	border: 1px solid #ccd3e9;
 	border-radius: remy(15);
@@ -34,3 +34,4 @@
 		color: #011e64;
 	}
 }
+

@@ -1,0 +1,15 @@
+.basket-card,.basket-card__left,.basket-card__right{display: flex;}
+	
+	
+
+.basket-card{
+	width: 100%;
+
+		&__left{
+			column-gap: remy(32);
+		}
+
+		&_img{
+
+		}
+}
