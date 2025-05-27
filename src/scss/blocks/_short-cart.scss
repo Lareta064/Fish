@@ -1,0 +1,36 @@
+.cart-status-empty{
+	row-gap:remy(25);
+	.cart-status__icon{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: remy(96);
+		img, svg{
+			height:100%;
+			width: auto;
+		}
+	}
+}
+.benefits-info.flex-col{
+	row-gap: remy(25);
+}
+.cart-status{
+	padding: remy(20) remy(29);
+	border: 1px solid #ccd3e9;
+	border-radius: remy(15);
+	background-color: #fff;
+	&__txt{
+		font-weight: 800;
+		font-size: 1rem;
+		line-height: 1.25;
+		letter-spacing: -0.02em;
+		color: #bfbfbf;
+	}
+	&__footer{
+		font-weight: 900;
+		font-size: 1rem;
+		line-height: 1.50;
+		text-align: center;
+		color: #011e64;
+	}
+}

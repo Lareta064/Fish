@@ -62,4 +62,32 @@ html(lang="ru")
 						+product-card('product3')
 						pre.
 							+product-card('product3')
-					
+						
+					hr
+					.cart-status
+						//карточка, когда корзина пустая
+						.cart-status-empty.flex-col
+							.cart-status__icon
+								svg.svg-fish
+									use(href='../img/fish.svg#svg-fish')
+							.cart-status__txt.txt-center
+								p В корзине пока пусто
+							.benefits-info.flex-col
+								+benefit-info('Забота о здоровье', 'Рыба и морепродкуты это богатый источник витаминов, минералов, питательных веществ')
+								+benefit-info('Самые свежие продуткы', 'Продукция от проверенных поставщиков поступает в наши точки каждый день')
+								+benefit-info('Привилегии для постоянных покупателей', 'Кэшбэк до 10%, оплата заказа бонусами до 20%, специальные предложения для участников программы лояльности')
+							
+							.cart-status__footer 
+								p В корзине пока пусто
+						
+						//карточка, когда в корзину закигули товар
+						.cart-short
+							.cart-short__header
+								.fs-24 Корзина
+								button.cart-clean Очистить
+							
+							//content
+							.cart-short__content
+								
+							.cart-short__total
+							.cart-short__btns
