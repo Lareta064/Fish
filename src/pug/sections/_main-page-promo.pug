@@ -1,0 +1,21 @@
+section.promo
+	.container
+		.grid-two-columns
+			.grid-content
+			
+			//RIGHT COLUMN
+			.grid-aside
+				//карточка, когда корзина пустая
+				.basket-status-empty.flex-col.border-round-card
+					.basket-status__icon
+						svg.svg-fish
+							use(href='../img/fish.svg#svg-fish')
+					.basket-status__txt.txt-center
+						p В корзине пока пусто
+					.benefits-info.flex-col
+						+benefit-info('Забота о здоровье', 'Рыба и морепродкуты это богатый источник витаминов, минералов, питательных веществ')
+						+benefit-info('Самые свежие продуткы', 'Продукция от проверенных поставщиков поступает в наши точки каждый день')
+						+benefit-info('Привилегии для постоянных покупателей', 'Кэшбэк до 10%, оплата заказа бонусами до 20%, специальные предложения для участников программы лояльности')
+					
+					.basket-status__footer
+						p Доставка с 10:00 до 22:00
