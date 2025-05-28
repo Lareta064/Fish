@@ -13,31 +13,25 @@ html(lang="ru")
 		link(rel="stylesheet", href="../css/main.css")
 		title UI-KIT
 
-	body.body-dashboard
+	body
+		header.header
+			.container
+				.header-content
+					a(href="index.html") LOGO
+					.header-content-wrapper
+						.header-content-wrapper
+							.header-top-row
+								ul.header-menu
+									li
+										a(href="aboutus.html") О компании
+									li
+										a(href="stores.html") Магазины 
+									li
+										a(href="#!") Покупателям
+									li
+										a(href="blog.html") Блог / рецепты
+									li
+										a(href="contacts.html") Контакты
 
-		include ui-navigation.pug
 
-		block content
-			.container-dashboard
-				h2 Компоненты
-
-				.container-dashboard__content
-					+social-ui
-					pre.
-						+social
-					
-					hr
-					div(style="background-color: blue; padding-top:15px; padding-bottom: 15px;")
-						+social-roung-ui
-							pre.
-								+social-roung-ui
-					
-					hr
-					div(style="background-color: blue; padding-top:15px; padding-bottom: 15px;")
-						button.cart-button
-							svg.svg-cart
-								use(href='../img/sprite.svg#svg-cart')
-							span.fw-700 Корзина
-						
-						
-						
+							.header-bottom-row

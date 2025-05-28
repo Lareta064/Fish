@@ -74,3 +74,16 @@ svg.svg-cart{
 	width: remy(100);
 	height: remy(96);
 }
+.remove-button{
+	width: remy(30);
+	height: remy(30);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: remy(6);
+	.svg-delete{
+		width: remy(20);
+		height: remy(22);
+		color:#6F6F6F;
+	}
+}

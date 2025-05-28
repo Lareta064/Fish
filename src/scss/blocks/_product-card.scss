@@ -1,4 +1,4 @@
-.price-block{
+.product-card__price{
 	font-family: var(--font-family);
 	font-weight: 400;
 	.fs-15{
@@ -6,7 +6,7 @@
 	   font-weight: 400;
 	   font-size: remy(15);
 	}
-	&__old{
+	.price-old{
 		line-height: 1.53;
 		letter-spacing: 0.05em;
 		color: var(--color-tekst-seryy);
@@ -26,7 +26,7 @@
 
 		}
 	}
-	&__val{
+	.price-val{
 		font-weight: 900;
 		font-size:remy(23);
 		line-height: 1;
@@ -111,7 +111,7 @@
 .plus-anim line {
   stroke-dasharray: 11;  
   stroke-dashoffset: 11;
-  transition: stroke-dashoffset 0.4s ease;
+  transition: stroke-dashoffset 0.6s ease-out;
 }
 
 .cart-btn.cart-btn--animate:hover svg.svg-cart {

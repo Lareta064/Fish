@@ -40,9 +40,9 @@ html(lang="ru")
 								img.img-cover(src='../img/products/product1.webp', srcset='../img/products/product1@2x.webp 2x' width='' height='' loading='lazy' alt='img')
 							.product-card__body
 								.product-card__title Мидии 40/60, неочищенные
-								.price-block
-									.price-block__old.fs-15 349 &#8381;
-									.price-block__val 349 &#8381; #[span.fs-15 / 100 г.]
+								.product-card__price
+									.price-old.fs-15 349 &#8381;
+									.price-val 349 &#8381; #[span.fs-15 / 100 г.]
 								
 								.product-card__footer
 									p.fs-10 Купили 781 раз
@@ -105,73 +105,77 @@ html(lang="ru")
 							.cart-short__btns
 
 					hr
-					
-					+counter
+					+counter('200 ₽/кг')
 					pre.
 						+counter
+
 					hr
 					.basket-card
 						.basket-card__left
 							.basket-card__img
-								img(src='./img/product1.webp', srcset='./img/product1@2x.webp 2x' width='83' height='83' alt='img')
+								img.img-cover(src='../img/products/product1.webp', srcset='../img/products/product1@2x.webp 2x' width='83' height='83' alt='img')
 							.basket-card__title
-								p Мидии 40/60, неочищенные
+								.product-name Мидии 40/60, неочищенные
+								.product-info Охлажденные
 						
 						.basket-card__right
 							.basket-card__counter
-								+counter
-								.fs-12 200 ₽ / кг
+								+counter('200 ₽/кг')
 							
 							.basket-card__cost
-								.price-box 5 999 р
+								.cost-block
+									span.cost-block__new 100 999 р
+									span.cost-block__old 100 999 р
 							
 							.basket-card__btn
 								button.remove-button
 									svg.svg-delete
-										use(href='./img/sprite.svg#svg-delete')
+										use(href='../img/sprite.svg#svg-delete')
 
 		script.
 			document.addEventListener("DOMContentLoaded", function () {
-						console.log(123)
-						const counters = document.querySelectorAll('.counter');
+				let counters = document.querySelectorAll('.counter');
 
-						// Перебираем каждый блок счетчика
-						counters.forEach((counter) => {
-							const minusButton = counter.querySelector('.counter-minus'); // Кнопка уменьшения
-							const plusButton = counter.querySelector('.counter-plus'); // Кнопка увеличения
-							const counterValue = counter.querySelector('.counter-value'); // Текущее значение (span)
+				counters.forEach((counter) => {
+					const minusButton = counter.querySelector('.counter-minus');
+					const plusButton = counter.querySelector('.counter-plus');
+					const counterValue = counter.querySelector('.counter-value'); // <input type="number">
 
-							// Инициализируем значение (из текста span)
-							let currentValue = parseInt(counterValue.textContent, 10) || 0;
+					// Обновляет кнопку "-" в зависимости от текущего значения
+					const updateMinusButtonState = (value) => {
+						if (value <= 0) {
+							minusButton.setAttribute('disabled', 'disabled');
+						} else {
+							minusButton.removeAttribute('disabled');
+						}
+					};
 
-							// Обновляем состояние кнопки уменьшения
-							const updateMinusButtonState = () => {
-							if (currentValue <= 0) {
-								minusButton.setAttribute('disabled', 'disabled');
-							} else {
-								minusButton.removeAttribute('disabled');
-							}
-							};
+					// Слушаем клик на кнопку "-"
+					minusButton.addEventListener('click', () => {
+						let currentValue = parseInt(counterValue.value, 10) || 0;
+						if (currentValue > 0) {
+							currentValue -= 1;
+							counterValue.value = currentValue;
+							updateMinusButtonState(currentValue);
+						}
+					});
 
-							// Устанавливаем начальное состояние кнопки
-							updateMinusButtonState();
+					// Слушаем клик на кнопку "+"
+					plusButton.addEventListener('click', () => {
+						let currentValue = parseInt(counterValue.value, 10) || 0;
+						currentValue += 1;
+						counterValue.value = currentValue;
+						updateMinusButtonState(currentValue);
+					});
 
-							// Обработчик клика на кнопку уменьшения
-							minusButton.addEventListener('click', () => {
-							if (currentValue > 0) {
-								currentValue -= 1; // Уменьшаем значение
-								counterValue.textContent = currentValue; // Обновляем текст в span
-								updateMinusButtonState(); // Обновляем состояние кнопки
-							}
-							});
-
-							// Обработчик клика на кнопку увеличения
-							plusButton.addEventListener('click', () => {
-								
-								currentValue += 1; // Увеличиваем значение
-								counterValue.textContent = currentValue; // Обновляем текст в span
-								updateMinusButtonState(); // Обновляем состояние кнопки
-						});
-					})
-				
+					// Обработка ручного ввода
+					counterValue.addEventListener('input', () => {
+						let value = parseInt(counterValue.value, 10);
+						if (isNaN(value) || value < 0) {
+							counterValue.value = 0;
+							value = 0;
+						}
+						updateMinusButtonState(value);
+					});
+				});
 			})

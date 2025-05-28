@@ -1,12 +1,29 @@
+.counter-wrapper{
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	.counter-sub{
+		text-align: center;
+		font-size: remy(12);
+		line-height: 100%;
+		letter-spacing: 0.03em;
+		text-align: center;
+		color: var(--temno-siniy);
+	}
+}
 .counter{
+	font-size: remy(10);
 	display: flex;
 	align-items: center;
-	width: remy(116);
-	column-gap:remy(12);
+	column-gap:1.2em;
 	justify-content: space-between;
+	padding-inline: 1.2em;
+	border: 1px solid var(--goluboy);
+	width: 18em;
+	border-radius: remy(8);
 	button{
-		width: remy(12);
-		height: remy(26);
+		width: 1.6em;
+		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -18,40 +35,52 @@
 	.counter-input{
 		display: flex;
 		align-items: center;
-		justify-content: center;
-		flex-shrink: 0;
-		height: remy(26);
-		border: 1px solid var(--goluboy);
-		border-radius: remy(6);
+		
 		font-size: remy(14);
 		font-weight: 400;
-		font-family: vr(--font-family);
+		font-family: var(--font-family);
 		letter-spacing: -0.03em;
 		color: var(--temno-siniy);
-		width: remy(80);
-		padding-inline: remy(8);
+		
 		column-gap:3px;
-		span{width: fit-content;}
+		span{
+			width: fit-content;
+			font-weight: 700;
+			font-size: remy(20);
+			letter-spacing: -0.02em;
+			color: var(--temno-siniy);
+		}
 	}
 	.counter-value{
 		display: block;
+		height: remy(38);
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: remy(20);
+		text-align: right;
+		width: remy(70);
+		letter-spacing: -0.02em;
+		color: var(--temno-siniy);
 		&:focus{outline: none;}
+		&::placeholder{color: inherit; font-family: inherit; font-size: inherit;}
 		
 	}
 	input[type="number"]::-webkit-inner-spin-button,
 	input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
     input[type="number"] { -moz-appearance: textfield; }
 	.counter-plus, .counter-minus{
-		background-size:remy(12) remy(12);
+		background-size:remy(16) remy(16);
+		height: remy(16);
 		background-repeat: no-repeat;
 		background-position: center;;
 	}
 	.counter-plus{
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='0.166016' y='7' width='16' height='2' fill='%232E2D2A' /%3e%3crect x='7.16602' y='16' width='16' height='2' transform='rotate(-90 7.16602 16)' fill='%232E2D2A' /%3e%3c/svg%3e");
 		
+		
 	}
 	.counter-minus{
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512' enable-background='new 0 0 512 512' viewBox='0 0 512 512' id='minus'%3e%3cpath d='M485.883,264.293h-460c-4.971,0-9-4.029-9-9s4.029-9,9-9h460c4.971,0,9,4.029,9,9S490.854,264.293,485.883,264.293z'%3e%3c/path%3e%3c/svg%3e ");
-		background-size:remy(12) remy(12);
+		
 	}
 }

@@ -40,10 +40,10 @@ mixin product-card(img, old)
 			img.img-cover(src='../img/products/'+img+'.webp', srcset='../img/products/'+img+'@2x.webp 2x' width='' height='' alt='img')
 		.product-card__body
 			.product-card__title Мидии 40/60, неочищенные
-			.price-block
+			.product-card__price
 				if old	
-					.price-block__old.fs-15 349 &#8381;
-				.price-block__val 349 &#8381; #[span.fs-15 / 100 г.]
+					.price-old.fs-15 349 &#8381;
+				.price-val 349 &#8381; #[span.fs-15 / 100 г.]
 			
 			.product-card__footer
 				p.fs-10 Купили 781 раз
@@ -58,9 +58,15 @@ mixin product-card(img, old)
 						line(x1='21' y1='11' x2='11' y2='11')
 
 mixin counter
-	.counter
-		button(type="button" disabled aria-label="Уменьшить количество").counter-minus
-		.counter-input
-			span.counter-value(contenteditable="true") 0
-			span.dim-span(contenteditable="true") гр.
-		button(type="button" aria-label="Увеличить количество" ).counter-plus
+	.counter-wrapper(txt)
+		.counter
+			button(type="button" disabled aria-label="Уменьшить количество").counter-minus
+			
+			.counter-input
+				input.counter-value(name=""  min="0" type="text" placeholder="0")
+				span.dim-span гр.
+			
+			button(type="button" aria-label="Увеличить количество" ).counter-plus
+
+		if txt
+			.counter-sub !{txt}

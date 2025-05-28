@@ -2,46 +2,51 @@ document.addEventListener("DOMContentLoaded", function () {
     let bodyEl = document.body;
    
     // СЧЕТЧИК
-    const counters = document.querySelectorAll('.counter');
+    let counters = document.querySelectorAll('.counter');
 
-    // Перебираем каждый блок счетчика
-    counters.forEach((counter) => {
-      const minusButton = counter.querySelector('.counter-minus'); // Кнопка уменьшения
-      const plusButton = counter.querySelector('.counter-plus'); // Кнопка увеличения
-      const counterValue = counter.querySelector('.counter-value'); // Текущее значение (span)
+      counters.forEach((counter) => {
+        const minusButton = counter.querySelector('.counter-minus');
+        const plusButton = counter.querySelector('.counter-plus');
+        const counterValue = counter.querySelector('.counter-value'); // <input type="number">
 
-      // Инициализируем значение (из текста span)
-      let currentValue = parseInt(counterValue.textContent, 10) || 0;
+        // Обновляет кнопку "-" в зависимости от текущего значения
+        const updateMinusButtonState = (value) => {
+          if (value <= 0) {
+            minusButton.setAttribute('disabled', 'disabled');
+          } else {
+            minusButton.removeAttribute('disabled');
+          }
+        };
 
-      // Обновляем состояние кнопки уменьшения
-      const updateMinusButtonState = () => {
-        if (currentValue <= 0) {
-          minusButton.setAttribute('disabled', 'disabled');
-        } else {
-          minusButton.removeAttribute('disabled');
-        }
-      };
+        // Слушаем клик на кнопку "-"
+        minusButton.addEventListener('click', () => {
+          let currentValue = parseInt(counterValue.value, 10) || 0;
+          if (currentValue > 0) {
+            currentValue -= 1;
+            counterValue.value = currentValue;
+            updateMinusButtonState(currentValue);
+          }
+        });
 
-      // Устанавливаем начальное состояние кнопки
-      updateMinusButtonState();
+        // Слушаем клик на кнопку "+"
+        plusButton.addEventListener('click', () => {
+          let currentValue = parseInt(counterValue.value, 10) || 0;
+          currentValue += 1;
+          counterValue.value = currentValue;
+          updateMinusButtonState(currentValue);
+        });
 
-      // Обработчик клика на кнопку уменьшения
-      minusButton.addEventListener('click', () => {
-        if (currentValue > 0) {
-          currentValue -= 1; // Уменьшаем значение
-          counterValue.textContent = currentValue; // Обновляем текст в span
-          updateMinusButtonState(); // Обновляем состояние кнопки
-        }
+        // Обработка ручного ввода
+        counterValue.addEventListener('input', () => {
+          let value = parseInt(counterValue.value, 10);
+          if (isNaN(value) || value < 0) {
+            counterValue.value = 0;
+            value = 0;
+          }
+          updateMinusButtonState(value);
+        });
       });
-
-      // Обработчик клика на кнопку увеличения
-      plusButton.addEventListener('click', () => {
-        currentValue += 1; // Увеличиваем значение
-        counterValue.textContent = currentValue; // Обновляем текст в span
-        updateMinusButtonState(); // Обновляем состояние кнопки
-      });
-    
-    
+          
     // INPUT TYPE="FILE"
     const fileInputs = document.querySelectorAll(".fileUploadInput");
 
