@@ -18,5 +18,10 @@
 }
 
 .txt-center{text-align: center;}
+.border-round-card{
+	border: 1px solid var(--goluboy);
+	border-radius: remy(15);
+	padding: remy(20);
+}
 
 

@@ -64,45 +64,55 @@ html(lang="ru")
 							+product-card('product3')
 						
 					hr
-					.basket-status
-						//карточка, когда корзина пустая
-						.basket-status-empty.flex-col
-							.basket-status__icon
-								svg.svg-fish
-									use(href='../img/fish.svg#svg-fish')
-							.basket-status__txt.txt-center
-								p В корзине пока пусто
-							.benefits-info.flex-col
-								+benefit-info('Забота о здоровье', 'Рыба и морепродкуты это богатый источник витаминов, минералов, питательных веществ')
-								+benefit-info('Самые свежие продуткы', 'Продукция от проверенных поставщиков поступает в наши точки каждый день')
-								+benefit-info('Привилегии для постоянных покупателей', 'Кэшбэк до 10%, оплата заказа бонусами до 20%, специальные предложения для участников программы лояльности')
-							
-							.basket-status__footer 
-								p В корзине пока пусто
+					
+					//карточка, когда корзина пустая
+					.basket-status-empty.flex-col.border-round-card
+						.basket-status__icon
+							svg.svg-fish
+								use(href='../img/fish.svg#svg-fish')
+						.basket-status__txt.txt-center
+							p В корзине пока пусто
+						.benefits-info.flex-col
+							+benefit-info('Забота о здоровье', 'Рыба и морепродкуты это богатый источник витаминов, минералов, питательных веществ')
+							+benefit-info('Самые свежие продуткы', 'Продукция от проверенных поставщиков поступает в наши точки каждый день')
+							+benefit-info('Привилегии для постоянных покупателей', 'Кэшбэк до 10%, оплата заказа бонусами до 20%, специальные предложения для участников программы лояльности')
 						
-						//карточка, когда в корзину закигули товар
-						.cart-short
-							.cart-short__header.flex-center-y
-								.fs-24 Корзина
-								button.cart-clean Очистить
-							
-							//content
-							.cart-short__content
-								//- .cart-item
-								//- 	.cart-item__img
-								//- 		img(src='./img/product1.webp', srcset='./img/product1@2x.webp 2x' width='83' height='83' alt='img')
-								//- 	.cart-item__title
-								//- 		p Мидии 40/60, неочищенные
-								//- 	.cart-item__group
-								//- 		.cart-item__counter
-								//- 			+counter
-								//- 		.cart-item__cost
-								//- 			.price-box 5 999 р
-												
-							
-							
-							.cart-short__total
-							.cart-short__btns
+						.basket-status__footer 
+							p Доставка с 10:00 до 22:00
+						
+					//карточка, когда в корзину закинули товар
+					.cart-short.border-round-card
+						.cart-short__header.flex-center-y
+							.fs-24 Корзина
+							button.cart-clean Очистить
+						
+						//content
+						.cart-short__content
+							.basket-card
+								.basket-card__img
+									img.img-cover(src='../img/products/product1.webp', srcset='../img/products/product1@2x.webp 2x' width='83' height='83' alt='img')
+								
+								.basket-card__group
+									.basket-card__title
+										.product-name Мидии 40/60, неочищенные
+										.product-info Охлажденные
+								
+								
+									.basket-card__counter
+										+counter('200 ₽/кг')
+									
+									.basket-card__cost
+										.cost-block
+											span.cost-block__new 100 999 р
+											span.cost-block__old 100 999 р
+									
+									.basket-card__btn
+										button.remove-button
+											svg.svg-delete
+												use(href='../img/sprite.svg#svg-delete')
+						
+						.cart-short__total
+						.cart-short__btns
 
 					hr
 					+counter('200 ₽/кг')
@@ -128,10 +138,10 @@ html(lang="ru")
 									span.cost-block__new 100 999 р
 									span.cost-block__old 100 999 р
 							
-						.basket-card__btn
-							button.remove-button
-								svg.svg-delete
-									use(href='../img/sprite.svg#svg-delete')
+							.basket-card__btn
+								button.remove-button
+									svg.svg-delete
+										use(href='../img/sprite.svg#svg-delete')
 					
 					
 

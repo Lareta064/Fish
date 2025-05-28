@@ -1,6 +1,6 @@
 .basket-status-empty{
 	row-gap:remy(25);
-	.cart-status__icon{
+	.basket-status__icon{
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -14,19 +14,17 @@
 .benefits-info.flex-col{
 	row-gap: remy(25);
 }
-.basket-status{
-	padding: remy(20) remy(29);
-	border: 1px solid #ccd3e9;
-	border-radius: remy(15);
+.basket-status-empty{
+	
 	background-color: #fff;
-	&__txt{
+	.basket-status__txt{
 		font-weight: 800;
 		font-size: 1rem;
 		line-height: 1.25;
 		letter-spacing: -0.02em;
 		color: #bfbfbf;
 	}
-	&__footer{
+	.basket-status__footer{
 		font-weight: 900;
 		font-size: 1rem;
 		line-height: 1.50;
@@ -35,3 +33,26 @@
 	}
 }
 
+.cart-short .cart-short__header{
+	padding-bottom: 1rem;
+	border-bottom: 1px solid rgba(28, 28, 28, 0.1);
+	.fs-24{
+		
+		font-family: var(--second-family);
+		font-weight: 400;
+		font-size: remy(24);
+		line-height: 133%;
+		letter-spacing: -0.02em;
+		color: var(--color-chernyy);
+		margin-right: auto;
+		
+	}
+}
+.cart-clean{
+	font-family: var(--font-family);
+	font-weight: 900;
+	font-size: 1rem;
+	line-height: 150%;
+	color: var(--temno-siniy);
+	margin-left: auto;
+}
