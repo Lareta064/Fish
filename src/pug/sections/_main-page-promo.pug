@@ -1,47 +1,26 @@
+//PROMO
 section.promo
-	.container
-		.grid-two-columns
-			//LEFT COLUMN
-			.grid-content
-				.promo-swiper.swiper
-					.swiper-wrapper
-						.swiper-slide
-							.promo-slide(style="background-image: url(./img/main-slide.webp)")
-								.promo-slide__title
-									.h-120 Сезон барабули
-						.swiper-slide
-							.promo-slide(style="background-image: url(./img/main-slide.webp)")
-								.promo-slide__title
-									.h-120 Сезон барабули
-						.swiper-slide
-							.promo-slide(style="background-image: url(./img/main-slide.webp)")
-								.promo-slide__title
-									.h-120 Сезон барабули
-					//swiper-nav
-					.promo-swiper__nav
-						.promo-swiper-next.swiper-button-next
-							svg.svg-arrRight
-								use(href='../img/sprite.svg#svg-arrRight')
-						.promo-swiper-prev.swiper-button-prev
-							svg.svg-arrLeft
-								use(href='../img/sprite.svg#svg-arrLeft')
-					//swiper-pagination
-					.promo-swiper-pagination.swiper-pagination
-			
-			
-			//RIGHT COLUMN
-			.grid-aside
-				//карточка, когда корзина пустая
-				.basket-status-empty.flex-col.border-round-card
-					.basket-status__icon
-						svg.svg-fish
-							use(href='../img/fish.svg#svg-fish')
-					.basket-status__txt.txt-center
-						p В корзине пока пусто
-					.benefits-info.flex-col
-						+benefit-info('Забота о здоровье', 'Рыба и морепродкуты это богатый источник витаминов, минералов, питательных веществ')
-						+benefit-info('Самые свежие продуткы', 'Продукция от проверенных поставщиков поступает в наши точки каждый день')
-						+benefit-info('Привилегии для постоянных покупателей', 'Кэшбэк до 10%, оплата заказа бонусами до 20%, специальные предложения для участников программы лояльности')
-					
-					.basket-status__footer
-						p Доставка с 10:00 до 22:00
+	.promo-swiper.swiper
+		.swiper-wrapper
+			.swiper-slide
+				.promo-slide(style="background-image: url(./img/main-slide.webp)")
+					.promo-slide__title
+						.h-120 Сезон барабули
+			.swiper-slide
+				.promo-slide(style="background-image: url(./img/main-slide.webp)")
+					.promo-slide__title
+						.h-120 Сезон барабули
+			.swiper-slide
+				.promo-slide(style="background-image: url(./img/main-slide.webp)")
+					.promo-slide__title
+						.h-120 Сезон барабули
+		//swiper-nav
+		.promo-swiper__nav
+			.promo-swiper-next.swiper-button-next
+				svg.svg-arrRight
+					use(href='../img/sprite.svg#svg-arrRight')
+			.promo-swiper-prev.swiper-button-prev
+				svg.svg-arrLeft
+					use(href='../img/sprite.svg#svg-arrLeft')
+		//swiper-pagination
+		.promo-swiper-pagination.swiper-pagination

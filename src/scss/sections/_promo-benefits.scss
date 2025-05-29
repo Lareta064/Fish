@@ -1,0 +1,14 @@
+.promo-benefits-content{
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: center;
+	flex-wrap: wrap;
+	column-gap: remy(20);
+	.benefit-item{
+		flex:1;
+		max-width: remy(211);
+	}
+	@media (max-width: 767px) {
+	column-gap: remy(8);
+	}
+}

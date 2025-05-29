@@ -1,7 +1,9 @@
 .benefit-item{
 	border-radius: remy(15);
+	padding-top: remy(60);
+	padding-bottom: remy(52);
+	padding-inline: remy(7);
 	background-color: #fff;
-	
 	&__icon{
 		height: remy(62);
 		aspect-ratio: 1;
@@ -9,6 +11,14 @@
 		margin-inline: auto;
 		margin-bottom: remy(20);
 		img{display: inline-block;}
+		@media (max-width: 767px) {
+		   height: remy(55);
+		   margin-bottom: remy(10);
+		}
+	}
+	@media (max-width: 767px) {
+		padding-top: remy(40);
+		padding-bottom: remy(20);
 	}
 }
 
@@ -17,6 +27,9 @@
 	letter-spacing: -0.02em;
 	text-align: center;
 	color: var(--color-chernyy);
+	@media (max-width: 767px) {
+	font-size: remy(15);
+	}
 }
 .benefit-info{
 	font-weight: 400;

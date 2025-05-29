@@ -23,9 +23,7 @@
 }
 .promo{
 	@media (max-width: 767px) {
-		.grid-two-columns .grid-aside{
-			display: none;
-		}
+		
 		.promo-slide__title{
 			bottom: remy(72);
 			left: 1rem;

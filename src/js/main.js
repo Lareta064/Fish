@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
    
     //PROMO SLIDER
     let promoSlider = new Swiper('.promo-swiper',{
-      spaceBetween: 16,
+      spaceBetween: 10,
       speed:600,
       navigation: {
         nextEl: ".promo-swiper-next",
