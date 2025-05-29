@@ -70,6 +70,14 @@
 		
 	  .fw-700{display: none;}
 	}
+	@media (max-width: 767px) {
+	  width: remy(30);
+	  height: remy(30);
+	  .svg-cart{
+		width: remy(17);
+		height: remy(14);
+	  }
+	}
 }
 .cart-btn.cart-btn--transform{
 	@media (min-width: 1024px) {

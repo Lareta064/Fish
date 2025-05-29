@@ -13,7 +13,29 @@ document.addEventListener("DOMContentLoaded", function () {
         el: ".promo-swiper-pagination",
         clickable: true,
       },
-    })
+    });
+  
+    const productSwipers = document.querySelectorAll('.product-swiper');
+
+    productSwipers.forEach((swiperEl, index) => {
+      new Swiper(swiperEl, {
+        slidesPerView: 2,
+        spaceBetween: 12,
+        scrollToSlides:2,
+        speed:600,
+        navigation: {
+          nextEl: swiperEl.querySelector('.product-swiper-next'),
+          prevEl: swiperEl.querySelector('.product-swiper-prev'),
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 4,
+             spaceBetween: 18,
+          }
+        }
+      });
+    });
+
     
     // СЧЕТЧИК
     let counters = document.querySelectorAll('.counter');

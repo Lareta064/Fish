@@ -1,0 +1,14 @@
+.poppulare-swiper{
+	 width: remy(1136);
+	@media (max-width: 767px) {
+	  width: remy(344);
+	}
+}
+.product-swiper .swiper-wrapper{
+	display: flex;
+	.swiper-slide{
+		display: flex;
+		height: unset;
+		min-height: unset;
+	}
+}

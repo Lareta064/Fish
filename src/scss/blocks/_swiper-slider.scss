@@ -13,6 +13,22 @@
 	height: remy(40);
 	}
 }
+.swiper .swiper__nav{
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	bottom: auto;
+	margin-top: 2rem;
+	column-gap:remy(10);
+	.swiper-button-next,.swiper-button-prev{
+		position: relative;
+		top:auto;
+		right: auto;
+		left: auto;
+		margin-top: 0;
+	}
+}
 .swiper .swiper-pagination{
 	display: flex;
 	align-items: center;
