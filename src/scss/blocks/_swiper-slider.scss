@@ -1,9 +1,28 @@
-.swiper-button-next, .swiper-button-prev{
+.swiper .swiper-button-next, .swiper  .swiper-button-prev{
 	border: 1px solid var(--color-yarko-siniy-s-logo);
 	width: remy(55);
 	height:remy(55);
+	border-radius: 50%;
 	flex-shrink: 0;
 	background: var(--color-belyy);
 	display: flex;
 	justify-content: center;align-items: center;
+	&:after, &:before{display: none;}
+}
+.swiper .swiper-pagination{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	column-gap: remy(8);
+	.swiper-pagination-bullet{
+		margin: 0;
+		height: remy(10);
+		border-radius: 5px;
+		flex:1;
+		max-width: remy(80);
+		background-color:  #6f6f6f;;
+		opacity: 1;
+	}
+	.swiper-pagination-bullet-active{background: var(--goluboy);}
 }

@@ -1,6 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
     let bodyEl = document.body;
    
+    //PROMO SLIDER
+    let promoSlider = new Swiper('.promo-swiper',{
+      spaceBetween: 16,
+      speed:600,
+      navigation: {
+        nextEl: ".promo-swiper-next",
+        prevEl: ".promo-swiper-prev",
+      },
+      pagination: {
+        el: ".promo-swiper-pagination",
+        clickable: true,
+      },
+    })
+    
     // СЧЕТЧИК
     let counters = document.querySelectorAll('.counter');
 
@@ -191,93 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
     
-    // Устанавливаем checked при клике на #datepicker
-    const datepickerInput = document.querySelector('#datepicker');
-    if (datepickerInput) {
-        datepickerInput.addEventListener('click', function () {
-            const radioInput = this.closest('.switch-label')?.querySelector('input[type="radio"]');
-            if (radioInput) radioInput.checked = true;
-        });
-    }
-    /*PIZZA SIZE */
-    const sizeToggleWrapper = document.querySelector('.switch-group--size');
-    if(sizeToggleWrapper){
-      const productItem =  document.querySelector('#scale-img');
-      const sizeToggleSwith =  sizeToggleWrapper.querySelectorAll('[data-size]');
-      if(sizeToggleSwith.length > 0){
-          sizeToggleSwith.forEach((item)=>{
-            item.addEventListener('click', ()=>{
-              const swithAttr = item.getAttribute('data-size');
-
-              productItem.className = swithAttr;
-            });
-          });
-        }
-    }
-    /*DELIVERY HIDE FIELDS */
-    const deliverySwitch = document.querySelector('#switch-delivery');
-    if(deliverySwitch){
-      deliverySwitchLabels = deliverySwitch.querySelectorAll('.switch-label');
-      deliverySwitchLabels.forEach((swtch)=>{
-
-        swtch.addEventListener('click', ()=>{
-          
-          const thisInputRadio = swtch.querySelector('[type="radio"]');
-          const hideDeliveryFields = document.querySelector('#delivery-courier');
-          const pickupDeliveryFields = document.querySelector('#delivery-pickup');
-          if(swtch.classList.contains('switch-delivery-courier')){
-            if(thisInputRadio.checked){
-              hideDeliveryFields.classList.add('filds-visible');
-              pickupDeliveryFields.classList.add('filds-hide');
-            }
-          }else{
-            hideDeliveryFields.classList.remove('filds-visible');
-            pickupDeliveryFields.classList.remove('filds-hide');
-          }
-        });
-      });
-    }
-    // СЧЕТЧИК
-  const counters = document.querySelectorAll('.counter');
-   if(counters){
-      // Перебираем каждый блок счетчика
-      counters.forEach((counter) => {
-        const minusButton = counter.querySelector('.counter-minus'); // Кнопка уменьшения
-        const plusButton = counter.querySelector('.counter-plus'); // Кнопка увеличения
-        const counterValue = counter.querySelector('.counter-value'); // Текущее значение (span)
-
-        // Инициализируем значение (из текста span)
-        let currentValue = parseInt(counterValue.textContent, 10) || 0;
-
-        // Обновляем состояние кнопки уменьшения
-        const updateMinusButtonState = () => {
-          if (currentValue <= 0) {
-            minusButton.setAttribute('disabled', 'disabled');
-          } else {
-            minusButton.removeAttribute('disabled');
-          }
-        };
-
-        // Устанавливаем начальное состояние кнопки
-        updateMinusButtonState();
-
-        // Обработчик клика на кнопку уменьшения
-        minusButton.addEventListener('click', () => {
-          if (currentValue > 0) {
-            currentValue -= 1; // Уменьшаем значение
-            counterValue.textContent = currentValue; // Обновляем текст в span
-            updateMinusButtonState(); // Обновляем состояние кнопки
-          }
-        });
-
-        // Обработчик клика на кнопку увеличения
-        plusButton.addEventListener('click', () => {
-          currentValue += 1; // Увеличиваем значение
-          counterValue.textContent = currentValue; // Обновляем текст в span
-          updateMinusButtonState(); // Обновляем состояние кнопки
-        });
-      });
-    }
+   
     //ACORDION
     $(function() {
     
@@ -303,95 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const lvl1 = document.querySelectorAll('.js-level_1 > button');
-  const lvl2 = document.querySelectorAll('.js-level_2');
-  const lvl3 = document.querySelectorAll('.js-level_3');
 
-  // Toggle lvl 2 options and all lvl 3 cards
-  lvl1.forEach(
-    (btn, ind) => btn.addEventListener('click', () => lvl1Handler(ind))
-  );
-
-  // Lvl 2 btns click 
-  lvl2.forEach(
-    btnsContainer => {
-      // Iterate over every lvl 2 btn and add listener
-      for(const lvl2btn of btnsContainer.children){
-        lvl2btn.addEventListener('click', lvl2Handler)
-      }
-    }
-  )
-
-  function lvl1Handler (ind) {
-    // Hide previous lvl2 options
-    document.querySelector('.js-level_2.active')?.classList?.remove('active');
-
-    // Show new lvl2 options
-    lvl2[ind].classList.add('active');
-
-    // Hide previous lvl3 cards
-    document.querySelector('.js-level_3.active')?.classList?.remove('active');
-
-    // Clear all hidden cards
-    document.querySelectorAll('.js-level_3 .filtered').forEach(card => card.classList.remove('filtered'));
-    
-    // Show new card set
-    lvl3[ind].classList.add('active');
-  };
-
-  function lvl2Handler (e) {
-    // Btn and active cards wrapper
-    const btnTag = e.target.getAttribute('data-tag');
-    const activeCardsWrapper = document.querySelector('.js-level_3.active');
-    
-    // Clear up hidden cards
-    for(const lvl3card of activeCardsWrapper.children){
-      lvl3card.classList.remove('filtered')
-      
-      // If reset tag pressed - skip filtering
-      if(btnTag === '*') continue;
-
-      // Filter cards
-      if(!lvl3card.getAttribute('data-tags').split(' ').includes(btnTag)) 
-        lvl3card.classList.add('filtered');
-    }
-  }
-
-  const itemsGroup = document.querySelectorAll('.js-group');
-  if (itemsGroup.length > 0) {
-    for (let item of itemsGroup) {
-      const itemsGroupChilds = item.querySelectorAll('.js-group-item');
-      item.addEventListener('click', function (e) {
-        for (let el of itemsGroupChilds) {
-          el.classList.remove('active');
-        }
-        e.target.classList.add('active');
-      });
-    }
-  }
-  //SEO TEXT 
-
-  const seoAboutText = document.querySelector('.hide-seo');
-  if(seoAboutText){
-    const toggleSeoText = document.querySelector('.toggle-hide-seo');
-    if(toggleSeoText){
-      toggleSeoText.addEventListener('click', function(){
-        if(toggleSeoText.classList.contains('active')){
-
-          toggleSeoText.textContent = 'Подробнее';
-          toggleSeoText.classList.remove('active');
-          seoAboutText.style.height = 0;
-        }else{
-          toggleSeoText.textContent = 'Свернуть';
-          toggleSeoText.classList.add('active');
-          seoAboutText.style.height = seoAboutText.scrollHeight + 'px';
-        }
-      });
-    }
-  }
-  
-});
 document.addEventListener('DOMContentLoaded', function() {
   const tabsContainers = document.querySelectorAll('.tabs-container');
   
@@ -417,24 +257,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 
-    /*autorization tabs */
-    const autorizForms = document.querySelectorAll('.autorization-forms');
-    if(autorizForms.length > 0){
-      autorizForms.forEach((item)=>{
-        const autorizForm = item.querySelector('.autoriz-form');
-        const autorizFormSwitch = item.querySelector('.switch-label-autoriz');
-        const regFormSwitch = item.querySelector('.switch-label-reg');
-        const regForm = item.querySelector('.reg-form');
-        autorizFormSwitch.addEventListener('click', ()=>{
-          autorizForm.classList.add('active');
-          regForm.classList.remove('active'); 
-        });
-        regFormSwitch.addEventListener('click', ()=>{
-          autorizForm.classList.remove('active');
-          regForm.classList.add('active'); 
-        });
-      })
-    }
-    
+   
    
   });

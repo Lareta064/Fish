@@ -1,7 +1,33 @@
 section.promo
 	.container
 		.grid-two-columns
+			//LEFT COLUMN
 			.grid-content
+				.promo-swiper.swiper
+					.swiper-wrapper
+						.swiper-slide
+							.promo-slide(style="background-image: url(./img/main-slide.webp)")
+								.promo-slide__title
+									.h-120 Сезон барабули
+						.swiper-slide
+							.promo-slide(style="background-image: url(./img/main-slide.webp)")
+								.promo-slide__title
+									.h-120 Сезон барабули
+						.swiper-slide
+							.promo-slide(style="background-image: url(./img/main-slide.webp)")
+								.promo-slide__title
+									.h-120 Сезон барабули
+					//swiper-nav
+					.promo-swiper__nav
+						.promo-swiper-next.swiper-button-next
+							svg.svg-arrRight
+								use(href='../img/sprite.svg#svg-arrRight')
+						.promo-swiper-prev.swiper-button-prev
+							svg.svg-arrLeft
+								use(href='../img/sprite.svg#svg-arrLeft')
+					//swiper-pagination
+					.promo-swiper-pagination.swiper-pagination
+			
 			
 			//RIGHT COLUMN
 			.grid-aside

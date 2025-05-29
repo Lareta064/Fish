@@ -1,0 +1,19 @@
+.promo-swiper{
+	width: remy(1136);
+	
+	.promo-slide{
+		width: 100%;
+		aspect-ratio: 1136/672;
+		background-size: cover;
+		position: relative;
+		
+		.promo-slide__title{
+			width: 50%;
+			position: absolute;
+			bottom: remy(40);
+			left: remy(50);
+			z-index: 5;
+		}
+	}
+	.promo-swiper-pagination{justify-content: flex-end; padding-right: remy(50); bottom: remy(40)}
+}
