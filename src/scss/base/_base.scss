@@ -87,6 +87,9 @@ body {
 	@media (max-width: 1699px) {
 		font-size: size(16);
 	}
+	@media (max-width: 767px) {
+	font-size: var(--baseFs);
+	}
 }
 .lock{
 	overflow: hidden; 
@@ -164,5 +167,9 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	padding-inline: remy(20);
     @media (max-width: 1699px) {
 		width: size(1560);
+	}
+	@media (max-width: 767px) {
+		width: 100%;
+		max-width: remy(384);
 	}
 }

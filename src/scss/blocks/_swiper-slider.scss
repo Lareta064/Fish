@@ -8,6 +8,10 @@
 	display: flex;
 	justify-content: center;align-items: center;
 	&:after, &:before{display: none;}
+	@media (max-width: 767px) {
+	width: remy(40);
+	height: remy(40);
+	}
 }
 .swiper .swiper-pagination{
 	display: flex;
@@ -23,6 +27,10 @@
 		max-width: remy(80);
 		background-color:  #6f6f6f;;
 		opacity: 1;
+		@media (max-width: 767px) {
+			max-width: remy(70);
+			height: remy(7);
+		}
 	}
 	.swiper-pagination-bullet-active{background: var(--goluboy);}
 }

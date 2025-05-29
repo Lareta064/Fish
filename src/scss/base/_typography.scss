@@ -4,6 +4,12 @@
 	font-size: remy(120);
 	line-height: .86;
 	color: #fff;
+	@media (max-width: 767px) {
+	 font-size: remy(40);
+	 line-height: 1;
+	 letter-spacing: -0.01em;
+
+	}
 }
 
 .h2{

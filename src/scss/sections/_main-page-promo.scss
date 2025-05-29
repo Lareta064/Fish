@@ -6,14 +6,39 @@
 		aspect-ratio: 1136/672;
 		background-size: cover;
 		position: relative;
-		
-		.promo-slide__title{
-			width: 50%;
-			position: absolute;
-			bottom: remy(40);
-			left: remy(50);
-			z-index: 5;
-		}
+		border-radius: remy(15);
+	}
+	.promo-slide__title{
+		width: 50%;
+		position: absolute;
+		bottom: remy(40);
+		left: remy(50);
+		z-index: 5;
 	}
 	.promo-swiper-pagination{justify-content: flex-end; padding-right: remy(50); bottom: remy(40)}
+
+	@media (max-width: 767px) {
+		width: remy(344);
+	}
+}
+.promo{
+	@media (max-width: 767px) {
+		.grid-two-columns .grid-aside{
+			display: none;
+		}
+		.promo-slide__title{
+			bottom: remy(72);
+			left: 1rem;
+		}
+		.promo-slide{
+			aspect-ratio: 344/520;
+		}
+		.promo-swiper-pagination{
+			padding-left: 1rem;
+			padding-right: 1rem;
+			justify-content: center;
+			bottom:remy(24);
+		}
+	}
+	
 }
