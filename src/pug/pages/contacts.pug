@@ -1,0 +1,64 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header.pug
+	main.main-inner
+		section.contacts-page
+			.container
+				.stores-contacts-grid
+					//LEFT  COLUMN
+					.contacts-content.flex-col
+						// ya gis
+						.geo-app.flex
+							.geo-app__item
+								img(src='../img/geo-ya.webp', srcset='../img/geo-ya@2x.webp 2x' width='213' height='29' loading='lazy' alt='img')
+							.geo-app__item
+								img(src='../img/geo-gis.webp', srcset='../img/geo-gis@2x.webp 2x' width='110' height='29' loading='lazy' alt='img')
+						
+						//address-card
+						.address-card
+							address г. Сочи ул. Пипяево
+							a(href="tel:+79129786654").contact-link
+								span +7 912 978 66 54
+							.work-mode
+								.fs-21 Режим работы:
+								.fs-19.flex
+									span с 10:00 до 20:00 
+									span без выходных
+						
+						.contacts-content__links
+							a(href="tel:+79129786654").contact-link
+								svg.svg-phone
+									use(href='../img/sprite.svg#svg-phone')
+								span +7 912 978 66 54
+							
+							a(href="mailto:info@decona.ru").contact-link
+								svg.svg-email
+									use(href='../img/sprite.svg#svg-email')
+								span info@decona.ru
+						
+						//social
+						+social
+					
+					//RIGHT COLUMN
+					.contacts-map-content
+						.map-wrapper
+							img(src='../img/map.webp', srcset='../img/map@2x.webp 2x' width='1027' height='601' loading='lazy' alt='img')
+						
+						//stores
+						.our-stores.swiper
+							.swiper-wrapper
+								.swiper-slide
+									.store-item
+										img.img-cover(src='../img/store1.webp', srcset='../img/store1@2x.webp 2x' width='330' height='195' loading='lazy' alt='img')
+								.swiper-slide
+									.store-item
+										img.img-cover(src='../img/store2.webp', srcset='../img/store2@2x.webp 2x' width='330' height='195' loading='lazy' alt='img')
+								.swiper-slide
+									.store-item
+										img.img-cover(src='../img/store3.webp', srcset='../img/store3@2x.webp 2x' width='330' height='195' loading='lazy' alt='img')
+
+			
+			
+block variables
+	-var title = "Контакты";
