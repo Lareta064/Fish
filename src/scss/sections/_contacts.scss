@@ -3,9 +3,9 @@
 	font-family: var(--font-family);
 	font-weight: 400;
 	border-radius: 1.8em;
-	padding: 1.1em;
+	padding: 1.2em;
 	padding-bottom: 2em;
-	background: var(--color-svetlyy-);
+	background: var(--goluboy);
 	address{
 		font-family: var(--font-family);
 		font-weight: 700;
@@ -15,12 +15,7 @@
 		margin-bottom: 3px;
 		
 	}
-	.contact-link{
-		font-size: 1.9em;
-		line-height: 1.25;
-		letter-spacing: -0.02em;
-		color: var(--color-chernyy);
-	}
+
 	.work-mode{
 		font-size: 1em;
 		margin-top: 1.4em;
@@ -59,7 +54,10 @@
 	font-size: remy(10);
 	column-gap: 3em;
 	justify-content: space-between;
-    
+    @media (max-width: 767px) {
+	  flex-direction: column;
+	  row-gap:remy(60);
+	}
 }
 .contacts-content{
 	width: 100%;
@@ -71,5 +69,16 @@
 	max-width: 102.7em;
 	&>*+*{
 		margin-top: 3em;
+	}
+}
+.main-page{
+	.stores-contacts .contacts-map-content{
+		max-width: remy(560);
+		display: flex;
+		img{
+			object-fit: cover;
+			object-position: left;
+			height: 100%;
+		}
 	}
 }

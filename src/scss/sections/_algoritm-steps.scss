@@ -6,6 +6,7 @@
 	display: flex;
 	flex-direction: column;
 	row-gap:remy(8);
+	width: remy(212);
 	&__icon{
 		height: remy(82);
 		flex-shrink: 0;
@@ -35,8 +36,22 @@
 		padding: remy(28) remy(11);
 		font-size: remy(15);
 		&__icon{height: remy(65);}
+		width: calc((100% - 7px) /2);
 		.h-23{font-size: remy(18);}
 
 	}
 }
 
+.alroritm-steps-content{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	column-gap:remy(18);
+	@media (max-width: 767px) {
+	column-gap:remy(7);
+	row-gap: remy(7);
+	.step-card:last-child{
+		width: 100%;
+	}
+	}
+}
