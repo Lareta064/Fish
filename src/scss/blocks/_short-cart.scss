@@ -33,8 +33,9 @@
 	}
 }
 
-.cart-short .cart-short__header{
+.short-basket  .short-basket__header{
 	padding-bottom: 1rem;
+	padding-bottom: remy(16);
 	border-bottom: 1px solid rgba(28, 28, 28, 0.1);
 	.fs-24{
 		
@@ -53,6 +54,42 @@
 	font-weight: 900;
 	font-size: 1rem;
 	line-height: 150%;
-	color: var(--temno-siniy);
+	color: var(--svetlo-siniy);
 	margin-left: auto;
 }
+
+.basket__total{
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: remy(16);
+	border-top: 1px solid rgba(28, 28, 28, 0.1);
+	&-row{
+		column-gap:remy(10);
+		justify-content: space-between;	
+		padding-block: remy(20);
+		border-bottom: 1px solid rgba(28, 28, 28, 0.1);
+	}
+	.basket__total-txt{
+		
+		font-size: remy(20);
+		letter-spacing: -0.02em;
+		text-transform: capitalize;
+		color: #1c1c1c;
+	}
+	.basket__total-summ{
+		
+		font-weight: 700;
+		font-size: remy(24);
+		letter-spacing: -0.02em;
+		text-align: right;
+		color: #1c1c1c;
+	}
+	.basket__total--ps{
+		line-height: 1.25;
+		letter-spacing: -0.02em;
+		color: #1c1c1c;
+		text-align: center;
+		padding-top: remy(20);
+	}
+}
+.short-basket .buttons-column{margin-top: remy(32);}

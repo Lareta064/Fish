@@ -8,17 +8,24 @@
 	font-size: 1rem;
 	height: remy(52);
 	border-radius: remy(30);
-	border: 1px solid var(--color-smuglyy-yarkiy);
+	border: 1px solid var(--svetlo-siniy);
 	line-height: 1;
 	letter-spacing: 0.06em;
 	padding-inline: remy(30);
 	color: var(--color-belyy);
-	background: var(--color-smuglyy-yarkiy);
+	background: var(--svetlo-siniy);
 
 }
+.btn:hover{
+	background: var(--goluboy);
+	border-color: var(--goluboy);
+}
+.btn:active{background: var(--color-svetlyy-);border-color:var(--color-svetlyy-)}
 .btn-outline{
 	background: var(--color-belyy);
-	color: var(--color-smuglyy-yarkiy);
+	border: 1px solid var(--temno-siniy);
+	color: var(--temno-siniy);
+	&:hover{background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(19, 36, 57, 0.8); }
 }
 .btn-light{
 	background: var(--color-smuglyy-yarkiy-opac);
@@ -88,4 +95,10 @@
 		height: remy(52);
 		svg.svg-cart{color: var(--color-smuglyy);}
 	}
+}
+.buttons-column{
+	display: flex;
+	flex-direction: column;
+	row-gap:remy(16);
+	&>*{width: 100%;}
 }

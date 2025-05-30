@@ -1,0 +1,143 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Карточки
+
+				.container-dashboard__content
+					
+						
+					//карточка, когда в корзину закинули товар
+					.short-basket.border-round-card
+						.short-basket__header.flex-center-y
+							.fs-24 Корзина
+							button.cart-clean Очистить
+						
+						//content
+						.short-basket__content
+							//short-card
+							.basket-card.basket-card--mini
+								.basket-card__img
+									img.img-cover(src='../img/products/product1.webp', srcset='../img/products/product1@2x.webp 2x' width='83' height='83' alt='img')
+								
+								.basket-card__group
+									.basket-card__title
+										.product-name Мидии 40/60, неочищенные
+										.product-info Охлажденные
+								
+								
+									.basket-card__counter
+										+counter('200 ₽/кг')
+									
+									.basket-card__cost
+										.cost-block
+											span.cost-block__new 100 999 &#8381;
+											//span.cost-block__old 100 999 &#8381;
+									
+									.basket-card__btn
+										button.remove-button
+											svg.svg-delete
+												use(href='../img/sprite.svg#svg-delete')
+						
+							//short-card
+							.basket-card.basket-card--mini
+								.basket-card__img
+									img.img-cover(src='../img/products/product1.webp', srcset='../img/products/product1@2x.webp 2x' width='83' height='83' alt='img')
+								
+								.basket-card__group
+									.basket-card__title
+										.product-name Мидии 40/60, неочищенные Мидии 40/60, неочищенные Мидии 40/60, неочищенные
+										.product-info Охлажденные
+								
+								
+									.basket-card__counter
+										+counter('200 ₽/кг')
+									
+									.basket-card__cost
+										.cost-block
+											span.cost-block__new 100 999 &#8381;
+											//span.cost-block__old 100 999 &#8381;
+									
+									.basket-card__btn
+										button.remove-button
+											svg.svg-delete
+												use(href='../img/sprite.svg#svg-delete')
+						
+						//total
+						.basket__total
+							.basket__total-row.flex-center-y
+								.basket__total-txt итого:
+								.basket__total-summ 
+									span 206 200 &#8381;
+							
+							.basket__total--ps *Цена указана без учета доставки 
+						//buttons
+						.buttons-column
+							a(href="order.html").btn Оформить заказ
+							a(href="basket.html").btn-outline Перейти в корзину
+
+					
+		script.
+			document.addEventListener("DOMContentLoaded", function () {
+				let counters = document.querySelectorAll('.counter');
+
+				counters.forEach((counter) => {
+					const minusButton = counter.querySelector('.counter-minus');
+					const plusButton = counter.querySelector('.counter-plus');
+					const counterValue = counter.querySelector('.counter-value'); // <input type="number">
+
+					// Обновляет кнопку "-" в зависимости от текущего значения
+					const updateMinusButtonState = (value) => {
+						if (value <= 0) {
+							minusButton.setAttribute('disabled', 'disabled');
+						} else {
+							minusButton.removeAttribute('disabled');
+						}
+					};
+
+					// Слушаем клик на кнопку "-"
+					minusButton.addEventListener('click', () => {
+						let currentValue = parseInt(counterValue.value, 10) || 0;
+						if (currentValue > 0) {
+							currentValue -= 1;
+							counterValue.value = currentValue;
+							updateMinusButtonState(currentValue);
+						}
+					});
+
+					// Слушаем клик на кнопку "+"
+					plusButton.addEventListener('click', () => {
+						let currentValue = parseInt(counterValue.value, 10) || 0;
+						currentValue += 1;
+						counterValue.value = currentValue;
+						updateMinusButtonState(currentValue);
+					});
+
+					// Обработка ручного ввода
+					counterValue.addEventListener('input', () => {
+						let value = parseInt(counterValue.value, 10);
+						if (isNaN(value) || value < 0) {
+							counterValue.value = 0;
+							value = 0;
+						}
+						updateMinusButtonState(value);
+					});
+				});
+			})
