@@ -279,6 +279,24 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 
-   
+   //
+   const catalogyItems = document.querySelectorAll('.catalogy-item');
+   if(hasDrop.length>0){
+      catalogyItems.forEach((item)=>{
+        catalogyHasDrop = item.querySelector('.has-drop');
+        catalogyDropContent = item.querySelector('.has-drop-content');
+        catalogyHasSub = item.querySelector('.has-subdrop');
+        catalogySubContent = item.querySelector('.has-subdrop-content');
+
+        catalogyHasDrop.addEventListener('click', ()=>{
+          if(item.classList.contains('active')){
+            item.classList.remove('active');
+          }else{
+             item.classList.add('active');
+             catalogyDropContent.classList.add('active');
+          }
+        })
+      });
+   }
    
   });

@@ -1,0 +1,87 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Каталог
+
+				.container-dashboard__content
+					.catalogy
+						
+						.catalogy-menu
+							//single  drop
+							.catalogy-item
+								.catalogy-item__btn.has-drop Каталог
+								
+								.catalogy-item__drop.has-drop-content
+									//single category
+									.catalogy-category.has-subdrop
+										.catalogy-category__btn
+											
+											.catalogy-category__icon
+												svg.svg-category1
+													use(href='../img/sprite.svg#category1')
+											
+											.catalogy-category__cat
+												P Рыба
+												span (96)
+										//subcategory
+										.catalogy-sub.has-subdrop-content
+											a(href="#!").catalogy-sub__item Рыба вяленная
+											a(href="#!").catalogy-sub__item Рыба вяленная
+											a(href="#!").catalogy-sub__item Рыба вяленная
+											a(href="#!").catalogy-sub__item Рыба вяленная
+											a(href="#!").catalogy-sub__item Рыба вяленная
+					
+					
+					
+					//- include ../blocks/_catalogy-menu
+
+					pre.
+						include ../blocks/_catalogy-menu
+		script.
+			const catalogyItems = document.querySelectorAll('.catalogy-item');
+			if(catalogyItems.length>0){
+				catalogyItems.forEach((item)=>{
+					catalogyHasDrop = item.querySelector('.has-drop');
+					catalogyDropContent = item.querySelector('.has-drop-content');
+					catalogyHasSub = item.querySelector('.has-subdrop');
+					catalogySubContent = item.querySelector('.has-subdrop-content');
+
+					catalogyHasDrop.addEventListener('click', ()=>{
+						if(item.classList.contains('active')){
+							item.classList.remove('active');
+						}else{
+							item.classList.add('active');
+							catalogyDropContent.classList.add('active');
+						}
+					});
+					catalogyHasSub.addEventListener('click', ()=>{
+						if(catalogyHasSub.classList.contains('active')){
+							catalogyHasSub.classList.remove('active');
+						}else{
+							catalogyHasSub.classList.add('active');
+							
+						}
+					})
+				});
+
+				
+			}
+		
