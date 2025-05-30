@@ -1,0 +1,59 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Карточка рассчета
+
+				.container-dashboard__content
+					
+					.basket-calculate.border-round-card
+						.basket-calculate__list
+							
+							.basket-calculate__item
+								.basket-calculate__text Кол-во товаров: 1
+								.basket-calculate__price 206 200 &#8381;
+
+							.basket-calculate__item
+								.basket-calculate__text Скидка
+								.basket-calculate__price.txt-red -1 200 &#8381;
+
+							.basket-calculate__item
+								.basket-calculate__text Промокод
+								.basket-calculate__price.txt-red -10 000 &#8381;
+						
+						.basket__total
+							.basket__total-row.flex-center-y
+								.basket__total-txt Итого:
+								.basket__total-summ 
+									span 195 000 &#8381;
+							.basket__total--ps *Цена указана без учета доставки 
+							
+						form.promo-use
+							.form-item
+								input.promo-use(type="text" placeholder="Промокод")
+								button.btn.promo-use-btn(type="submit") Применить
+						.basket-calculate__footer
+							a(href="order.html").btn-dark.w-100  Оформить заказ
+					
+					//- include ../blocks/_basket-calculate
+
+					pre.
+						include ../blocks/_basket-calculate
+		

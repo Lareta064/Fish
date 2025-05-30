@@ -1,5 +1,5 @@
 
-.btn, .btn-outline, .btn-light{
+.btn,.btn-dark, .btn-outline, .btn-light{
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -8,7 +8,6 @@
 	font-size: 1rem;
 	height: remy(52);
 	border-radius: remy(30);
-	border: 1px solid var(--svetlo-siniy);
 	line-height: 1;
 	letter-spacing: 0.06em;
 	padding-inline: remy(30);
@@ -18,14 +17,27 @@
 }
 .btn:hover{
 	background: var(--goluboy);
-	border-color: var(--goluboy);
+	color: var(--svetlo-siniy);
+	
 }
-.btn:active{background: var(--color-svetlyy-);border-color:var(--color-svetlyy-)}
+.btn:active{background: var(--color-svetlyy-);color: var(--svetlo-siniy);}
 .btn-outline{
 	background: var(--color-belyy);
 	border: 1px solid var(--temno-siniy);
 	color: var(--temno-siniy);
 	&:hover{background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(19, 36, 57, 0.8); }
+}
+.btn-dark{
+	
+	background: var(--temno-siniy);
+	&:hover{
+		background: rgba(19, 36, 57, 0.8);
+		color: rgba(255, 255, 255, 0.8);
+	}
+	&:active{
+		background: #061e3a;
+		color: var(--color-belyy);
+	}
 }
 .btn-light{
 	background: var(--color-smuglyy-yarkiy-opac);

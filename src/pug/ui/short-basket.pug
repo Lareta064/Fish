@@ -22,77 +22,10 @@ html(lang="ru")
 				h2 Карточки
 
 				.container-dashboard__content
-					
 						
-					//карточка, когда в корзину закинули товар
-					.short-basket.border-round-card
-						.short-basket__header.flex-center-y
-							.fs-24 Корзина
-							button.cart-clean Очистить
-						
-						//content
-						.short-basket__content
-							//short-card
-							.basket-card.basket-card--mini
-								.basket-card__img
-									img.img-cover(src='../img/products/product1.webp', srcset='../img/products/product1@2x.webp 2x' width='83' height='83' alt='img')
-								
-								.basket-card__group
-									.basket-card__title
-										.product-name Мидии 40/60, неочищенные
-										.product-info Охлажденные
-								
-								
-									.basket-card__counter
-										+counter('200 ₽/кг')
-									
-									.basket-card__cost
-										.cost-block
-											span.cost-block__new 100 999 &#8381;
-											//span.cost-block__old 100 999 &#8381;
-									
-									.basket-card__btn
-										button.remove-button
-											svg.svg-delete
-												use(href='../img/sprite.svg#svg-delete')
-						
-							//short-card
-							.basket-card.basket-card--mini
-								.basket-card__img
-									img.img-cover(src='../img/products/product1.webp', srcset='../img/products/product1@2x.webp 2x' width='83' height='83' alt='img')
-								
-								.basket-card__group
-									.basket-card__title
-										.product-name Мидии 40/60, неочищенные Мидии 40/60, неочищенные Мидии 40/60, неочищенные
-										.product-info Охлажденные
-								
-								
-									.basket-card__counter
-										+counter('200 ₽/кг')
-									
-									.basket-card__cost
-										.cost-block
-											span.cost-block__new 100 999 &#8381;
-											//span.cost-block__old 100 999 &#8381;
-									
-									.basket-card__btn
-										button.remove-button
-											svg.svg-delete
-												use(href='../img/sprite.svg#svg-delete')
-						
-						//total
-						.basket__total
-							.basket__total-row.flex-center-y
-								.basket__total-txt итого:
-								.basket__total-summ 
-									span 206 200 &#8381;
-							
-							.basket__total--ps *Цена указана без учета доставки 
-						//buttons
-						.buttons-column
-							a(href="order.html").btn Оформить заказ
-							a(href="basket.html").btn-outline Перейти в корзину
-
+					include ../blocks/_short-basket
+					pre.
+						include ../blocks/_short-basket
 					
 		script.
 			document.addEventListener("DOMContentLoaded", function () {

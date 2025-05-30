@@ -49,6 +49,7 @@
 		
 	}
 }
+.short-basket__content{border-bottom: 1px solid rgba(28, 28, 28, 0.1);}
 .cart-clean{
 	font-family: var(--font-family);
 	font-weight: 900;
@@ -62,7 +63,7 @@
 	font-family: var(--font-family);
 	font-weight: 400;
 	font-size: remy(16);
-	border-top: 1px solid rgba(28, 28, 28, 0.1);
+	
 	&-row{
 		column-gap:remy(10);
 		justify-content: space-between;	
@@ -70,7 +71,6 @@
 		border-bottom: 1px solid rgba(28, 28, 28, 0.1);
 	}
 	.basket__total-txt{
-		
 		font-size: remy(20);
 		letter-spacing: -0.02em;
 		text-transform: capitalize;
