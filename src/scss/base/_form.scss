@@ -1,10 +1,28 @@
 
 .form-item{
 	position: relative;
-	input{
+	input.form-input, textarea.form-textarea{
 		width: 100%;
 		display: block;
+		border: 1px solid var(--goluboy);
+		border-radius: remy(24);
+		padding-inline: 1rem;
+		height: remy(52);
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 1rem;
+		line-height: 1.25;
+		letter-spacing: -0.02em;
+		color: rgba(14, 21, 38, .8);
 	}
+	textarea.form-textarea{
+		height: remy(160);
+		padding: 1rem;
+	}
+}
+.form-item.w-50{
+	flex:1;
+	max-width: 50%;
 }
 .range-slider-wrapper{
 	column-gap: remy(12);
