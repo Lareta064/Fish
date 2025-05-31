@@ -1,16 +1,22 @@
-.grid-two-columns{
+.grid-two-columns, .grid-three-columns{
 	display: flex;
 	column-gap: remy(20);
 	
 }
 .grid-two-columns .grid-content {
 	flex:1;
+	
+}
+.grid-three-columns .grid-content {
+	display: flex;
+	column-gap: remy(32);
+	flex:1;
+}
+.grid-three-columns {
 	.grid-content-aside{
 		flex-shrink: 0;
 		width: remy(240);
 	}
 	.grid-content-body{flex: 1;}
 }
-.grid-three-columns .grid-content {display: flex;
-	column-gap: remy(32);}
-.grid-two-columns .grid-aside{width: remy(364);flex-shrink:0;}
+.grid-two-columns .grid-aside, .grid-three-columns .grid-aside{width: remy(364);flex-shrink:0;}

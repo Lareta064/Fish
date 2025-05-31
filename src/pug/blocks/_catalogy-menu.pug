@@ -1,0 +1,114 @@
+.catalogy
+	.catalogy-menu
+		//КАТЕГОРИИ
+		.catalogy-item
+			.catalogy-item__btn.has-drop 
+				a(href="#").catalogy-item__name Каталог
+				i.carret-down
+			
+			.catalogy-item__drop.has-drop-content
+				//single category
+				.catalogy-category.has-subdrop
+					.catalogy-category__btn
+						
+						.catalogy-category__icon
+							svg.svg-category1
+								use(href='../img/sprite.svg#category1')
+						
+						.catalogy-category__cat
+							p Рыба
+							span (96)
+					//subcategory
+					.catalogy-sub.has-subdrop-content
+						a(href="#!").catalogy-sub__item 
+							p Рыба вяленная
+							span (25)
+						a(href="#!").catalogy-sub__item 
+							p Рыба вяленная
+							span (25)
+						a(href="#!").catalogy-sub__item 
+							p Рыба вяленная
+							span (25)
+						a(href="#!").catalogy-sub__item 
+							p Рыба вяленная
+							span (25)
+						a(href="#!").catalogy-sub__item 
+							p Рыба вяленная
+							span (25)
+				
+				//single category
+				.catalogy-category.has-subdrop
+					.catalogy-category__btn
+						
+						.catalogy-category__icon
+							svg.svg-category2
+								use(href='../img/sprite.svg#category2')
+						
+						.catalogy-category__cat
+							p Икра
+							span (96)
+					//subcategory
+					.catalogy-sub.has-subdrop-content
+						a(href="#!").catalogy-sub__item 
+							p Икра красная
+							span (25)
+						a(href="#!").catalogy-sub__item 
+							p Икра черная
+							span (25)
+						a(href="#!").catalogy-sub__item 
+							p Рыба щучья
+							span (25)
+						a(href="#!").catalogy-sub__item 
+							p Икра красная
+							span (25)
+						a(href="#!").catalogy-sub__item 
+							p Икра черная
+							span (25)
+
+		//ЦЕНА
+		.catalogy-item
+			.catalogy-item__btn.has-drop 
+				a(href="#").catalogy-item__name Цена, ₽
+				i.carret-down
+			
+			.catalogy-item__drop.has-drop-content
+				#slider
+					div.range-slider-wrapper.flex-center
+						input#minValue.range-slider-input(type='number' min='0' max='800')
+						input#maxValue.range-slider-input(type='number' min='0' max='800')
+					script(src="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.js")
+					script.
+						const slider = document.getElementById('slider');
+						const minValue = document.getElementById('minValue');
+						const maxValue = document.getElementById('maxValue');
+
+						noUiSlider.create(slider, {
+							start: [250, 800],
+							connect: true,
+							range: {
+								min: 0,
+								max: 1000
+							}
+						});
+
+						// Синхронизация ползунка с полями
+						slider.noUiSlider.on('update', (values) => {
+							minValue.value = Math.round(values[0]);
+							maxValue.value = Math.round(values[1]);
+						});
+
+						// Синхронизация полей с ползунком
+						minValue.addEventListener('change', () => {
+							slider.noUiSlider.set([minValue.value, null]);
+						});
+
+						maxValue.addEventListener('change', () => {
+							slider.noUiSlider.set([null, maxValue.value]);
+						});
+
+		.catalogy-item
+			.catalogy-item__btn.has-drop 
+				a(href="#").catalogy-item__name Акции
+				i.carret-down
+			
+			.catalogy-item__drop.has-drop-content
