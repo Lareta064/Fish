@@ -299,4 +299,38 @@ document.addEventListener('DOMContentLoaded', function() {
       });
    }
    
-  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  const slider = document.getElementById('slider');
+  if(slider){
+
+    const minValue = document.getElementById('minValue');
+    const maxValue = document.getElementById('maxValue');
+
+    noUiSlider.create(slider, {
+      start: [250, 800],
+      connect: true,
+      range: {
+        min: 0,
+        max: 1000
+      }
+    });
+
+    // Синхронизация ползунка с полями
+    slider.noUiSlider.on('update', (values) => {
+      minValue.value = Math.round(values[0]);
+      maxValue.value = Math.round(values[1]);
+    });
+
+    // Синхронизация полей с ползунком
+    minValue.addEventListener('change', () => {
+      slider.noUiSlider.set([minValue.value, null]);
+    });
+
+    maxValue.addEventListener('change', () => {
+      slider.noUiSlider.set([null, maxValue.value]);
+    });
+  }
+})
