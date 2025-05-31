@@ -23,9 +23,8 @@ html(lang="ru")
 
 				.container-dashboard__content
 					.catalogy
-						
 						.catalogy-menu
-							//single  drop
+							//single catalogy-item
 							.catalogy-item
 								.catalogy-item__btn.has-drop 
 									a(href="#").catalogy-item__name Каталог
@@ -60,6 +59,35 @@ html(lang="ru")
 											a(href="#!").catalogy-sub__item 
 												p Рыба вяленная
 												span (25)
+									
+									//single category
+									.catalogy-category.has-subdrop
+										.catalogy-category__btn
+											
+											.catalogy-category__icon
+												svg.svg-category2
+													use(href='../img/sprite.svg#category2')
+											
+											.catalogy-category__cat
+												p Икра
+												span (96)
+										//subcategory
+										.catalogy-sub.has-subdrop-content
+											a(href="#!").catalogy-sub__item 
+												p Икра красная
+												span (25)
+											a(href="#!").catalogy-sub__item 
+												p Икра черная
+												span (25)
+											a(href="#!").catalogy-sub__item 
+												p Рыба щучья
+												span (25)
+											a(href="#!").catalogy-sub__item 
+												p Икра красная
+												span (25)
+											a(href="#!").catalogy-sub__item 
+												p Икра черная
+												span (25)
 					
 					
 					
@@ -73,8 +101,8 @@ html(lang="ru")
 				catalogyItems.forEach((item)=>{
 					catalogyHasDrop = item.querySelector('.has-drop');
 					catalogyDropContent = item.querySelector('.has-drop-content');
-					catalogyHasSub = item.querySelector('.has-subdrop');
-					catalogySubContent = item.querySelector('.has-subdrop-content');
+					catalogyHasSub = item.querySelectorAll('.has-subdrop');
+					
 
 					catalogyHasDrop.addEventListener('click', ()=>{
 						if(item.classList.contains('active')){
@@ -84,14 +112,19 @@ html(lang="ru")
 							catalogyDropContent.classList.add('active');
 						}
 					});
-					catalogyHasSub.addEventListener('click', ()=>{
-						if(catalogyHasSub.classList.contains('active')){
-							catalogyHasSub.classList.remove('active');
-						}else{
-							catalogyHasSub.classList.add('active');
-							
-						}
-					})
+
+					catalogyHasSub.forEach((sub)=>{
+						catalogySubContent = sub.querySelector('.has-subdrop-content');
+					
+							sub.addEventListener('click', ()=>{
+								if(sub.classList.contains('active')){
+									sub.classList.remove('active');
+								}else{
+									sub.classList.add('active');
+									
+								}
+							});
+					});
 				});
 
 				

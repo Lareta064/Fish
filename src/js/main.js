@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function() {
       catalogyItems.forEach((item)=>{
         catalogyHasDrop = item.querySelector('.has-drop');
         catalogyDropContent = item.querySelector('.has-drop-content');
-        catalogyHasSub = item.querySelector('.has-subdrop');
+        catalogyHasSub = item.querySelectorAll('.has-subdrop');
         catalogySubContent = item.querySelector('.has-subdrop-content');
 
         catalogyHasDrop.addEventListener('click', ()=>{
