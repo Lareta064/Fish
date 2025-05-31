@@ -333,4 +333,22 @@ document.addEventListener('DOMContentLoaded', function() {
       slider.noUiSlider.set([null, maxValue.value]);
     });
   }
+
+  //
+  const acordions = document.querySelectorAll('.acordion');
+  if(acordions.length >0){
+    acordions.forEach((acor)=>{
+      const acorGroups = acor.querySelectorAll('.acordion-group');
+        acorGroups.forEach((gr)=>{
+          acorItemHeader = gr.querySelector('.acordion-header');
+          acorItemHeader.addEventListener('click', ()=>{
+            if(gr.classList.contains('active')){
+              gr.classList.remove('active');
+            }else{
+              gr.classList.add('active');
+            }
+          });
+        });
+    });
+  }
 })

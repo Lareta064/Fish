@@ -1,0 +1,53 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Аккордеон
+
+				.container-dashboard__content
+					.faq-acordion.acordion
+						//=======single item =====
+						.acordion-group
+							.acordion-header 
+								.acordion-title Как скоро перезвонит менеджер?
+								span.acordion-icon
+							
+							.acordion-body
+								.acordion-body__content
+									p Мы понимаем, что свежесть и качество рыбы — это ключевые факторы для наших клиентов. Принимаем все необходимые меры, чтобы гарантировать, что ваша рыба будет доставлена в идеальном состоянии: используем специальные термоизолирующие упаковки и ледяные гели, стремимся минимизировать время доставки, перед отправкой мы тщательно проверяем каждый продукт на свежесть и качество. Мы работаем только с надежными поставщиками и местными рыбаками.
+		
+		script.
+			const acordions = document.querySelectorAll('.acordion');
+			if(acordions.length >0){
+				acordions.forEach((acor)=>{
+				const acorGroups = acor.querySelectorAll('.acordion-group');
+					acorGroups.forEach((gr)=>{
+					acorItemHeader = gr.querySelector('.acordion-header');
+					acorItemHeader.addEventListener('click', ()=>{
+						if(gr.classList.contains('active')){
+						gr.classList.remove('active');
+						}else{
+						gr.classList.add('active');
+						}
+					});
+					});
+				});
+			}
+									
