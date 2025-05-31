@@ -92,3 +92,13 @@ svg.svg-cart{
 	height: remy(32);
 	color: #0E1526;
 }
+i.carret-down{
+	width: remy(24);
+	height: remy(14);
+	display: inline-block;
+	flex-shrink: 0;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='13' viewBox='0 0 24 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_638_55684)'%3e%3cpath d='M17.42 2.95199L18.48 4.01299L12.703 9.79199C12.6104 9.88514 12.5004 9.95907 12.3791 10.0095C12.2579 10.06 12.1278 10.0859 11.9965 10.0859C11.8652 10.0859 11.7352 10.06 11.6139 10.0095C11.4927 9.95907 11.3826 9.88514 11.29 9.79199L5.51001 4.01299L6.57001 2.95299L11.995 8.37699L17.42 2.95199Z' fill='black' /%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_638_55684'%3e%3crect width='12' height='24' fill='white' transform='matrix(0 1 -1 0 24 0.5)' /%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: .2s; 
+}

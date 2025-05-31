@@ -4,17 +4,25 @@
 	.catalogy-item{
 		padding-top: remy(16);
 		padding-bottom: remy(24);
-	
+		
 	}
 	.catalogy-item__btn{
-		font-weight: 500;
-		font-size: remy(20);
-		line-height: 120%;
-		letter-spacing: 0.02em;
-		color: var(--temno-siniy);
+		
 		border-bottom: 1px solid var(--goluboy);
 		padding-top: remy(16);
 		padding-bottom: remy(24);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.catalogy-item__name{
+			flex: 1;
+			font-weight: 500;
+			font-size: remy(20);
+			line-height: 1.20;
+		
+			letter-spacing: 0.02em;
+			color: var(--temno-siniy);
+		}
 	}
 	.catalogy-category {}
 	.catalogy-category__btn{
@@ -23,10 +31,8 @@
 		column-gap: remy(16);
 		font-size: remy(16);
 		padding-block: .5em;
-		.active{
-			color: var(--svetlo-siniy);
-			svg{color: var(--svetlo-siniy);}
-		}
+		border-bottom: 1px solid var(--goluboy);
+		
 	}
 	.active .catalogy-category__btn{
 		color: var(--svetlo-siniy);
@@ -60,6 +66,12 @@
 		color: #333
 	}
 	.has-drop-content, .has-subdrop-content{display: none;}
-	.active {.has-drop-content{display: block;}}
+	.catalogy-item.active {
+		.has-drop-content{display: block;}
+		.carret-down{transform: rotate(180deg);}
+	}
 	.has-subdrop.active  .has-subdrop-content{display: block;}
+	.has-subdrop.active {
+		.catalogy-category__icon svg, .catalogy-category__cat{color:var(--svetlo-siniy);}
+	}
 }
