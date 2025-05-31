@@ -65,7 +65,7 @@
 		font-size: remy(16);
 		line-height: 1;
 		letter-spacing: -0.02em;
-		color: #333;
+		color: var(--temno-siniy);
 		transition: .2s; 
 		&:hover{
 			color: var(--svetlo-siniy);
