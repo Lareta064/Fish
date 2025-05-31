@@ -1,0 +1,46 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Карточки
+
+				.container-dashboard__content
+					.assortiment-grid
+						a(href="#!").assortiment-card
+							.assortiment-card__img
+								img(src='../img/assort1.webp', srcset='../img/assort1@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+							.fs-30 Икра
+							.fs-16.flex-center-y
+								span черная
+								span красная
+						a(href="#!").assortiment-card
+							.assortiment-card__img
+								img(src='../img/assort1.webp', srcset='../img/assort1@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+							.fs-30 Икра
+							.fs-16.flex-center-y
+								span черная
+								span красная
+						a(href="#!").assortiment-card
+							.assortiment-card__img
+								img(src='../img/assort1.webp', srcset='../img/assort1@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+							.fs-30 Икра
+							.fs-16.flex-center-y
+								span черная
+								span красная
