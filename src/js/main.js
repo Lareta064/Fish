@@ -280,24 +280,37 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
    //
-   const catalogyItems = document.querySelectorAll('.catalogy-item');
-   if(catalogyItems.length>0){
-      catalogyItems.forEach((item)=>{
-        catalogyHasDrop = item.querySelector('.has-drop');
-        catalogyDropContent = item.querySelector('.has-drop-content');
-        catalogyHasSub = item.querySelectorAll('.has-subdrop');
-        catalogySubContent = item.querySelector('.has-subdrop-content');
+  const catalogyItems = document.querySelectorAll('.catalogy-item');
+			if(catalogyItems.length>0){
+				catalogyItems.forEach((item)=>{
+					catalogyHasDrop = item.querySelector('.has-drop');
+					catalogyDropContent = item.querySelector('.has-drop-content');
+					catalogyHasSub = item.querySelectorAll('.has-subdrop');
+					
 
-        catalogyHasDrop.addEventListener('click', ()=>{
-          if(item.classList.contains('active')){
-            item.classList.remove('active');
-          }else{
-             item.classList.add('active');
-             catalogyDropContent.classList.add('active');
-          }
-        })
-      });
-   }
+					catalogyHasDrop.addEventListener('click', ()=>{
+						if(item.classList.contains('active')){
+							item.classList.remove('active');
+						}else{
+							item.classList.add('active');
+							catalogyDropContent.classList.add('active');
+						}
+					});
+
+					catalogyHasSub.forEach((sub)=>{
+						catalogySubContent = sub.querySelector('.has-subdrop-content');
+					
+							sub.addEventListener('click', ()=>{
+								if(sub.classList.contains('active')){
+									sub.classList.remove('active');
+								}else{
+									sub.classList.add('active');
+									
+								}
+							});
+					});
+				});
+			}
    
 });
 
