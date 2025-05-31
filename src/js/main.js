@@ -281,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
    //
    const catalogyItems = document.querySelectorAll('.catalogy-item');
-   if(hasDrop.length>0){
+   if(catalogyItems.length>0){
       catalogyItems.forEach((item)=>{
         catalogyHasDrop = item.querySelector('.has-drop');
         catalogyDropContent = item.querySelector('.has-drop-content');
@@ -347,7 +347,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }else{
               gr.classList.add('active');
             }
-          });
+          })
         });
     });
   }
