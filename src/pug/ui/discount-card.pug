@@ -1,0 +1,49 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Карточки
+
+				.container-dashboard__content
+					.promotion-cards-grid
+						a(href="#!").promotion-card
+							img.img-cover(src='../img/discount/discount1.webp', srcset='../img/discount/discount1@2x.webp 2x'  width="750" height="451" loading='lazy' alt='img')
+							.promotion-card__content
+								.h2 Сезон устриц
+								.fs-24 устрицы разных видов,<br>привезенные из Японии
+								
+								.promotion-card__labels.flex-center-y
+									.white-label 07.06 - 30.06
+									.white-label 37K0LM
+						
+						a(href="#!").promotion-card
+							img.img-cover(src='../img/discount/discount2.webp', srcset='../img/discount/discount2@2x.webp 2x'  width="750" height="451" loading='lazy' alt='img')
+							.promotion-card__content
+								.h2 10% скидка на сезонную<br>БАРАБУЛЮ
+								
+								.promotion-card__labels.flex-center-y
+									.white-label 44UOI8
+						
+						a(href="#!").promotion-card
+							img.img-cover(src='../img/discount/discount3.webp', srcset='../img/discount/discount3@2x.webp 2x'  width="750" height="451" loading='lazy' alt='img')
+							.promotion-card__content
+								.h2 Как в ресторане 
+								.fs-24 совместно с рестораном “La&nbsp;Luna” сделали маринад для&nbsp;мидий 
+								
