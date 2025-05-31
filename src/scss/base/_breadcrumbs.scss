@@ -1,0 +1,32 @@
+.breadcrumbs{
+	list-style-type: none;
+	display: flex;
+	column-gap:remy(16);
+	.breadcrumb-item{
+		list-style-type: none;
+		position: relative;
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 1rem;
+		line-height: 200%;
+		color: var(--temno-siniy);
+		display: inline-flex;
+		align-items: center;
+		column-gap:remy(12);
+		&:after{
+			content:'';
+			width: remy(10);height: remy(6);
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.57169 5.07225L0.346183 0.991167C0.156863 0.808319 0.154972 0.505536 0.341991 0.320336C0.522199 0.141882 0.811603 0.138943 0.995397 0.313701L6 5.07225L0.994565 9.69603C0.810467 9.86609 0.525168 9.86126 0.346934 9.68507C0.157607 9.49791 0.161963 9.19084 0.356523 9.00912L4.57169 5.07225Z' fill='%23132439' /%3e%3c/svg%3e");
+			flex-shrink:0;
+			background-position: center;
+			background-repeat: no-repeat;
+
+		}
+	}
+	.breadcrumb-item:last-child {
+		font-weight: 800;
+		pointer-events:none;
+		cursor:default;
+		&:after{display: none;}
+	}
+}

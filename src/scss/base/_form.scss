@@ -71,3 +71,31 @@
 	border:0;
 	background-color: transparent;
 }
+.form-button.flex-center-y{
+	gap: 2rem;
+	@media (max-width: 767px) {
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	
+	}
+}
+.form-button .btn-dark{
+	width: 100%;
+	max-width: remy(324);
+}
+.agree-block{
+	max-width: remy(370);
+	font-size: 1rem;
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: -0.02em;
+	color: var(--color-chernyy);
+	@media (max-width: 767px) {
+		font-size: remy(12);
+		line-height: 1;
+		letter-spacing: 0.03em;
+		text-align: center;
+		color: var(--color-chernyy);
+	}
+}
