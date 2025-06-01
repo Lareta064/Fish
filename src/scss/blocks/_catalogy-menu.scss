@@ -61,7 +61,10 @@
 		letter-spacing: 0.02em;
 		color: var(--temno-siniy);
 	}
-	
+	.catalogy-sub{
+		padding-bottom: remy(15);
+		border-bottom: 1px solid var(--goluboy);
+	}
 	.catalogy-sub__item{
 		padding: remy(15) remy(10);
 		padding-left: remy(24);
