@@ -44,7 +44,7 @@
 	.active .catalogy-category__btn{
 		color: var(--svetlo-siniy);
 		
-		svg{color: var(--svetlo-siniy);}
+		// svg{color: var(--svetlo-siniy);}
 	}
 	.catalogy-category__icon{
 		width: remy(32);
@@ -91,4 +91,9 @@
 		.catalogy-category__icon svg, .catalogy-category__cat{color:var(--svetlo-siniy);}
 		.catalogy-category__btn{border-bottom-color:transparent;}
 	}
+	
+}
+.catalogy-buttons{
+
+	&>*+*{margin-top: remy(24)}
 }

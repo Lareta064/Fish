@@ -184,8 +184,8 @@
 				.catalogy-item__drop.has-drop-content
 					#slider
 						div.range-slider-wrapper.flex-center
-							input#minValue.range-slider-input(type='number' min='0' max='800')
-							input#maxValue.range-slider-input(type='number' min='0' max='800')
+							input#minValue.range-slider-input(type='number' min='0' max='500')
+							input#maxValue.range-slider-input(type='number' min='0' max='1000')
 						script(src="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.js")
 						script.
 							const slider = document.getElementById('slider');
@@ -193,7 +193,7 @@
 							const maxValue = document.getElementById('maxValue');
 
 							noUiSlider.create(slider, {
-								start: [250, 800],
+								start: [50, 900],
 								connect: true,
 								range: {
 									min: 0,
@@ -235,4 +235,5 @@
 							span РаспроЖара
 
 		.catalogy-buttons
+			button.btn-outline.btn-44(type="submit") Применить фильтр
 			input.btn-light.btn-44(type="reset" name="clean_catalofy_form" value="Очистить фильтр")
