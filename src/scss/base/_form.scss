@@ -52,7 +52,7 @@
 		left: 0;
 		right: 0;
 		bottom: remy(7);
-		height: 3px;
+		height: remy(3);
 		.noUi-connect{background: var(--svetlo-siniy);}
 	}
 .noUi-horizontal .noUi-handle{
@@ -62,6 +62,7 @@
 	background-color: #fff;
 	border:remy(3) solid var(--svetlo-siniy);
 	right:remy(-12);
+	top:remy(-6);
 	&:before, &:after{display: none;}
 }
 .noUi-connects{background-color: var(--goluboy);}
@@ -87,7 +88,7 @@
 .agree-block{
 	max-width: remy(370);
 	font-size: 1rem;
-	font-size: 16px;
+	font-size: remy(16);
 	line-height: 1.25;
 	letter-spacing: -0.02em;
 	color: var(--color-chernyy);
@@ -103,7 +104,7 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-	column-gap:2px;
+	column-gap:remy(2);
 	font-weight: 500;
 	font-size: remy(14);
 	line-height: 1.43;
@@ -186,7 +187,7 @@
 	scrollbar-color: #EAEAEA white;
 	z-index: 3;
 	font-weight: 400;
-	font-size: 14px;
+	font-size: remy(14);
 	color: #2f2f2f;
 	
 	&::-webkit-scrollbar{
@@ -198,7 +199,7 @@
 	 }
 	
 	ul{
-	  margin-block:10px; 
+	  margin-block:remy(10); 
 	  list-style-type: none;
 	  padding-left: 0;
 	  overflow: hidden;
