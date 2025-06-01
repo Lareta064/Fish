@@ -106,9 +106,20 @@
 							slider.noUiSlider.set([null, maxValue.value]);
 						});
 
+		//АКЦИИ
 		.catalogy-item
 			.catalogy-item__btn.has-drop 
 				a(href="#").catalogy-item__name Акции
 				i.carret-down
 			
 			.catalogy-item__drop.has-drop-content
+				.catalogy-filters-group
+					label.checkbox-label
+						input.checkbox-input(type="checkbox" name="check1")
+						span Спецпредложения
+					label.checkbox-label
+						input.checkbox-input(type="checkbox" name="check2")
+						span Скидка 50%
+					label.checkbox-label
+						input.checkbox-input(type="checkbox" name="check3")
+						span РаспроЖара

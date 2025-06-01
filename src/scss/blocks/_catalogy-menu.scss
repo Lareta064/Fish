@@ -3,7 +3,7 @@
 	background-color: #fff;
 	.catalogy-item{
 		padding-top: remy(16);
-		padding-bottom: remy(24);
+		padding-bottom: remy(16);
 		
 	}
 	.catalogy-item__btn{
@@ -76,6 +76,7 @@
 		.has-drop-content{display: block;}
 		.carret-down{transform: rotate(180deg);}
 	}
+	.has-drop-content{ padding-top: remy(16);}
 	.has-subdrop.active  .has-subdrop-content{display: block;}
 	.has-subdrop.active {
 		.catalogy-category__icon svg, .catalogy-category__cat{color:var(--svetlo-siniy);}

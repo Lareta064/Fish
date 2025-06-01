@@ -181,103 +181,79 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     // DROP SELECT
-    const dropdowns = document.querySelectorAll('.dropdown');
-    dropdowns.forEach(function (dropDownWrapper) {
-        const dropDownInput = dropDownWrapper.querySelector('.dropdown__input');
-        const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
-        const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
-        const dropDownSelected = dropDownList.querySelector('.selected');
-        const radioInput = dropDownWrapper.closest('.switch-label')?.querySelector('input[type="radio"]');
+    // const dropdowns = document.querySelectorAll('.dropdown');
+    // dropdowns.forEach(function (dropDownWrapper) {
+    //     const dropDownInput = dropDownWrapper.querySelector('.dropdown__input');
+    //     const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
+    //     const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
+    //     const dropDownSelected = dropDownList.querySelector('.selected');
+    //     const radioInput = dropDownWrapper.closest('.switch-label')?.querySelector('input[type="radio"]');
     
-        // Клик по инпуту. Открыть/Закрыть select
-        dropDownInput.addEventListener('click', function (e) {
-            dropDownList.classList.toggle('dropdown__list--visible');
-            this.classList.toggle('dropdown__input--active');
-            if (radioInput) radioInput.checked = true;
-        });
+    //     // Клик по инпуту. Открыть/Закрыть select
+    //     dropDownInput.addEventListener('click', function (e) {
+    //         dropDownList.classList.toggle('dropdown__list--visible');
+    //         this.classList.toggle('dropdown__input--active');
+    //         if (radioInput) radioInput.checked = true;
+    //     });
     
-        // Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
-        dropDownListItems.forEach(function (listItem) {
-            listItem.addEventListener('click', function (e) {
-                e.stopPropagation();
-                dropDownListItems.forEach(function (item) { item.classList.remove('selected') });
+    //     // Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
+    //     dropDownListItems.forEach(function (listItem) {
+    //         listItem.addEventListener('click', function (e) {
+    //             e.stopPropagation();
+    //             dropDownListItems.forEach(function (item) { item.classList.remove('selected') });
                 
-                dropDownInput.value = this.dataset.value;
-                this.classList.add('selected');
-                dropDownList.classList.remove('dropdown__list--visible');
-                dropDownInput.classList.remove('dropdown__input--active');
-                if (radioInput) radioInput.checked = true;
-            });
-        });
+    //             dropDownInput.value = this.dataset.value;
+    //             this.classList.add('selected');
+    //             dropDownList.classList.remove('dropdown__list--visible');
+    //             dropDownInput.classList.remove('dropdown__input--active');
+    //             if (radioInput) radioInput.checked = true;
+    //         });
+    //     });
     
-        // Клик снаружи дропдауна. Закрыть дропдаун
-        document.addEventListener('click', function (e) {
-            if (!dropDownWrapper.contains(e.target)) {
-                dropDownInput.classList.remove('dropdown__input--active');
-                dropDownList.classList.remove('dropdown__list--visible');
-            }
-        });
+    //     // Клик снаружи дропдауна. Закрыть дропдаун
+    //     document.addEventListener('click', function (e) {
+    //         if (!dropDownWrapper.contains(e.target)) {
+    //             dropDownInput.classList.remove('dropdown__input--active');
+    //             dropDownList.classList.remove('dropdown__list--visible');
+    //         }
+    //     });
     
-        // Нажатие на Tab или Escape. Закрыть дропдаун
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Tab' || e.key === 'Escape') {
-                dropDownInput.classList.remove('dropdown__input--active');
-                dropDownList.classList.remove('dropdown__list--visible');
-            }
-        });
-    });
-    
-   
-    //ACORDION
-    $(function() {
-    
-        //BEGIN
-        $(".accordion__title").on("click", function(e) {
-        
-          e.preventDefault();
-          var $this = $(this);
-        
-          if (!$this.hasClass("accordion-active")) {
-          $(".accordion__content").slideUp(400);
-          $(".accordion__title").removeClass("accordion-active");
-          $('.accordion__arrow').removeClass('accordion__rotate');
-          }
-        
-          $this.toggleClass("accordion-active");
-          $this.next().slideToggle();
-          $('.accordion__arrow',this).toggleClass('accordion__rotate');
-        });
-        //END
-      
-      });
+    //     // Нажатие на Tab или Escape. Закрыть дропдаун
+    //     document.addEventListener('keydown', function (e) {
+    //         if (e.key === 'Tab' || e.key === 'Escape') {
+    //             dropDownInput.classList.remove('dropdown__input--active');
+    //             dropDownList.classList.remove('dropdown__list--visible');
+    //         }
+    //     });
+    // });
     
 });
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  const tabsContainers = document.querySelectorAll('.tabs-container');
+  // const tabsContainers = document.querySelectorAll('.tabs-container');
   
-    tabsContainers.forEach(container => {
-      const tabs = container.querySelectorAll('.tab');
-      const contents = container.querySelectorAll('.tab-content');
+  //   tabsContainers.forEach(container => {
+  //     const tabs = container.querySelectorAll('.tab');
+  //     const contents = container.querySelectorAll('.tab-content');
   
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          tabs.forEach(innerTab => innerTab.classList.remove('active'));
-          tab.classList.add('active');
+  //     tabs.forEach(tab => {
+  //       tab.addEventListener('click', () => {
+  //         tabs.forEach(innerTab => innerTab.classList.remove('active'));
+  //         tab.classList.add('active');
   
-          contents.forEach(content => content.classList.remove('active'));
-          const activeContent = container.querySelector(tab.getAttribute('data-tab-target'));
+  //         contents.forEach(content => content.classList.remove('active'));
+  //         const activeContent = container.querySelector(tab.getAttribute('data-tab-target'));
   
-          // Проверяем, существует ли элемент activeContent перед добавлением класса
-          if (activeContent) {
-            activeContent.classList.add('active');
-          } else {
-            console.error('Ошибка: Нет элемента соответствующего data-tab-target:', tab.getAttribute('data-tab-target'));
-          }
-        });
-      });
-    });
+  //         // Проверяем, существует ли элемент activeContent перед добавлением класса
+  //         if (activeContent) {
+  //           activeContent.classList.add('active');
+  //         } else {
+  //           console.error('Ошибка: Нет элемента соответствующего data-tab-target:', tab.getAttribute('data-tab-target'));
+  //         }
+  //       });
+  //     });
+  //   });
 
    //
   const catalogyItems = document.querySelectorAll('.catalogy-item');
@@ -286,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
 					catalogyHasDrop = item.querySelector('.has-drop');
 					catalogyDropContent = item.querySelector('.has-drop-content');
 					catalogyHasSub = item.querySelectorAll('.has-subdrop');
-					
+					console.log('555');
 
 					catalogyHasDrop.addEventListener('click', ()=>{
 						if(item.classList.contains('active')){
@@ -316,36 +292,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
 
-  const slider = document.getElementById('slider');
-  if(slider){
-
-    const minValue = document.getElementById('minValue');
-    const maxValue = document.getElementById('maxValue');
-
-    noUiSlider.create(slider, {
-      start: [250, 800],
-      connect: true,
-      range: {
-        min: 0,
-        max: 1000
-      }
-    });
-
-    // Синхронизация ползунка с полями
-    slider.noUiSlider.on('update', (values) => {
-      minValue.value = Math.round(values[0]);
-      maxValue.value = Math.round(values[1]);
-    });
-
-    // Синхронизация полей с ползунком
-    minValue.addEventListener('change', () => {
-      slider.noUiSlider.set([minValue.value, null]);
-    });
-
-    maxValue.addEventListener('change', () => {
-      slider.noUiSlider.set([null, maxValue.value]);
-    });
-  }
 
   //
   const acordions = document.querySelectorAll('.acordion');

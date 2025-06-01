@@ -99,3 +99,24 @@
 		color: var(--color-chernyy);
 	}
 }
+.checkbox-label{
+	position: relative;
+	display: flex;
+	align-items: center;
+	column-gap:2px;
+	font-weight: 500;
+	font-size: remy(14);
+	line-height: 1.43;
+	text-align: center;
+	color: #020618;
+	margin-bottom: remy(12);
+	
+}
+.checkbox-input{
+	width: remy(16);
+	height: remy(16);
+	border-radius: remy(4);
+	flex-shrink: 0;
+	border: 1px solid var(--color-smuglyy-yarkiy);
+	background-color: #fff;
+}
