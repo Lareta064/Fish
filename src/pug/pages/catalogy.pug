@@ -5,11 +5,13 @@ block content
 	include ../sections/_header.pug
 	main.inner-page
 		.container
-			.grid-three-columns
+			.grid-three-columns.catalogy-page-content
 				.grid-content-left
 					//LEFT COLUMN
 					.catalogy-page-header.flex
 						h1.h2  Каталог
+						button.btn-dark#show-catalogy Выбрать товар
+						
 						//СТРОКА С ФИЛЬТРАМИ
 						.catalogy-products-filters.flex-center-y
 							//выпадашка по сколько выводить
@@ -40,7 +42,7 @@ block content
 					
 					.grid-content
 						//CATALOG MENU
-						.grid-content-aside
+						.grid-content-aside.catalogy-filters
 							include ../blocks/_catalogy-menu
 						
 						//CATALOG CARDS
