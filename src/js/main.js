@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
 					catalogyHasDrop = item.querySelector('.has-drop');
 					catalogyDropContent = item.querySelector('.has-drop-content');
 					catalogyHasSub = item.querySelectorAll('.has-subdrop');
-					console.log('555');
+					
 
 					catalogyHasDrop.addEventListener('click', ()=>{
 						if(item.classList.contains('active')){
@@ -291,8 +291,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-
-
+  
   //
   const acordions = document.querySelectorAll('.acordion');
   if(acordions.length >0){
@@ -310,5 +309,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
   }
+  // 
+  const hasHide = document.querySelectorAll('.has-hide');
+  if(hasHide.length > 0){
+      hasHide.forEach((box)=>{
+        const hideCards = box.querySelectorAll('.product-card--hide');
+        const showHideBtn = box.querySelector('.show-more-cards');
+      
+        showHideBtn.addEventListener('click', ()=>{
+          if(hideCards.length >0 ){
+             hideCards.forEach((crd)=>{
+              if(crd.classList.contains('d-none')){
+                crd.classList.remove('d-none');
+                showHideBtn.textContent="Показать меньше";
+              }else{
+                crd.classList.add('d-none');
+                showHideBtn.textContent="Показать больше";
+              }
+             })
+          }
+        });    
+      });
+  }
+  
 })
 

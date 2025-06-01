@@ -35,7 +35,7 @@ mixin step-card-ui(img, title, txt)
 			p #{txt}
 
 mixin product-card(img, old)
-	.product-card
+	.product-card&attributes(attributes)
 		.product-card__img
 			img.img-cover(src='../img/products/'+img+'.webp', srcset='../img/products/'+img+'@2x.webp 2x' width='' height='' alt='img')
 		.product-card__body

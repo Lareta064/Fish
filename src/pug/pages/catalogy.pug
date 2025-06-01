@@ -44,10 +44,10 @@ block content
 							include ../blocks/_catalogy-menu
 						
 						//CATALOG CARDS
-						.grid-content-body
+						.grid-content-body.has-hide
 							.catalogy-products-content
-					
-								//КОНТЕНТ С КАРТОЧКАМИ
+
+								//КОНТЕНТ С КАРТОЧКАМИ, у карточек, которые скрыты, но оторжаются по клику на кнопку ПОКАЗАТЬ БОЛЬШЕ есть  дополнительные классы "product-card--hide  d-none. По скрипту удаляется / добавляется класс d-none"
 								.catalogy-products-grid
 									+product-card('product1')
 									+product-card('product2')
@@ -55,9 +55,13 @@ block content
 									+product-card('product1')
 									+product-card('product2')
 									+product-card('product3')
+									+product-card('product3')(class="product-card--hide d-none")
+									+product-card('product3')(class="product-card--hide d-none")
+									+product-card('product3')(class="product-card--hide d-none")
+
 
 							.grid-content-body__footer.flex-center-y
-								button.btn-outline.h-50#show-more Показать больше
+								button.btn-outline.h-50.show-more-cards Показать больше
 								.pagination
 									a(href="#!").pagination-item--prev.btn-outline.h-50 Назад
 									a(href="#!").pagination-item
@@ -70,9 +74,6 @@ block content
 										span 5
 									
 									a(href="#!").pagination-item--next.btn-outline.h-50 Вперед
-
-
-
 				
 				//RIGHT COLUMN
 				.grid-aside

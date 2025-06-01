@@ -110,6 +110,9 @@
 		 border-radius: .9em .9em 1.8em .9em;
 	}
 }
+.product-card.product-card--hide.d-none{
+	display: none!important;
+}
 .cart-btn.cart-btn--animate{
 	position: relative;
 	transition: .3s; 
