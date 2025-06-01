@@ -134,10 +134,10 @@
 			flex: unset;
 			flex-shrink: 0;
 			order:1;
-			font-size: remy(17);
+			font-size: remy(16);
 			line-height: 1.29;
 			letter-spacing: 0.03em;
-			color: var(--svetlo-siniy);
+			color: var(--color-chernyy);
 			
 			.product-info{display: none;}
 	   }
@@ -174,7 +174,8 @@
 				}
 		}
 		.cost-block__old{font-size: 10px;}
-		.cost-block{row-gap:4px;}
+		.cost-block{row-gap:4px; letter-spacing: 0.03em;
+color: var(--svetlo-siniy);}
 		.counter{
 		    width: 118px;
 			column-gap:6px;
