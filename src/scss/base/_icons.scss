@@ -90,6 +90,35 @@ svg.svg-cart{
 .svg-category1{
 	width: remy(32);
 	height: remy(32);
+	
+}
+.svg-category2{
+	width: remy(30);
+	height: remy(34);
+	fill: transparent;
+	
+}
+.svg-category3{
+	width: remy(32);
+	height: remy(34);
+	fill: transparent;
+	
+}
+.svg-category4{
+	width: remy(34);
+	height: remy(33);
+	
+}
+.svg-category5{
+	width: remy(28);
+	height: remy(28);
+	
+}
+.svg-category6{
+	width: remy(33);
+	height: remy(36);
+}
+svg[class^="svg-category"]{
 	color: #0E1526;
 }
 i.carret-down{
