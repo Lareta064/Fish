@@ -54,3 +54,63 @@ html(lang="ru")
 					label.checkbox-label
 						input.checkbox-input(type="checkbox" name="check1")
 						span Спецпредложения
+
+					hr
+					.dropdown
+						button.dropdown__button(type="button") График работы
+						
+						.dropdown__list
+							ul
+								li.dropdown__list-item(data-value="Текст1") Текст 1
+								li.dropdown__list-item(data-value="Текст2") Текст 2
+								li.dropdown__list-item(data-value="Текст3") Текст 3
+								li.dropdown__list-item(data-value="Текст4") Текст 4
+
+						//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+						input.dropdown__input-hidden(type="hidden", name="")
+					script.
+						document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
+							const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
+							const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
+							const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
+							const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
+
+							// Клик по кнопке. Открыть/Закрыть select
+							dropDownBtn.addEventListener('click', function (e) {
+							dropDownList.classList.toggle('dropdown__list--visible');
+							this.classList.toggle('dropdown__button--active');
+							});
+							
+
+							// Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
+							dropDownListItems.forEach(function (listItem) {
+							
+							listItem.addEventListener('click', function (e) {
+								e.stopPropagation();
+								dropDownBtn.innerText = this.innerText;
+								dropDownBtn.focus();
+								dropDownInput.value = this.dataset.value;
+								
+								dropDownList.classList.remove('dropdown__list--visible');
+								dropDownBtn.classList.remove('dropdown__button--active');
+								
+							});
+							});
+
+							// Клик снаружи дропдауна. Закрыть дропдаун
+							document.addEventListener('click', function (e) {
+							if (e.target !== dropDownBtn) {
+								dropDownBtn.classList.remove('dropdown__button--active');
+								dropDownList.classList.remove('dropdown__list--visible');
+							}
+							});
+
+							// Нажатие на Tab или Escape. Закрыть дропдаун
+							document.addEventListener('keydown', function (e) {
+							if (e.key === 'Tab' || e.key === 'Escape') {
+								dropDownBtn.classList.remove('dropdown__button--active');
+								dropDownList.classList.remove('dropdown__list--visible');
+							}
+							});
+						});
+

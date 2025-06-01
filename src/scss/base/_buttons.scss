@@ -52,6 +52,16 @@
     font-size: remy(14);
 	height: remy(44);
 }
+.h-50{
+	height: remy(50);
+	font-family: var(--font-family);
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 125%;
+	letter-spacing: -0.02em;
+	color: var(--temno-siniy);
+}
+
 .btn-catalogy{
 	height: remy(56);
 	display: flex;

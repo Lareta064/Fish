@@ -6,13 +6,73 @@ block content
 	main.inner-page
 		.container
 			.grid-three-columns
-				//LEFT COLUMN
-				.grid-content
-					//CATALOG MENU
-					.grid-content-aside
-						include ../blocks/_catalogy-menu
-					//CATALOG CARDS
-					.grid-content-body
+				.grid-content-left
+					//LEFT COLUMN
+					.catalogy-page-header.flex
+						h1.h2  Каталог
+						//СТРОКА С ФИЛЬТРАМИ
+						.catalogy-products-filters.flex-center-y
+							//выпадашка по сколько выводить
+							.dropdown.dropdown-products-count
+								button.dropdown__button(type="button") Показывать по 9
+								
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Показывать по 18") Показывать по 18
+										li.dropdown__list-item(data-value="Показывать по 36") Показывать по 36
+										li.dropdown__list-item(data-value="Показывать по 72") Показывать по 72
+
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="product_count")
+
+							//выпадашка 
+							.dropdown.dropdown-products-count
+								button.dropdown__button(type="button") По популярности
+								
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="По популярности") По популярности
+										li.dropdown__list-item(data-value="Сначала дешевые") Сначала дешевые
+										li.dropdown__list-item(data-value="Сначала дорогие") Сначала дорогие
+
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="product_type")
+					
+					.grid-content
+						//CATALOG MENU
+						.grid-content-aside
+							include ../blocks/_catalogy-menu
+						
+						//CATALOG CARDS
+						.grid-content-body
+							.catalogy-products-content
+					
+								//КОНТЕНТ С КАРТОЧКАМИ
+								.catalogy-products-grid
+									+product-card('product1')
+									+product-card('product2')
+									+product-card('product3')
+									+product-card('product1')
+									+product-card('product2')
+									+product-card('product3')
+
+							.grid-content-body__footer.flex-center-y
+								button.btn-outline.h-50#show-more Показать больше
+								.pagination
+									a(href="#!").pagination-item--prev.btn-outline.h-50 Назад
+									a(href="#!").pagination-item
+										span 1
+									a(href="#!").pagination-item.item-dot
+										span
+										span
+										span
+									a(href="#!").pagination-item
+										span 5
+									
+									a(href="#!").pagination-item--next.btn-outline.h-50 Вперед
+
+
+
 				
 				//RIGHT COLUMN
 				.grid-aside
