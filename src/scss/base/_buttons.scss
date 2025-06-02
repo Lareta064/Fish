@@ -64,7 +64,7 @@
 
 .btn-catalogy{
 	height: remy(56);
-	display: flex;
+	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	column-gap:remy(15);
@@ -72,7 +72,7 @@
 	border-radius: remy(30);
 	font-family: var(--font-family);
 	font-weight: 700;
-	font-size: 16px;
+	font-size: remy(16);
 	background: var(--color-belyy);
 	color: var(--color-smuglyy);
 	line-height: 1;

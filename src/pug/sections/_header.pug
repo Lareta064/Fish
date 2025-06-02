@@ -1,4 +1,18 @@
-//HEADER
+header.header-mobile
+	.container
+		a.logo(href="index.html")
+			img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='128' height='128'  alt='logo')
+		
+		//cart-btn
+		a(href="basket-page.html").cart-btn.cart-btn--transform
+			svg.svg-cart
+				use(href='../img/sprite.svg#svg-cart')
+			span.fw-700 Корзина
+		//menu-toggle
+		button.menu-toggle
+			span.icon-menu
+
+//HEADER DESKTOP
 header.header
 	.container
 		.header-content
@@ -6,20 +20,37 @@ header.header
 				img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='128' height='128'  alt='logo')
 			
 			.header-content-wrapper
+				//TOP ROW
 				.header-top-row
-					.header-menu-wrapper
-						ul.header-menu
-							li.header-menu-item
-								a.header-menu__link(href="aboutus.html") О компании
-							li.header-menu-item
-								a.header-menu__link(href="stores.html") Магазины 
-							li.header-menu-item
-								a.header-menu__link(href="#!") Покупателям
-							li.header-menu-item
-								a.header-menu__link(href="blog.html") Блог / рецепты
-							li.header-menu-item
-								a.header-menu__link(href="contacts.html") Контакты
+					ul.header-menu
+						li.header-menu-item
+							a.header-menu__link(href="aboutus.html") О компании
+						li.header-menu-item
+							a.header-menu__link(href="stores.html") Магазины 
+						li.header-menu-item
+							a.header-menu__link(href="#!") Покупателям
+						li.header-menu-item
+							a.header-menu__link(href="blog.html") Блог / рецепты
+						li.header-menu-item
+							a.header-menu__link(href="contacts.html") Контакты
 					//SOCIAL
 					+social-roung
-
+				
+				//BOTTOM ROW
 				.header-bottom-row
+					a(href="catalogy.html").btn-catalogy
+						span.icon-menu
+							span
+						span Каталог
+					
+					form.header-search-form
+						.form-item
+							input.form-input(type="text" name="search_input" placeholder="Например: Раки вареные")
+							
+							svg.svg-search
+								use(href='./img/sprite.svg#svg-search')
+
+					a(href="basket-page.html").cart-btn.cart-btn--transform
+						svg.svg-cart
+							use(href='../img/sprite.svg#svg-cart')
+						span.fw-700 Корзина

@@ -20,19 +20,24 @@
 	column-gap: remy(50);
 	
 }
-.header-top-row{
+.header-top-row, .header-bottom-row{
 	display: flex;
 	column-gap: remy(75);
 	
 }
-.header-menu-wrapper{
-	flex:1;
+.header-bottom-row{
+	column-gap: remy(30);
+	margin-top: remy(40);
+	.btn-catalogy, .promotion-link, .cart-btn{
+		flex-shrink: 0;
+	}
 }
+
 .header-menu{
 	display: flex;
 	justify-content: flex-end;
 	list-style-type: none;
-	
+	flex:1;
 	column-gap: remy(75);
 	.header-menu__link{
 		font-family: var(--font-family);
@@ -42,5 +47,26 @@
 		letter-spacing: -0.02em;
 		
 		color: var(--color-belyy);
+	}
+}
+.header-search-form{
+	flex:1;
+	.svg-search{
+		position: absolute;
+		left: remy(24);
+		top: remy(18);
+		z-index: 2;
+	}
+	input.form-input{
+		background: var(--goluboy);
+		height: remy(56);
+		padding-left: remy(48);
+		color: var(--color-yarko-siniy-s-logo);
+		&::placeholder{
+			font-family: inherit;
+			font-size: inherit;
+			color: var(--color-yarko-siniy-s-logo);
+		}
+
 	}
 }
