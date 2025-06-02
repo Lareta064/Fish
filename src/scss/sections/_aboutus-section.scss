@@ -1,0 +1,42 @@
+.aboutus-content{
+	column-gap: remy(48);
+	&__img{
+		max-width: remy(621);
+		flex-shrink: 0;
+		img{
+			border-radius: remy(30);
+			@media (max-width: 767px) {
+				aspect-ratio: 344/274;
+			}
+		}
+		@media (max-width: 767px) {
+			
+			.btn-outline{width: 100%;margin-top: 32px;}
+		}
+	}
+	&__txt{
+		flex:1;
+		.btn-outline{
+			width: fit-content;
+			margin-top: auto;
+		}
+	}
+	.aboutus-deskrip {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: remy(16);
+		line-height: 1.60;
+		letter-spacing: -0.02em;
+		color: #0e1526;
+		p+p{margin-top: remy(24);}
+		@media (max-width: 767px) {
+		line-height: 1.25;
+		p+p{margin-top: 15px;}
+		}
+	}
+	@media (max-width: 767px) {
+	
+		flex-direction: column;
+		row-gap:20px;
+	}
+}

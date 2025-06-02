@@ -24,4 +24,15 @@
 	padding: remy(20);
 }
 
-
+*.hide-sm{
+	display: flex;
+	@media (max-width: 767px) {
+	display: none!important;
+	}
+}
+*.visible-sm{
+	display: none!important;;
+	@media (max-width: 767px) {
+	display: flex!important;;
+	}
+}
