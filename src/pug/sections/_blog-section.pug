@@ -1,0 +1,41 @@
+//BLOG SLIDER
+section.blog
+	h2.h2 Блог
+	.blog-swiper.swiper
+		.swiper-wrapper
+			//SLIDE
+			.swiper-slide
+				.blog-card
+					.blog-card__img
+						img(src='./img/blog/blog1.webp', srcset='./img/blog/blog1@2x.webp 2x' width='303' height='562' loading='lazy' alt='img')
+					.blog-card__text
+						.blog-card__text
+			//SLIDE
+			.swiper-slide
+				.blog-card
+					.blog-card__img
+						img(src='./img/blog/blog2.webp', srcset='./img/blog/blog2@2x.webp 2x' width='489' height='562' loading='lazy' alt='img')
+					.blog-card__text
+						.blog-card__text
+			//SLIDE
+			.swiper-slide
+				.blog-card
+					.blog-card__img
+						img(src='./img/blog/blog3.webp', srcset='./img/blog/blog3@2x.webp 2x' width='303' height='562' loading='lazy' alt='img')
+					.blog-card__text
+						.blog-card__text
+			//SLIDE
+			.swiper-slide
+				.blog-card
+					.blog-card__img
+						img(src='./img/blog/blog1.webp', srcset='./img/blog/blog1@2x.webp 2x' width='303' height='562' loading='lazy' alt='img')
+					.blog-card__text
+						.blog-card__text
+		//SWIPER NAV
+		.swiper__nav
+			.blog-swiper-prev.swiper-button-prev
+				svg.svg-arrLeft
+					use(href='../img/sprite.svg#svg-arrLeft')
+			.blog-swiper-next.swiper-button-next
+				svg.svg-arrRight
+					use(href='../img/sprite.svg#svg-arrRight')

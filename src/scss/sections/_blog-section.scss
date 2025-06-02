@@ -1,0 +1,13 @@
+.blog-swiper{
+	height: remy(660);
+	padding-bottom: remy(95);
+	// width: remy(1136);
+	.swiper-slide{width:fit-content!important;}
+}
+.blog-card{
+	img{
+		border-radius: remy(8);
+		height: remy(562);
+		width: auto;
+	}
+}

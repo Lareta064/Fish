@@ -31,9 +31,22 @@ document.addEventListener("DOMContentLoaded", function () {
         clickable: true,
       },
     });
-  
+     //BLOG SLIDER
+    let blogSlider = new Swiper('.blog-swiper',{
+      spaceBetween: 20,
+      speed:600,
+      slidesPerView: 'auto',
+      autoWidth: true,
+      navigation: {
+        nextEl: ".blog-swiper-next",
+        prevEl: ".blog-swiper-prev",
+      },
+      
+      
+    });
+    
+    //PRODUCT SLIDER
     const productSwipers = document.querySelectorAll('.product-swiper');
-
     productSwipers.forEach((swiperEl, index) => {
       new Swiper(swiperEl, {
         slidesPerView: 2,
