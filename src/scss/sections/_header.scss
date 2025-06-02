@@ -1,1 +1,46 @@
 
+.header{
+	padding-block: remy(15);
+	background: var(--temno-siniy);
+	.logo{
+		flex-shrink: 0;
+		img, svg{
+			height: remy(128);
+			width: auto;
+			object-fit: contain;
+		}
+		
+	}
+}
+.header-content-wrapper{
+	flex:1;
+}
+.header .header-content{
+	display: flex;
+	column-gap: remy(50);
+	
+}
+.header-top-row{
+	display: flex;
+	column-gap: remy(75);
+	
+}
+.header-menu-wrapper{
+	flex:1;
+}
+.header-menu{
+	display: flex;
+	justify-content: flex-end;
+	list-style-type: none;
+	
+	column-gap: remy(75);
+	.header-menu__link{
+		font-family: var(--font-family);
+		font-weight: 800;
+		font-size: remy(16);
+		line-height: 1.25;
+		letter-spacing: -0.02em;
+		
+		color: var(--color-belyy);
+	}
+}

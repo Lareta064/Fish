@@ -1,1 +1,25 @@
-h1 HEADER
+//HEADER
+header.header
+	.container
+		.header-content
+			a.logo(href="index.html")
+				img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='128' height='128'  alt='logo')
+			
+			.header-content-wrapper
+				.header-top-row
+					.header-menu-wrapper
+						ul.header-menu
+							li.header-menu-item
+								a.header-menu__link(href="aboutus.html") О компании
+							li.header-menu-item
+								a.header-menu__link(href="stores.html") Магазины 
+							li.header-menu-item
+								a.header-menu__link(href="#!") Покупателям
+							li.header-menu-item
+								a.header-menu__link(href="blog.html") Блог / рецепты
+							li.header-menu-item
+								a.header-menu__link(href="contacts.html") Контакты
+					//SOCIAL
+					+social-roung
+
+				.header-bottom-row
