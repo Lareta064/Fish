@@ -20,3 +20,12 @@
 	.grid-content-body{flex: 1;}
 }
 .grid-two-columns .grid-aside, .grid-three-columns .grid-aside{width: remy(364);flex-shrink:0;}
+.column-gap-80{
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap:remy(80);
+	&>*{width: 100%;}
+	@media (max-width: 767px) {
+		row-gap:60px;
+	}
+}

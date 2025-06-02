@@ -1,7 +1,7 @@
 header.header-mobile
 	.container
 		a.logo(href="index.html")
-			img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='128' height='128'  alt='logo')
+			img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='44' height='44'  alt='logo')
 		
 		//cart-btn
 		a(href="basket-page.html").cart-btn.cart-btn--transform
@@ -9,8 +9,34 @@ header.header-mobile
 				use(href='../img/sprite.svg#svg-cart')
 			span.fw-700 Корзина
 		//menu-toggle
-		button.menu-toggle
-			span.icon-menu
+		button.menu-toggle#menu-toggle
+			span
+	
+	//mobile-menu
+	.header-mobile-menu#header-mobile-menu
+		.header-mobile-search
+			form.header-search-form
+				.form-item
+					input.form-input(type="text" name="search_input" placeholder="Например: Раки вареные")
+					
+					svg.svg-search
+						use(href='./img/sprite.svg#svg-search')
+			
+			ul.header-menu
+				li.header-menu-item
+					a.header-menu__link(href="index.html") Главная
+				li.header-menu-item
+					a.header-menu__link(href="catalogy.html") Каталог
+				li.header-menu-item
+					a.header-menu__link(href="aboutus.html") О нас
+				li.header-menu-item
+					a.header-menu__link(href="#!") Покупателям
+				li.header-menu-item
+					a.header-menu__link(href="discount-page.html") %  Акции и скидки 
+				li.header-menu-item
+					a.header-menu__link(href="blog.html") Блог / рецепты
+				li.header-menu-item
+					a.header-menu__link(href="contacts.html") Контакты
 
 //HEADER DESKTOP
 header.header
@@ -26,9 +52,11 @@ header.header
 						li.header-menu-item
 							a.header-menu__link(href="aboutus.html") О компании
 						li.header-menu-item
-							a.header-menu__link(href="stores.html") Магазины 
+							a.header-menu__link(href="stories.html") Магазины
+						
 						li.header-menu-item
 							a.header-menu__link(href="#!") Покупателям
+						
 						li.header-menu-item
 							a.header-menu__link(href="blog.html") Блог / рецепты
 						li.header-menu-item
@@ -50,6 +78,8 @@ header.header
 							svg.svg-search
 								use(href='./img/sprite.svg#svg-search')
 
+					a(href="discount-page.html").promotion-link #[span %] Акции и скидки 
+					
 					a(href="basket-page.html").cart-btn.cart-btn--transform
 						svg.svg-cart
 							use(href='../img/sprite.svg#svg-cart')
