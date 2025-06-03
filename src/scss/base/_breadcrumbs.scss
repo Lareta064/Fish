@@ -2,6 +2,9 @@
 	list-style-type: none;
 	display: flex;
 	column-gap:remy(16);
+	text-overflow: ellipsis;
+	overflow: hidden;
+	margin-bottom: remy(20);
 	.breadcrumb-item{
 		list-style-type: none;
 		position: relative;
@@ -13,6 +16,8 @@
 		display: inline-flex;
 		align-items: center;
 		column-gap:remy(12);
+		padding-block: remy(8);
+		white-space: nowrap;
 		&:after{
 			content:'';
 			width: remy(10);height: remy(6);
@@ -22,11 +27,17 @@
 			background-repeat: no-repeat;
 
 		}
+		@media (max-width: 767px) {
+		 padding-block: remy(6);
+		}
 	}
 	.breadcrumb-item:last-child {
 		font-weight: 800;
 		pointer-events:none;
 		cursor:default;
 		&:after{display: none;}
+	}
+	@media (max-width: 767px) {
+	margin-bottom: 16px;
 	}
 }

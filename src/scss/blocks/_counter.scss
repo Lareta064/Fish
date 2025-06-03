@@ -42,7 +42,7 @@
 		letter-spacing: -0.03em;
 		color: var(--temno-siniy);
 		
-		column-gap:3px;
+		column-gap:remy(3);
 		span{
 			width: fit-content;
 			font-weight: 700;

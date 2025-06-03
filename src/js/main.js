@@ -33,15 +33,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
      //BLOG SLIDER
     let blogSlider = new Swiper('.blog-swiper',{
-      spaceBetween: 20,
+      spaceBetween: 10,
       speed:600,
       slidesPerView: 'auto',
       autoWidth: true,
+      loop: true,
       navigation: {
         nextEl: ".blog-swiper-next",
         prevEl: ".blog-swiper-prev",
       },
-      
+      breakpoints: {
+          768: {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+          }
+        }
       
     });
     

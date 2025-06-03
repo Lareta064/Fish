@@ -3,6 +3,10 @@
 	padding-bottom: remy(95);
 	// width: remy(1136);
 	.swiper-slide{width:fit-content!important;}
+	@media (max-width: 767px) {
+		padding-bottom: remy(75);
+	  height: 400px;
+	}
 }
 .blog-card{
 	overflow: hidden;
@@ -21,6 +25,9 @@
 		border-radius: remy(8);
 		height: remy(562);
 		width: auto;
+		@media (max-width: 767px) {
+		 height: 330px;
+		}
 	}
 	&__text{
 		position: absolute;
@@ -36,8 +43,9 @@
 		.blog-title{
 			font-size: remy(20);
 			letter-spacing: -0.02em;
-			
-			// color: #f7f7f5;
+			@media (max-width: 767px) {
+			  font-size: 11px;
+			}
 		}
 		.blog-tag{
 			font-weight: 500;
@@ -45,6 +53,10 @@
 			line-height: 152%;
 			letter-spacing: -0.03em;
 			margin-bottom: remy(2);
+			@media (max-width: 767px) {
+				font-size: 6px;
+				line-height: 1.52;
+			}
 			
 		}
 		.blog-data{
@@ -55,6 +67,12 @@
 			text-transform: uppercase;
 			color: #fff;
 			margin-top: auto;
+			@media (max-width: 767px) {
+			font-size: 10px;
+			}
+		}
+		@media (max-width: 767px) {
+		  padding: 18px 17px;
 		}
 	}
 }

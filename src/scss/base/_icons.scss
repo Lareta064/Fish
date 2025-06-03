@@ -5,7 +5,7 @@
 	height: remy(16);
 	position: relative;
 	span, span:after, span:before{
-		height: 1px;
+		height: remy(1);
 		position: absolute;
 		background-color: var(--color-smuglyy);
 		left: 0;
@@ -54,7 +54,7 @@ svg.svg-cart{
 }
 .svg-minus{
 	width: remy(12);
-	height: 2px;color: #0E1526;
+	height: remy(2);color: #0E1526;
 	
 }
 .disable-element .svg-minus{color:var(--color-seryy);}

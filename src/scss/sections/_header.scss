@@ -141,6 +141,11 @@
 }
 .header-mobile .header-menu{
 	flex-direction: column;
+	justify-content: flex-start;
+	height: calc(100vh - 200px);
+	overflow: hidden;
+	overflow-y: auto;
+	scrollbar-width: none;
 	&__link{
 		padding: 24px 0;
 		font-family: var(--second-family);
@@ -149,6 +154,9 @@
 		letter-spacing: -0.02em;
 		color: var(--temno-siniy);
 		border-bottom: 1px solid var(--color-belyy);
+	}
+	&::-webkit-scrollbar{
+		display: none;
 	}
 }
  

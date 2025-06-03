@@ -64,7 +64,7 @@
 	.remove-button:hover{
 		.svg-delete{color: red;}
 	}
-	@media (max-width: 1919px) {
+	@media (max-width: 767px) {
 		column-gap: remy(16);
 	   .basket-card__group{
 		  flex-wrap: wrap;
@@ -121,8 +121,8 @@
       column-gap: remy(16);
 	  .basket-card__img{
 		border-radius: 10px;
-		width: 83px;
-		height: 83px;
+		width: remy(83);
+		height: remy(83);
 	  }
 	   .basket-card__group{
 		  flex-wrap: wrap;
