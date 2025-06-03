@@ -8,9 +8,8 @@
 }
 .basket-page .grid-two-columns{
 	@media (max-width: 767px) {
-	flex-direction: column;
-	row-gap: 32px;
-	.grid-aside{width: 100%;}
-	.basket-calculate.border-round-card{border:transparent;}
+		flex-direction: column;
+		row-gap: 32px;
 	}
+	
 }

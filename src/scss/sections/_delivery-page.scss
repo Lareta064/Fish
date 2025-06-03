@@ -1,0 +1,29 @@
+.delivery-page{
+	
+	@media (max-width: 767px) {
+		.grid-two-columns{row-gap:60px;}
+		.grid-two-columns{
+			flex-direction: column-reverse;
+		}
+	}
+}
+.payments{
+	row-gap:remy(24);
+	width: 100%;
+	@media (max-width: 767px) {
+		row-gap:16px;
+	}
+}
+.payment-card{
+	width: 100%;
+	padding: remy(9) remy(14) remy(9) remy(20);
+	background-color: #fff;
+	border: 1px solid var(--goluboy);
+	border-radius: remy(15);
+	justify-content: space-between;
+	align-items: center;
+	column-gap:remy(24);
+	.payment-icon{
+		flex-shrink: 0;
+	}
+}

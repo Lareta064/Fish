@@ -38,8 +38,21 @@
 	@media (max-width: 767px) {
 	margin-bottom: 1rem;
 	}
-}	
-
+}
+.header-subtitle{
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: remy(16);
+	line-height: 1.25;
+	letter-spacing: -0.02em;
+	color: var(--color-chernyy);
+}
+.header-group.flex-col{
+	row-gap: remy(24);
+	@media (max-width: 767px) {
+	row-gap: 32px;
+	}
+}
 .contact-link{
 	display: flex;
 	column-gap:remy(5);

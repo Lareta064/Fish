@@ -1,0 +1,31 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header.pug
+	main.inner-page.delivery-page
+		.container
+			.breadcrumbs
+				a(href="index.html").breadcrumb-item Главная
+				a(href="#!").breadcrumb-item Доставка и оплата
+			
+			.header-group.flex-col.visible-sm
+				h1.h2 Доставка и оплата
+				.section-subtitle 
+					p Вы можете оформить заказ, а оплатить его позже.
+					p Менеджер свяжется с вами.	
+			.grid-two-columns
+				//LEFT COLUMN
+				.grid-content.column-gap-80
+					include ../sections/_delivery-page.pug
+					include ../sections/_faq.pug
+					
+					
+				
+				//RIGHT COLUMN
+				.grid-aside.aside-sticky
+					include ../blocks/_basket-calculate
+		
+		
+			
+block variables
+	-var title = "Доставка / оплата";

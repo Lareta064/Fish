@@ -1,0 +1,28 @@
+section.delivery-content
+	.header-group.flex-col.hide-sm
+		.h2 Доставка и оплата
+		.section-subtitle 
+			p Вы можете оформить заказ, а оплатить его позже.
+			p Менеджер свяжется с вами.
+	
+	.payments.flex-col
+		//payment-card
+		.payment-card.flex
+			.payment-card__type.flex
+				.payment-icon
+					img(src='./img/payment1.webp', srcset='./img/payment1@2x.webp 2x' width='42' height='32'  alt='img')
+				p Банковские карты
+			a(href="#!").button-blue информация
+		
+		//payment-card
+		.payment-card.flex
+			.payment-card__type
+				.payment-icon
+					img(src='./img/payment2.webp', srcset='./img/payment2@2x.webp 2x' width='94' height='26'  alt='img')
+			a(href="#!").button-blue информация
+		//payment-card
+		.payment-card.flex
+			.payment-card__type
+				.payment-icon
+					img(src='./img/payment3.webp', srcset='./img/payment3@2x.webp 2x' width='106' height='26'  alt='img')
+			a(href="#!").button-blue информация
