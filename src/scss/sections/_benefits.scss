@@ -69,6 +69,6 @@
 		max-width: remy(211);
 	}
 	@media (max-width: 767px) {
-	column-gap: remy(8);
+	   .benefit-item{width: calc(50% - 10px); max-width: unset; flex:unset;}
 	}
 }

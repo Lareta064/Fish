@@ -1,7 +1,9 @@
 .product-swiper{
 	 width: remy(1136);
 	@media (max-width: 767px) {
-	  width: remy(344);
+	  width: calc(100% - 40px);
+	  max-width:540px;
+	  .swiper-slide{width: 166px!important;}
 	}
 }
 .product-swiper .swiper-wrapper{
@@ -10,5 +12,6 @@
 		display: flex;
 		height: unset;
 		min-height: unset;
+		
 	}
 }

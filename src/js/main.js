@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const productSwipers = document.querySelectorAll('.product-swiper');
     productSwipers.forEach((swiperEl, index) => {
       new Swiper(swiperEl, {
-        slidesPerView: 2,
+        slidesPerView: 'auto',
         spaceBetween: 12,
         scrollToSlides:2,
         speed:600,
@@ -66,8 +66,12 @@ document.addEventListener("DOMContentLoaded", function () {
         breakpoints: {
           768: {
             slidesPerView: 4,
-             spaceBetween: 18,
-          }
+             
+          },
+          1200:{
+            spaceBetween: 16,
+          },
+          1440:{spaceBetween: 18}
         }
       });
     });
