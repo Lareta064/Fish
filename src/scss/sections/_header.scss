@@ -159,7 +159,24 @@
 		display: none;
 	}
 }
- 
+ @media(min-width:768px){
+	.fix-header {
+		position: sticky;
+		top: -200px;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		animation-name: styckySlow;
+		animation-duration: .5s;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+	@keyframes styckySlow{
+		from{top: -200px;}
+		to{top: 0;}
+	}
+
+}
 /*BURGER*/
 .menu-toggle {
 	width: 44px;

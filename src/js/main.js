@@ -17,7 +17,37 @@ document.addEventListener("DOMContentLoaded", function () {
         bodyEl.classList.add('lock');
       }
     });
-   
+   //STICKY HEADER
+   const header = document.querySelector("#header");
+   const styckyAside = document.querySelector(".aside-sticky");
+
+    if (header) {
+      let lastScrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      window.addEventListener("scroll", () => {
+        const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        const isScrollingUp = currentScrollTop < lastScrollTop;
+
+        if (isScrollingUp && !header.classList.contains("fix-header")) {
+          header.classList.add("fix-header");
+          styckyAside.classList.add('aside-sticky-160')
+        }
+
+        if (!isScrollingUp && header.classList.contains("fix-header")) {
+          header.classList.remove("fix-header");
+          styckyAside.classList.remove('aside-sticky-160')
+        }
+
+        lastScrollTop = currentScrollTop;
+      });
+
+      // 🔒 Блокируем удаление .fix-header при resize
+      window.addEventListener("resize", () => {
+        // Ничего не делаем с .fix-header!
+        // Просто можно обновить layout или вызвать перерисовку, если нужно
+      });
+    }
     //PROMO SLIDER
     let promoSlider = new Swiper('.promo-swiper',{
       spaceBetween: 10,
