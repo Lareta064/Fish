@@ -30,7 +30,10 @@
 .txt-red{color:#DD3535 !important;}
 .txt-center{text-align: center;}
 .txt-right{text-align: right;}
-	
+.header-group{
+	display: flex;
+	justify-content: space-between;
+}	
 
 .contact-link{
 	display: flex;
