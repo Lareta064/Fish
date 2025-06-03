@@ -69,6 +69,7 @@
 }
 .catalogy-page-content{
 	@media (max-width: 767px) {
+		.grid-content-left{width: 100%;}
 	   .grid-aside{display: none;}
 	   .catalogy-page-header, .catalogy-products-filters{
 		flex-direction: column;
