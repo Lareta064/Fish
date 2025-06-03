@@ -72,7 +72,7 @@
 		  column-gap:remy(10);
 	   }
 	   .basket-card__title{
-			width: calc(100% - 40px);
+			width: calc(100% - remy(40));
 			flex: unset;
 			flex-shrink: 0;
 			order:1;
@@ -130,7 +130,7 @@
 		  column-gap:remy(10);
 	   }
 	   .basket-card__title{
-			width: calc(100% - 40px);
+			width: calc(100% - remy(40));
 			flex: unset;
 			flex-shrink: 0;
 			order:1;
@@ -142,7 +142,7 @@
 			.product-info{display: none;}
 	   }
 	   .product-name{
-		font-size: 16px;
+		font-size: remy(16);
 		line-height: 100%;
 		letter-spacing: 0.06em;
 	   }
@@ -154,49 +154,49 @@
 	   }
 	   .basket-card__cost{
 			order:4;
-			width: calc(50% - 8px);
+			width: calc(50% - remy(8));
 			text-align: right;
 			
 	   }
 	   .cost-block .cost-block__new{
-			font-size: 17px;
+			font-size: remy(17);
 			line-height: 129%;
 			letter-spacing: 0.03em;
 	   }
 	   .basket-card__btn{
-			width: 24px;
-			height: 24px;
-			border-radius: 4px;
+			width: remy(24);
+			height: remy(24);
+			border-radius: remy(4);
 			background: var(--goluboy);
 				.svg-delete{
-					width: 14px;
-					height: 18px;
+					width: remy(14);
+					height: remy(18);
 				}
 		}
-		.cost-block__old{font-size: 10px;}
+		.cost-block__old{font-size: remy(10);}
 		.cost-block{row-gap:4px; letter-spacing: 0.03em;
 color: var(--svetlo-siniy);}
 		.counter{
-		    width: 118px;
-			column-gap:6px;
-			padding-inline:6px;
+		    width: remy(118);
+			column-gap:remy(6);
+			padding-inline:remy(6);
 		
 			.counter-value{
-				font-size: 14px;
+				font-size: remy(14);
 				line-height: 129%;
 				letter-spacing: -0.03em;
-				height: 26px;
-				width: 50px;
+				height: remy(26);
+				width: remy(50);
 				
 			}
 			.counter-input span{
-				font-size: 14px;
+				font-size: remy(14);
 				line-height: 1.29;
 				letter-spacing: -0.03em;
 			}
 			.counter-plus, .counter-minus{
-				width: 12px;
-				height: 12px;
+				width: remy(12);
+				height: remy(12);
 			}
 		}
 		

@@ -28,7 +28,12 @@
 
 		}
 		@media (max-width: 767px) {
-		 padding-block: remy(6);
+		 padding-block: 6px;
+		 column-gap: 8px;
+		 &:after{
+			width: 12px;
+			height: 10px;
+		 }
 		}
 	}
 	.breadcrumb-item:last-child {
@@ -39,5 +44,6 @@
 	}
 	@media (max-width: 767px) {
 	margin-bottom: 16px;
+	column-gap:12px;
 	}
 }
