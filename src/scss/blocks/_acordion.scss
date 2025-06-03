@@ -1,5 +1,8 @@
 .acordion{
 	background-color: #fff;
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: remy(32) ;
 	&-group{
 		border: 1px solid var(--color-seryy);
 		border-radius: remy(15);
@@ -61,6 +64,9 @@
 			padding-top: remy(20);
 			padding-bottom: remy(24);
 		}
+	}
+	@media (max-width: 767px) {
+	row-gap:16px;
 	}
 }
 .acordion-group.active{

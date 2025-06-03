@@ -1,9 +1,15 @@
 .delivery-page{
-	
+	.header-group{
+		border-bottom: 1px solid var(--goluboy);
+		padding-bottom: remy(32);
+	}
 	@media (max-width: 767px) {
 		.grid-two-columns{row-gap:60px;}
 		.grid-two-columns{
 			flex-direction: column-reverse;
+		}
+		.header-group{
+			border-bottom: 0;
 		}
 	}
 }
