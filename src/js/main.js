@@ -69,9 +69,13 @@ document.addEventListener("DOMContentLoaded", function () {
              
           },
           1200:{
+            slidesPerView: 4,
             spaceBetween: 16,
           },
-          1440:{spaceBetween: 18}
+          1440:{
+            slidesPerView: 4,
+            spaceBetween: 18
+          }
         }
       });
     });
