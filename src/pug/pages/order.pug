@@ -1,0 +1,27 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header.pug
+	main.inner-page.basket-page
+		.container
+			.breadcrumbs
+				a(href="index.html").breadcrumb-item Главная
+				a(href="catalogy.html").breadcrumb-item Каталог
+				a(href="basket-page.html").breadcrumb-item Корзина
+				a(href="#!").breadcrumb-item Оформление заказа
+			.grid-two-columns
+				//LEFT COLUMN
+				.grid-content.column-gap-80
+				
+					include ../sections/_order-page.pug
+					
+					
+				
+				//RIGHT COLUMN
+				.grid-aside.aside-sticky
+					include ../blocks/_basket-calculate
+		
+		
+			
+block variables
+	-var title = "Корзина";

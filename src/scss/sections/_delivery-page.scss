@@ -1,16 +1,11 @@
 .delivery-page{
-	.header-group{
-		border-bottom: 1px solid var(--goluboy);
-		padding-bottom: remy(32);
-	}
+	
 	@media (max-width: 767px) {
 		.grid-two-columns{row-gap:60px;}
 		.grid-two-columns{
 			flex-direction: column-reverse;
 		}
-		.header-group{
-			border-bottom: 0;
-		}
+		
 	}
 }
 .payments{
@@ -32,4 +27,9 @@
 	.payment-icon{
 		flex-shrink: 0;
 	}
+}
+.header-group.header-group--bb{
+    border-bottom: 1px solid var(--goluboy);
+	padding-bottom: remy(32);
+	@media (max-width: 767px) {border-bottom: 0;}
 }
