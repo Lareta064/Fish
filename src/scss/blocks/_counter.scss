@@ -9,6 +9,10 @@
 		letter-spacing: 0.03em;
 		text-align: center;
 		color: var(--temno-siniy);
+		margin-top: 1em;
+		@media (max-width: 767px) {
+		 font-size: 10px;
+		}
 	}
 }
 .counter{
@@ -73,7 +77,11 @@
 		background-size:remy(16) remy(16);
 		height: remy(16);
 		background-repeat: no-repeat;
-		background-position: center;;
+		background-position: center;
+		@media (max-width: 767px) {
+		 background-size:12px 12px;
+		 height: remy(16);
+		}
 	}
 	.counter-plus{
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='0.166016' y='7' width='16' height='2' fill='%232E2D2A' /%3e%3crect x='7.16602' y='16' width='16' height='2' transform='rotate(-90 7.16602 16)' fill='%232E2D2A' /%3e%3c/svg%3e");

@@ -43,7 +43,8 @@
 	margin-top: remy(20);
 	.form-item{
 		position: relative;
-		input{
+		.promo-use-input{
+			width: 100%;
 			font-size: remy(16);
 			letter-spacing: -0.02em;
 			color: var(--temno-siniy);

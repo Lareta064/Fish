@@ -33,6 +33,11 @@
 .header-group{
 	display: flex;
 	justify-content: space-between;
+	h1, h2, h3{margin-bottom: 0;}
+	margin-bottom: 2rem;
+	@media (max-width: 767px) {
+	margin-bottom: 1rem;
+	}
 }	
 
 .contact-link{

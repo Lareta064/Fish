@@ -1,7 +1,7 @@
 .product-swiper{
 	 width: remy(1136);
 	@media (max-width: 767px) {
-	  width: calc(100% - 40px);
+	  width: calc(100vw - 40px);
 	  max-width:540px;
 	  .swiper-slide{width: 166px!important;}
 	}

@@ -14,6 +14,9 @@
 		width: remy(194);
 		border-radius: remy(10);
 		overflow: hidden;
+		@media (max-width: 767px) {
+		 width: 83px;
+		}
 		
 	}
 	&__title{
@@ -65,7 +68,12 @@
 		.svg-delete{color: red;}
 	}
 	@media (max-width: 767px) {
-		column-gap: remy(16);
+		  column-gap: remy(16);
+	  .basket-card__img{
+		border-radius: 10px;
+		width: remy(83);
+		height: remy(83);
+	  }
 	   .basket-card__group{
 		  flex-wrap: wrap;
 		  row-gap: 1rem;
@@ -76,9 +84,17 @@
 			flex: unset;
 			flex-shrink: 0;
 			order:1;
-			// padding-right: 1rem;
+			font-size: remy(16);
+			line-height: 1.29;
+			letter-spacing: 0.03em;
+			color: var(--color-chernyy);
 			
 			.product-info{display: none;}
+	   }
+	   .product-name{
+		font-size: remy(16);
+		line-height: 100%;
+		letter-spacing: 0.06em;
 	   }
 	   .basket-card__btn{order:2; }
 	   .basket-card__counter{
@@ -88,32 +104,56 @@
 	   }
 	   .basket-card__cost{
 			order:4;
-			width: calc(50% - 8px);
+			width: calc(50% - remy(8));
 			text-align: right;
-			.cost-block__new{
-				font-size: 17px;
-				line-height: 129%;
-				letter-spacing: 0.03em;
-			}
-			.cost-block__old{
-				font-size: 14px;
-				line-height: 129%;
-				letter-spacing: 0.03em;
-			}
+			
 	   }
-	  
+	   .cost-block .cost-block__new{
+			font-size: remy(17);
+			line-height: 129%;
+			letter-spacing: 0.03em;
+	   }
 	   .basket-card__btn{
-			width: 24px;
-			height: 24px;
-			border-radius: 4px;
+			width: remy(24);
+			height: remy(24);
+			border-radius: remy(4);
 			background: var(--goluboy);
 				.svg-delete{
-					width: 14px;
-					height: 18px;
+					width: remy(14);
+					height: remy(18);
 				}
+		}
+		.cost-block__old{font-size: remy(10);}
+		.cost-block{
+			row-gap:4px; letter-spacing: 0.03em;
+				color: var(--svetlo-siniy);
+			}
+		.counter{
+		    width: remy(118);
+			column-gap:remy(6);
+			padding-inline:remy(6);
+		
+			.counter-value{
+				font-size: remy(14);
+				line-height: 129%;
+				letter-spacing: -0.03em;
+				height: remy(26);
+				width: remy(50);
+				
+			}
+			.counter-input span{
+				font-size: remy(14);
+				line-height: 1.29;
+				letter-spacing: -0.03em;
+			}
+			.counter-plus, .counter-minus{
+				width: remy(12);
+				height: remy(12);
 			}
 		}
+		
 	}
+}
 .short-basket {
 	max-width: remy(364);
 }
@@ -174,8 +214,10 @@
 				}
 		}
 		.cost-block__old{font-size: remy(10);}
-		.cost-block{row-gap:4px; letter-spacing: 0.03em;
-color: var(--svetlo-siniy);}
+		.cost-block{
+			row-gap:4px; letter-spacing: 0.03em;
+				color: var(--svetlo-siniy);
+			}
 		.counter{
 		    width: remy(118);
 			column-gap:remy(6);
