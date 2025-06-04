@@ -361,12 +361,10 @@ document.addEventListener('DOMContentLoaded', function() {
 					});
 				});
 			}
-   
 });
 
 document.addEventListener('DOMContentLoaded', function() {
   
-  //
   const acordions = document.querySelectorAll('.acordion');
   if(acordions.length >0){
     acordions.forEach((acor)=>{
@@ -405,6 +403,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });    
       });
   }
-  
+  //FOTORAMA
+  let mySwiperThumb = new Swiper(".mySwiperThumb", {
+    spaceBetween: 20,
+    slidesPerView: 'auto',
+    direction: "vertical", // Вертикальный режим
+    freeMode: true,
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: ".mySwiperThumb-next",
+      prevEl: ".mySwiperThumb-prev",
+    },
+    });
+    var mySwiperFotorama = new Swiper(".mySwiperFotorama", {
+    spaceBetween: 10,
+    speed: 800,
+   
+    thumbs: {
+      swiper:  mySwiperThumb,
+    },
+  });
 })
 
