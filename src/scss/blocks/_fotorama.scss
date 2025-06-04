@@ -1,12 +1,17 @@
 .mySwiperFotorama{
 	width: remy(493);
 	height: remy(493);
-	margin-bottom: remy(20);
+	
 	.swiper-slide{
 		img{
 			border-radius: remy(10);
 
 		}
+	}
+	@media (max-width: 767px) {
+		width: calc(100vw - 40px);
+	    height: auto;
+		aspect-ratio: 344/321;
 	}
 }
 .mySwiperThumb{
@@ -19,5 +24,9 @@
 	.swiper-wrapper {
 	width: fit-content;
 	margin: 0 auto;
+	}
+	@media (max-width: 767px) {
+		margin-top: remy(20);
+		display: none!important;
 	}
 }

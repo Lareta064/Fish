@@ -1,6 +1,10 @@
 section.product-gallery
 	
 	.product-gallery-swiper
+		//лейбл скидки поверх большой картинки
+		.sale-label
+			span -11%
+		
 		//большая картинка
 		.swiper.mySwiperFotorama
 			.swiper-wrapper
@@ -16,7 +20,8 @@ section.product-gallery
 					img.img-cover(src='./img/blog/gallery1.webp' srcset='./img/blog/gallery1@2x.webp 2x' width="493" height="493" alt="img")
 				.swiper-slide
 					img.img-cover(src='./img/blog/gallery1.webp' srcset='./img/blog/gallery1@2x.webp 2x' width="493" height="493" alt="img")
-		
+			//pagination
+			.fotorama-swiper-pagination.swiper-pagination
 		//маленькие превьюшки
 		.swiper.mySwiperThumb(thumbsslider)
 			.swiper-wrapper

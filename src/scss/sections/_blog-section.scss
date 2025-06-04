@@ -5,7 +5,7 @@
 	.swiper-slide{width:fit-content!important;}
 	@media (max-width: 767px) {
 		padding-bottom: remy(75);
-	  height: 400px;
+	     height: 330px;
 	}
 }
 .blog-card{
@@ -74,5 +74,15 @@
 		@media (max-width: 767px) {
 		  padding: 18px 17px;
 		}
+	}
+}
+.blog-swiper{
+	@media (max-width: 767px) {
+	 padding-bottom: 0;
+	}
+}
+.blog-swiper .swiper__nav{
+	@media (max-width: 767px) {
+	display: none;
 	}
 }

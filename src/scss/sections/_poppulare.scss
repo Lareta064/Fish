@@ -3,7 +3,9 @@
 	@media (max-width: 767px) {
 	  width: calc(100vw - 40px);
 	  max-width:540px;
+	  padding-bottom: 0;
 	  .swiper-slide{width: 166px!important;}
+	  .swiper__nav{display: none;}
 	}
 }
 .product-swiper .swiper-wrapper{

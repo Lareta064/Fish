@@ -50,3 +50,12 @@
 	}
 	.swiper-pagination-bullet-active{background: var(--goluboy);}
 }
+.fotorama-swiper-pagination.swiper-pagination .swiper-pagination-bullet{
+	@media (max-width: 767px) {
+		max-width: 10px;
+		width: 10px;
+		height: 10px;
+		background-color: var(--color-svetlyy-);;
+		&.swiper-pagination-bullet-active{background:  var(--temno-siniy);;}
+	}
+}

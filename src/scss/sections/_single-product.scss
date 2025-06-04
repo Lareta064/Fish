@@ -1,13 +1,28 @@
+.single-product-page {
+	@media (max-width: 767px) {
+		.grid-aside{display: none!important;}
+	}
+}
+
 .product-gallery{
 	width: remy(1136);
     display: flex;
 	column-gap: remy(32);
 	padding-bottom: remy(16);
 	border-bottom: 0.67px solid rgba(28, 28, 28, 0.1);
+	@media (max-width: 767px) {
+		width: 100%;
+		flex-direction: column;
+		row-gap:20px;
+	}
 }
 .product-gallery-swiper{
 	width: remy(493);
 	flex-shrink: 0;
+	@media (max-width: 767px) {
+	flex-shrink: 2;
+	width: 100%;
+	}
 }
 .product-gallery .product-gallery-info{
 	flex-grow: 1;
@@ -23,6 +38,9 @@
 .product-gallery__title{
 	padding-bottom: remy(24);
 	&>*+*{margin-top: remy(16);}
+	@media (max-width: 767px) {
+		order:1;
+	}
 }
 .label-gray-group{
 	column-gap: remy(16);
@@ -42,6 +60,11 @@
 	padding:  remy(6) remy(12) remy(8) remy(8);
 	border-radius: remy(16)
 	
+}
+.product-gallery__nutritional{
+	@media (max-width: 767px) {
+		order:3;
+	}
 }
 .nutritional-txt-item{
 	display: flex;
@@ -91,6 +114,11 @@
 	}
 }
 .product-gallery__nutritional .nutritional-txt{margin-bottom: remy(20);}
+.product-gallery__text{
+	@media (max-width: 767px) {
+		order:4;
+	}
+}
 .about-product-title{
 	font-family: var(--font-family);
 	font-size: remy(18);
@@ -151,13 +179,47 @@
 			transform: rotate(-10deg);
 		}
 	}
+	@media (max-width: 767px) {
+		flex-direction: column;
+		align-items: flex-start;
+		row-gap:16px;
+	}
 }
 .product-gallery__price{
 	justify-content: space-between;
 	padding-bottom: remy(24);
-
+	@media (max-width: 767px) {
+		order:2;
+	}
 }
 .blog.bb-block{
 border-bottom: 0.67px solid rgba(28, 28, 28, 0.1);
 padding-bottom: remy(40);
+}
+.sale-label{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding-inline: remy(16);
+	height: remy(46);
+	font-family: var(--second-family);
+	font-weight: 700;
+	font-size: remy(24);
+	line-height: 90%;
+	letter-spacing: -0.02em;
+	color: var(--temno-siniy);
+	border-radius: remy(30);
+	background-color: #fff;
+}
+.product-gallery-swiper{
+	position: relative;
+	.sale-label{
+		position: absolute;
+		z-index: 2;
+		top:remy(20);
+		left: remy(20);
+		@media (max-width: 767px) {
+		display: none;
+		}
+	}
 }

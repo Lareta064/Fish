@@ -417,10 +417,19 @@ document.addEventListener('DOMContentLoaded', function() {
     var mySwiperFotorama = new Swiper(".mySwiperFotorama", {
     spaceBetween: 10,
     speed: 800,
+    pagination: {
+        el: ".fotorama-swiper-pagination",
+        clickable: true,
+      },
    
-    thumbs: {
-      swiper:  mySwiperThumb,
-    },
+    breakpoints:{
+      768:{
+        thumbs: {
+          swiper:  mySwiperThumb,
+       },
+       pagination:false,
+      }
+    }
   });
 })
 
