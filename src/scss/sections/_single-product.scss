@@ -1,0 +1,12 @@
+.product-gallery{
+	width: remy(1136);
+    display: flex;
+	column-gap: remy(32);
+}
+.product-gallery-swiper{
+	width: remy(493);
+	flex-shrink: 0;
+}
+.product-gallery .product-gallery-info{
+	flex-grow: 1;
+}

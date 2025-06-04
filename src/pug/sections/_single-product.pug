@@ -1,34 +1,39 @@
 section.product-desckription
 	.product-gallery
-		//маленькие превьюшки
-		.swiper.mySwiperThumb(thumbsslider)
-			.swiper-wrapper
-				.swiper-slide
-					img(src='./img/blog/gallery1-thumb.webp' srcset='./img/gallery1-thumb.webp@2x.webp 2x' width="107" height="62" alt="img")
-				.swiper-slide
-					img(src='./img/blog/gallery1-thumb.webp' srcset='./img/gallery1-thumb.webp@2x.webp 2x' width="107" height="62" alt="img")
-				.swiper-slide
-					img(src='./img/blog/gallery1-thumb.webp' srcset='./img/gallery1-thumb.webp@2x.webp 2x' width="107" height="62" alt="img")
-				.swiper-slide
-					img(src='./img/blog/gallery1-thumb.webp' srcset='./img/gallery1-thumb.webp@2x.webp 2x' width="107" height="62" alt="img")
-				.swiper-slide
-					img(src='./img/blog/gallery1-thumb.webp' srcset='./img/gallery1-thumb.webp@2x.webp 2x' width="107" height="62" alt="img")
-				.swiper-slide
-					img(src='./img/blog/gallery1-thumb.webp' srcset='./img/gallery1-thumb.webp@2x.webp 2x' width="107" height="62" alt="img")
+		.product-gallery-swiper
+			
+			//большая картинка
+			.swiper.mySwiperFotorama
+				.swiper-wrapper
+					.swiper-slide
+						img.img-cover(src='./img/blog/gallery1.webp' srcset='./img/blog/gallery1@2x.webp 2x' width="493" height="493" alt="img")
+					.swiper-slide
+						img.img-cover(src='./img/blog/gallery1.webp' srcset='./img/blog/gallery1@2x.webp 2x' width="493" height="493" alt="img")
+					.swiper-slide
+						img.img-cover(src='./img/blog/gallery1.webp' srcset='./img/blog/gallery1@2x.webp 2x' width="493" height="493" alt="img")
+					.swiper-slide
+						img.img-cover(src='./img/blog/gallery1.webp' srcset='./img/blog/gallery1@2x.webp 2x' width="493" height="493" alt="img")
+					.swiper-slide
+						img.img-cover(src='./img/blog/gallery1.webp' srcset='./img/blog/gallery1@2x.webp 2x' width="493" height="493" alt="img")
+					.swiper-slide
+						img.img-cover(src='./img/blog/gallery1.webp' srcset='./img/blog/gallery1@2x.webp 2x' width="493" height="493" alt="img")
+			
+			//маленькие превьюшки
+			.swiper.mySwiperThumb(thumbsslider)
+				.swiper-wrapper
+					.swiper-slide
+						img.img-cover(src='./img/blog/gallery1-thumb.webp' srcset='./img/blog/gallery1-thumb@2x.webp 2x' width="107" height="62" alt="img")
+					.swiper-slide
+						img.img-cover(src='./img/blog/gallery1-thumb.webp' srcset='./img/blog/gallery1-thumb@2x.webp 2x' width="107" height="62" alt="img")
+					.swiper-slide
+						img.img-cover(src='./img/blog/gallery1-thumb.webp' srcset='./img/blog/gallery1-thumb@2x.webp 2x' width="107" height="62" alt="img")
+					.swiper-slide
+						img.img-cover(src='./img/blog/gallery1-thumb.webp' srcset='./img/blog/gallery1-thumb@2x.webp 2x' width="107" height="62" alt="img")
+					.swiper-slide
+						img.img-cover(src='./img/blog/gallery1-thumb.webp' srcset='./img/blog/gallery1-thumb@2x.webp 2x' width="107" height="62" alt="img")
+					.swiper-slide
+						img.img-cover(src='./img/blog/gallery1-thumb.webp' srcset='./img/blog/gallery1-thumb@2x.webp 2x' width="107" height="62" alt="img")
 		
-		//большая картинка
-		.swiper.mySwiperFotorama		
-			.swiper-wrapper
-				.swiper-slide
-					img(src='./img/blog/gallery1.webp' srcset='./img/gallery1.webp@2x.webp 2x' width="493" height="493" alt="img")
-				.swiper-slide
-					img(src='./img/blog/gallery1.webp' srcset='./img/gallery1.webp@2x.webp 2x' width="493" height="493" alt="img")
-				.swiper-slide
-					img(src='./img/blog/gallery1.webp' srcset='./img/gallery1.webp@2x.webp 2x' width="493" height="493" alt="img")
-				.swiper-slide
-					img(src='./img/blog/gallery1.webp' srcset='./img/gallery1.webp@2x.webp 2x' width="493" height="493" alt="img")
-				.swiper-slide
-					img(src='./img/blog/gallery1.webp' srcset='./img/gallery1.webp@2x.webp 2x' width="493" height="493" alt="img")
-				.swiper-slide
-					img(src='./img/blog/gallery1.webp' srcset='./img/gallery1.webp@2x.webp 2x' width="493" height="493" alt="img")
-	.product-info
+		//RIGHT INFO
+		.product-gallery-info
+			h1 text

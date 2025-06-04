@@ -407,7 +407,6 @@ document.addEventListener('DOMContentLoaded', function() {
   let mySwiperThumb = new Swiper(".mySwiperThumb", {
     spaceBetween: 20,
     slidesPerView: 'auto',
-    direction: "vertical", // Вертикальный режим
     freeMode: true,
     watchSlidesProgress: true,
     navigation: {

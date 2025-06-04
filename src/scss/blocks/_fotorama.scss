@@ -1,0 +1,23 @@
+.mySwiperFotorama{
+	width: remy(493);
+	height: remy(493);
+	margin-bottom: remy(20);
+	.swiper-slide{
+		img{
+			border-radius: remy(10);
+
+		}
+	}
+}
+.mySwiperThumb{
+	.swiper-slide{
+		width: remy(106)!important;
+		height: remy(62);
+		img{border-radius: remy(10)}
+		
+	}
+	.swiper-wrapper {
+		width: fit-content;
+		margin: 0 auto;
+		}
+}
