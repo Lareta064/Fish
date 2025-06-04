@@ -1,0 +1,26 @@
+//POPPULARE
+section.recommend
+	h2.h-40 С этим товаром покупают 
+	.recommend-swiper.product-swiper.swiper
+		.swiper-wrapper
+			.swiper-slide
+				+product-card('product1')
+			.swiper-slide
+				+product-card('product2')
+			.swiper-slide
+				+product-card('product3')
+			.swiper-slide
+				+product-card('product4')
+			.swiper-slide
+				+product-card('product1')
+			.swiper-slide
+				+product-card('product2')
+		
+		//SWIPER NAV
+		.swiper__nav
+			.product-swiper-prev.swiper-button-prev
+				svg.svg-arrLeft
+					use(href='../img/sprite.svg#svg-arrLeft')
+			.product-swiper-next.swiper-button-next
+				svg.svg-arrRight
+					use(href='../img/sprite.svg#svg-arrRight')

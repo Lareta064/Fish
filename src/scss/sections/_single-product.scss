@@ -2,6 +2,8 @@
 	width: remy(1136);
     display: flex;
 	column-gap: remy(32);
+	padding-bottom: remy(16);
+	border-bottom: 0.67px solid rgba(28, 28, 28, 0.1);
 }
 .product-gallery-swiper{
 	width: remy(493);
@@ -152,4 +154,10 @@
 }
 .product-gallery__price{
 	justify-content: space-between;
+	padding-bottom: remy(24);
+
+}
+.blog.bb-block{
+border-bottom: 0.67px solid rgba(28, 28, 28, 0.1);
+padding-bottom: remy(40);
 }

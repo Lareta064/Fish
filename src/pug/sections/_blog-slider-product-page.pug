@@ -1,0 +1,53 @@
+//BLOG SLIDER
+section.blog.bb-block
+	h2.h-40 Рецепты
+	.blog-swiper.swiper
+		.swiper-wrapper
+			//SLIDE
+			.swiper-slide
+				.blog-card
+					.blog-card__img
+						img(src='./img/blog/blog1.webp', srcset='./img/blog/blog1@2x.webp 2x' width='303' height='562' loading='lazy' alt='img')
+					
+					.blog-card__text
+						.blog-tag #рецепты
+						.blog-title Соте из вонголе с просекко
+						.blog-data 18 июля
+			//SLIDE
+			.swiper-slide
+				.blog-card
+					.blog-card__img
+						img(src='./img/blog/blog2.webp', srcset='./img/blog/blog2@2x.webp 2x' width='489' height='562' loading='lazy' alt='img')
+					
+					.blog-card__text
+						.blog-tag #сми
+						.blog-title стейки из Лосося<br>за&nbsp;5&nbsp;минут
+						.blog-data 18 июля
+			//SLIDE
+			.swiper-slide
+				.blog-card
+					.blog-card__img
+						img(src='./img/blog/blog3.webp', srcset='./img/blog/blog3@2x.webp 2x' width='303' height='562' loading='lazy' alt='img')
+					
+					.blog-card__text
+						.blog-tag ##рецепты
+						.blog-title рыба на костре<br>с итальянскими травами
+						.blog-data 18 июля
+			//SLIDE
+			.swiper-slide
+				.blog-card
+					.blog-card__img
+						img(src='https://farm6.staticflickr.com/5808/22690915754_6b043df788_b.jpg', srcset='https://farm6.staticflickr.com/5808/22690915754_6b043df788_b.jpg' width='303' height='562' loading='lazy' alt='img')
+					
+					.blog-card__text
+						.blog-tag #рецепты
+						.blog-title рыба на костре<br>с итальянскими травами
+						.blog-data 18 июля
+		//SWIPER NAV
+		.swiper__nav
+			.blog-swiper-prev.swiper-button-prev
+				svg.svg-arrLeft
+					use(href='../img/sprite.svg#svg-arrLeft')
+			.blog-swiper-next.swiper-button-next
+				svg.svg-arrRight
+					use(href='../img/sprite.svg#svg-arrRight')

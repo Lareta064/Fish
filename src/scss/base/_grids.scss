@@ -42,6 +42,15 @@
 		row-gap:60px;
 	}
 }
+.column-gap-40{
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap:remy(40);
+	&>*{width: 100%;}
+	// @media (max-width: 767px) {
+	// 	row-gap:60px;
+	// }
+}
 @media (min-width: 768px) {
 
 	.aside-sticky, .aside-sticky-160{
