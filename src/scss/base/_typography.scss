@@ -25,9 +25,17 @@
 		letter-spacing: -0.01em;
 	}
 }
-
+.h-40{
+	font-family: var(--second-family);
+	font-weight: 700;
+	font-size: remy(40);
+	line-height: 1;
+	letter-spacing: -0.01em;
+	color: var(--temno-siniy)
+}
 .fw-700{font-weight: 700;}
 .txt-red{color:#DD3535 !important;}
+.txt-grey{color: var(--color-tekst-seryy)!important;;}
 .txt-center{text-align: center;}
 .txt-right{text-align: right;}
 .header-group{
