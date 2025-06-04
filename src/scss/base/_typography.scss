@@ -31,9 +31,14 @@
 	font-size: remy(40);
 	line-height: 1;
 	letter-spacing: -0.01em;
-	color: var(--temno-siniy)
+	color: var(--temno-siniy);
+	@media (max-width: 767px) {
+	font-size: 30px;
+	line-height: .9;
+	}
 }
 .fw-700{font-weight: 700;}
+.fw-900{font-weight: 900;}
 .txt-red{color:#DD3535 !important;}
 .txt-grey{color: var(--color-tekst-seryy)!important;;}
 .txt-center{text-align: center;}

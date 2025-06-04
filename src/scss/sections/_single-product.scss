@@ -11,7 +11,7 @@
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
-	row-gap:remy(24);
+	// row-gap:remy(24);
 	&>*{width: 100%;}
 	&>*+*{
 		border-top: 0.67px solid rgba(28, 28, 28, 0.1);
@@ -19,7 +19,7 @@
 	}
 }
 .product-gallery__title{
-	padding-bottom: reny(16);
+	padding-bottom: remy(24);
 	&>*+*{margin-top: remy(16);}
 }
 .label-gray-group{
@@ -40,4 +40,116 @@
 	padding:  remy(6) remy(12) remy(8) remy(8);
 	border-radius: remy(16)
 	
+}
+.nutritional-txt-item{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	column-gap: remy(20);
+	font-family: var(--font-family);
+	font-size: 18px;
+	line-height: 1.33;
+	color: var(--color-chernyy);
+	@media (max-width: 767px) {
+		font-size: 16px;
+		.fw-700{letter-spacing: 0.06em;}
+
+		
+	}
+}
+.nutritional-list{
+	flex-wrap: wrap;
+	gap:remy(16);
+	flex-wrap: wrap;
+
+}
+.nutritional-list-item{
+	width: remy(70);
+	height: remy(70);
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap:remy(10);
+	padding: remy(8) 0;
+	border: 1px solid var(--goluboy);
+	flex-shrink: 0;
+	.fw-900{
+		
+		font-size: remy(20);
+		line-height: 1;
+		letter-spacing: -0.02em;
+		color: var(--temno-siniy);
+	}
+	.txt-grey{
+		font-size: remy(12);
+		line-height: .92;
+		letter-spacing: 0.03em;
+	}
+}
+.product-gallery__nutritional .nutritional-txt{margin-bottom: remy(20);}
+.about-product-title{
+	font-family: var(--font-family);
+	font-size: remy(18);
+	line-height: 1.17;
+	color: var(--color-chernyy);
+	margin-bottom: remy(16);
+}
+.about-product-list{
+	list-style-type: none;
+
+}
+.about-product-item{
+	letter-spacing: -0.02em;
+	color: var(--color-chernyy);
+	.fs-14{
+		font-size: remy(14);
+		line-height: 125%;
+		color: var(--color-tekst-seryy);
+		margin-bottom: remy(4);
+	}
+	.fs-16{
+		line-height: 150%;
+		font-size: remy(16);
+		color: var(--color-chernyy)
+	}
+}
+.about-product-item +.about-product-item{
+	margin-top: remy(12);
+}
+.price-box{
+	display: flex;
+	align-items: center;
+	column-gap: remy(15);
+	.price-val{
+		font-weight: 700;
+		font-size: remy(32);
+		line-height: .9;
+		letter-spacing: -0.01em;
+		color: var(--temno-siniy);
+		white-space: nowrap;
+	}
+	.price-old{
+		font-size: remy(16);
+		line-height: .90;
+		letter-spacing: -0.02em;
+		color: var(--svetlo-siniy);
+		position: relative;
+		width: fit-content;
+		&:before{
+			content:'';
+			position: absolute;
+			left: 0;bottom: 10%;
+			height: 1px;
+			width: 100%;
+			background-color: #de2b2b;
+			z-index: 2;
+			top: 50%;
+			transform: rotate(-10deg);
+		}
+	}
+}
+.product-gallery__price{
+	justify-content: space-between;
 }
