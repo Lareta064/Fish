@@ -23,6 +23,10 @@
 .form-item.w-50{
 	flex:1;
 	max-width: 50%;
+	@media (max-width: 767px) {
+	max-width: 100%;
+	flex:unset;
+	}
 }
 .range-slider-wrapper{
 	column-gap: remy(12);
@@ -75,10 +79,10 @@
 .form-button.flex-center-y{
 	gap: 2rem;
 	@media (max-width: 767px) {
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		width: 100%;
 	}
 }
 .form-button .btn-dark{
@@ -86,11 +90,11 @@
 	max-width: remy(324);
 }
 .agree-block{
-	max-width: remy(370);
+	max-width: remy(400);
 	font-size: 1rem;
-	font-size: remy(16);
+	width: 100%;
 	line-height: 1.25;
-	letter-spacing: -0.02em;
+	letter-spacing: -0.03em;
 	color: var(--color-chernyy);
 	@media (max-width: 767px) {
 		font-size: remy(12);

@@ -53,6 +53,11 @@
 	row-gap: 32px;
 	}
 }
+.header-group.header-group--bb{
+    border-bottom: 1px solid var(--goluboy);
+	padding-bottom: remy(32);
+	@media (max-width: 767px) {border-bottom: 0;}
+}
 .contact-link{
 	display: flex;
 	column-gap:remy(5);

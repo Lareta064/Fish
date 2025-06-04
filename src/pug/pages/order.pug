@@ -2,25 +2,54 @@ extends ../layouts/layout.pug
 
 block content
 	include ../sections/_header.pug
-	main.inner-page.basket-page
+	main.inner-page.order-page
 		.container
 			.breadcrumbs
 				a(href="index.html").breadcrumb-item Главная
 				a(href="catalogy.html").breadcrumb-item Каталог
 				a(href="basket-page.html").breadcrumb-item Корзина
 				a(href="#!").breadcrumb-item Оформление заказа
+			
+			.header-group.flex-col.visible-sm
+				h1.h2 Оформление заказа
+				.header-subtitle
+					p Заполните простую форму, и наши менеджеры свяжутся с вами,<br>ответят на любые вопросы и подготовят счет для оплаты.	
 			.grid-two-columns
 				//LEFT COLUMN
 				.grid-content.column-gap-80
 				
 					include ../sections/_order-page.pug
 					
-					
 				
 				//RIGHT COLUMN
 				.grid-aside.aside-sticky
-					include ../blocks/_basket-calculate
-		
+					//basket-calculate
+					.basket-calculate.border-round-card
+						.basket-calculate__list
+							.basket-calculate__item
+								.basket-calculate__text Кол-во товаров: 1
+								.basket-calculate__price 206 200 &#8381;
+
+							.basket-calculate__item
+								.basket-calculate__text Скидка
+								.basket-calculate__price.txt-red -1 200 &#8381;
+
+							.basket-calculate__item
+								.basket-calculate__text Промокод
+								.basket-calculate__price.txt-red -10 000 &#8381;
+						
+						.basket__total
+							.basket__total-row.flex-center-y
+								.basket__total-txt Итого:
+								.basket__total-summ 
+									span 195 000 &#8381;
+							.basket__total--ps *Цена указана без учета доставки 
+							
+						form.promo-use
+							.form-item
+								input.promo-use-input(type="text" placeholder="Промокод")
+								button.btn.promo-use-btn(type="submit") Применить
+						
 		
 			
 block variables

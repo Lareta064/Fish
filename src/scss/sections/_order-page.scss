@@ -1,0 +1,14 @@
+.order-form{
+	display: flex;
+	flex-wrap: wrap;
+	gap:16px;
+	.form-item{width: 100%;}
+	.form-item{margin-bottom: remy(16);}
+}
+.order-page{
+	@media (max-width: 767px) {
+	.grid-two-columns{
+		flex-direction: column-reverse;
+	}
+	}
+}
