@@ -119,6 +119,46 @@ block content
 								svg.svg-arrRight
 									use(href='../img/sprite.svg#svg-arrRight')
 
+			//PARTNERS
+			section.partners
+				.container
+					h2.h2 С кем мы работаем
+					.partners-swiper.swiper
+						.swiper-wrapper
+							
+							.swiper-slide
+								.partner-logo
+									img(src='./img/partners/1.webp', srcset='./img/partners/1@2x.webp 2x' width='235' height='44' loading='lazy' alt='img')
+							
+							.swiper-slide
+								.partner-logo
+									img(src='./img/partners/2.webp', srcset='./img/partners/2@2x.webp 2x' width='106' height='129' loading='lazy' alt='img')
+							
+							.swiper-slide
+								.partner-logo
+									img(src='./img/partners/3.webp', srcset='./img/partners/3@2x.webp 2x' width='252' height='19' loading='lazy' alt='img')
+							
+							.swiper-slide
+								.partner-logo
+									img(src='./img/partners/4.webp', srcset='./img/partners/4@2x.webp 2x' width='163' height='52' loading='lazy' alt='img')
+							
+							.swiper-slide
+								.partner-logo
+									img(src='./img/partners/5.webp', srcset='./img/partners/5@2x.webp 2x' width='88' height='91' loading='lazy' alt='img')
+							
+							.swiper-slide
+								.partner-logo
+									img(src='./img/partners/6.webp', srcset='./img/partners/6@2x.webp 2x' width='271' height='47' loading='lazy' alt='img')
+						
+						//SWIPER NAV
+						.swiper__nav
+							.partners-swiper-prev.swiper-button-prev
+								svg.svg-arrLeft
+									use(href='../img/sprite.svg#svg-arrLeft')
+							.partners-swiper-next.swiper-button-next
+								svg.svg-arrRight
+									use(href='../img/sprite.svg#svg-arrRight')
+
 
 block variables
 	-var title = "О нас";

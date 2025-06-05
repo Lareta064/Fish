@@ -1,0 +1,15 @@
+.partner-logo{
+
+}
+.partners-swiper{
+	.swiper-wrapper{
+		display: flex;
+	}
+	.swiper-slide{
+		height: unset;
+		display: flex;
+		width: auto!important;
+		justify-content: center;
+		align-items: center;
+	}
+}

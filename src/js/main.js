@@ -109,7 +109,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
-
+    
+    //partners swiper
+    const partnersSlider = new Swiper('.partners-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 40,
+        speed:500,
+        navigation: {
+          nextEl: ".partners-swiper-prev",
+          prevEl: ".partners-swiper-next"
+        },
+        breakpoints: {
+          1024: {
+            spaceBetween: 60,
+             
+          },
+          1440: {
+            spaceBetween: 60,
+             
+          },
+        }
+    });
     
     // СЧЕТЧИК
     let counters = document.querySelectorAll('.counter');
