@@ -37,3 +37,24 @@
 	}
 	
 }
+.about-preview-grid{
+	display: flex;
+	column-gap:remy(126);
+	.about-preview-img{
+		width: remy(875);
+		aspect-ratio: 875/511;
+		border-radius: remy(15);
+		overflow: hidden;
+		flex-shrink: 0;
+	}
+	.about-preview-txt{
+		flex-grow: 1;
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: remy(24);
+		line-height: 133%;
+		letter-spacing: -0.02em;
+		color: var(--color-chernyy);
+		p+p{margin-top: 1em;}
+	}
+}
