@@ -65,5 +65,7 @@
 .about-benefits-cards{
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
+	border-radius: remy(15);
+	overflow: hidden;
 
 }

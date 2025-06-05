@@ -63,7 +63,61 @@ block content
 						
 						.about-preview-img
 							img.img-cover(src='./img/about-big.webp', srcset='./img/about-big@2x.webp 2x' width='875' height='511' loading='lazy' alt='img')
-`
+
+			//BLOG SLIDER
+			section.about-blog
+				.container
+					.blog-swiper.swiper
+						.swiper-wrapper
+							//SLIDE
+							.swiper-slide
+								.blog-card
+									.blog-card__img
+										img(src='./img/blog/about1.webp', srcset='./img/blog/about1@2x.webp 2x' width='303' height='562' loading='lazy' alt='img')
+									
+									.blog-card__text
+										.blog-tag #сми
+										.blog-title Репортаж на телеканале “Утро”
+										.blog-data 18 июля
+							//SLIDE
+							.swiper-slide
+								.blog-card
+									.blog-card__img
+										img(src='./img/blog/about2.webp', srcset='./img/blog/about2@2x.webp 2x' width='489' height='562' loading='lazy' alt='img')
+									
+									.blog-card__text
+										.blog-tag #сми
+										.blog-title Репортаж на телеканале “Утро”
+										.blog-data 18 июля
+							//SLIDE
+							.swiper-slide
+								.blog-card
+									.blog-card__img
+										img(src='./img/blog/about3.webp', srcset='./img/blog/about3@2x.webp 2x' width='303' height='562' loading='lazy' alt='img')
+									
+									.blog-card__text
+										.blog-tag #новости
+										.blog-title Истории, стоящие<br>за продуктами decona
+										.blog-data 18 июля
+							//SLIDE
+							.swiper-slide
+								.blog-card
+									.blog-card__img
+										img(src='./img/blog/about4.webp', srcset='./img/blog/about4@2x.webp 2x' width='303' height='562' loading='lazy' alt='img')
+									
+									.blog-card__text
+										.blog-tag #тpенд
+										.blog-title Истории, стоящие<br>за продуктами decona
+										.blog-data 18 июля
+							
+						//SWIPER NAV
+						.swiper__nav
+							.blog-swiper-prev.swiper-button-prev
+								svg.svg-arrLeft
+									use(href='../img/sprite.svg#svg-arrLeft')
+							.blog-swiper-next.swiper-button-next
+								svg.svg-arrRight
+									use(href='../img/sprite.svg#svg-arrRight')
 
 
 block variables
