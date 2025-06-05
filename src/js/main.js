@@ -130,7 +130,18 @@ document.addEventListener("DOMContentLoaded", function () {
           },
         }
     });
-    
+    //partners swiper
+    const docsSlider = new Swiper('.docs-swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      speed:500,
+      navigation: {
+        nextEl: ".docs-swiper-prev",
+        prevEl: ".docs-swiper-next"
+      },
+     
+  });
+  
     // СЧЕТЧИК
     let counters = document.querySelectorAll('.counter');
 

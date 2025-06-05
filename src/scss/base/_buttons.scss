@@ -149,3 +149,24 @@
 		height: 34px
 	}
 }
+.round-arrow{
+	width: remy(55);
+	height: remy(55);
+	border-radius: 50%;
+	border:1px solid var(--temno-siniy);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink:0;
+}
+.round-arrow-link{
+	display: flex;
+	align-items: center;
+	column-gap: remy(16);
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: remy(16);
+	line-height: 100%;
+	letter-spacing: 0.06em;
+	color: var(--temno-siniy);
+}

@@ -16,10 +16,15 @@
 *.scroll-x{
 	overflow: hidden;
 	overflow-x: auto;
+	scrollbar-width: none;
+	&::-webkit-scrollbar{
+		display: none;
+	}
 	@media (max-width: 767px) {
 		width: calc(50% + 50vw);
 		&>*:last-child{margin-right: 16px;}
 	}
+	
 }
 
 .txt-center{text-align: center;}
