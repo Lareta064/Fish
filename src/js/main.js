@@ -115,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 'auto',
         spaceBetween: 40,
         speed:500,
+        loop: true,
         navigation: {
           nextEl: ".partners-swiper-prev",
           prevEl: ".partners-swiper-next"
@@ -130,16 +131,21 @@ document.addEventListener("DOMContentLoaded", function () {
           },
         }
     });
-    //partners swiper
+    //docs swiper
     const docsSlider = new Swiper('.docs-swiper', {
       slidesPerView: 'auto',
-      spaceBetween: 16,
+      loop: true,
       speed:500,
       navigation: {
         nextEl: ".docs-swiper-prev",
         prevEl: ".docs-swiper-next"
       },
-     
+       breakpoints: {
+          768: {
+            slidesPerView: 4,
+             
+          },
+        }
   });
   
     // СЧЕТЧИК

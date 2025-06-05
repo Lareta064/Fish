@@ -19,3 +19,18 @@
 		height: 320px;
 	}
 }
+.docs-swiper {
+	margin-inline: remy(-8);
+	.swiper-slide{
+		padding: remy(12) remy(8);
+		
+	}
+	@media (max-width: 767px) {
+		width:calc(50vw + 50%);
+		.swiper-slide{
+			padding: remy(12) remy(8);
+			width: 255px!important;
+			// height: 1px;
+		}
+	}
+}

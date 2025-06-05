@@ -173,7 +173,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 		width: size(1560);
 	}
 	@media (max-width: 767px) {
-		width: 100%;
+		width: calc(100vw - 40px);
 		max-width: 540px;
 	}
 }
