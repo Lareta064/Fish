@@ -1,0 +1,39 @@
+.about-page-promo{
+	height: remy(611);
+	width: 100%;
+	@media (max-width: 767px) {
+	height: auto;
+	}
+	
+}
+.has-bg-video{
+	position: relative;
+	min-height: 100%;
+	// background-color: var(--color-temnyy-siniy);
+
+	overflow: hidden;
+	.bg-video{
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		left: 0;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		border-radius: remy(15);
+		&+*{
+			z-index: 2;
+			position: relative;
+		}
+		@media (max-width: 767px) {
+			position: relative;
+			min-height: 321px;
+			aspect-ratio: 344/321;
+		}
+	}
+	@media (max-width: 767px) {
+		
+	}
+	
+}

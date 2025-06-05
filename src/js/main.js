@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
    const header = document.querySelector("#header");
    const styckyAside = document.querySelector(".aside-sticky");
 
-    if (header) {
+    if (header && styckyAside) {
       let lastScrollTop = window.scrollY || document.documentElement.scrollTop;
 
       window.addEventListener("scroll", () => {

@@ -4,9 +4,14 @@
 	display: flex;
 	gap:remy(8);
 }
-  .flex-center, .flex-center-x{justify-content: center;}
- .flex-center, .flex-center-y{align-items: center;}
+.flex-center, .flex-center-x{justify-content: center;}
+.flex-center, .flex-center-y{align-items: center;}
 .flex-col{flex-direction: column; &>*{width:100%;}}
+.stretch-flex{
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
 
 *.scroll-x{
 	overflow: hidden;

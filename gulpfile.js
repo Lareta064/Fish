@@ -63,7 +63,10 @@ gulp.task("copy:libs", () =>
     gulp.src("./src/libs/**/*.*")
         .pipe(gulp.dest("./build/libs"))
 );
-
+gulp.task("copy:video", () => 
+    gulp.src("./src/video/**/*.*")
+        .pipe(gulp.dest("./build/video"))
+);
 // Server
 gulp.task("server", function () {
     browserSync.init({
@@ -133,6 +136,6 @@ gulp.task("watch", function () {
 // Default
 gulp.task("default", gulp.series(
     "clean:build",
-    gulp.parallel("pug","pug:ui", "scss", "copy:js", "copy:libs", "img", "fonts"),
+    gulp.parallel("pug","pug:ui", "scss", "copy:js", "copy:libs", "img", "fonts", "copy:video"),
     gulp.parallel("server", "watch")
 ));

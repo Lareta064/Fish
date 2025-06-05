@@ -78,4 +78,25 @@
 	column-gap:remy(5);
 	align-items: center;
 }
-
+.promo-info-card{
+	border-radius: 0 0 remy(30) remy(15);
+	width: remy(492);
+	background-color: #fff;
+	padding: remy(40);
+	margin-left: remy(40);
+	.promo-info__txt{
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: remy(18);
+		letter-spacing: -0.02em;
+		&>*+*{margin-top: remy(15);}
+	}
+	&>*{color: var(--temno-siniy);}
+	&>*+*{margin-top: remy(24);}
+	@media (max-width: 767px) {
+		border-radius: 0;
+		width: 100%;
+		padding: 20px;
+		margin-left: 0;
+	}
+}

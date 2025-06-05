@@ -1,0 +1,59 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header.pug
+	main.main-inner.about-page
+		.container
+			.breadcrumbs
+				a(href="index.html").breadcrumb-item Главная
+				a(href="#!").breadcrumb-item О нас
+		.column-gap-80
+			//PROMO
+			section.about-page-promo.stretch-flex
+				.container
+					.has-bg-video
+						//VIDEO BG
+						video.bg-video(autoplay muted loop playsinline)
+							source(src='./video/video.mp4' type='video/mp4')
+							source(src='./video/video.mp4' type='video/mp4')
+							source(src='./video/video.ogv' type='video/ogg')
+							p Ваш браузер не поддерживает видео.
+
+						//TEXT CONTENT
+						.promo-info-card
+							h1.h2 О нас
+							.promo-info__txt
+								p Мы — команда настоящих энтузиастов, которые любят море и всё, что с ним связано. Наша цель — предложить вам только самые свежие и качественные морепродукты, чтобы вы могли наслаждаться вкусом Черного моря прямо у себя дома.
+								p Гордимся тем, что работаем напрямую с местными рыбаками и поставщиками, что позволяет нам гарантировать свежесть и высокое качество нашей продукции.
+								p Каждый наш клиент — это не просто покупатель, а часть нашей большой морской семьи.
+
+			//BENEFITS
+			section.about-benefits
+				.container
+					.about-benefits-cards
+						//item
+						.about-benefit-item
+							.flex-col
+								.fs-65 2000
+								.fs-22 тонн в год собирают наши рыбаки
+						//item
+						.about-benefit-item
+							.flex-col
+								.fs-65 4
+								.fs-22 точек по городу, мы быстро расширяемся
+						//item
+						.about-benefit-item
+							.flex-col
+								.fs-65 10 +
+								.fs-22 лет опыт наших рыбаков, ловим в отрытом море и на суше
+						//item
+						.about-benefit-item
+							.flex-col
+								.fs-65 148
+								.fs-22 видов рыб и морепродуктов в нашем магазине
+
+
+
+
+block variables
+	-var title = "О нас";
