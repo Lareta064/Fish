@@ -1,0 +1,37 @@
+section.feedback
+	.container
+		.feedback-content
+			.feedback-form-wrapper
+				h2.h2 Работать у нас
+				form.feedback-form.row-gap-32
+					.form-item
+						input.form-input(type="text" placeholder="Имя*" name="")
+					
+					.form-item
+						input.form-input(type="text" placeholder="Электронная почта*" name="")
+					
+					.form-item.form-select
+						.dropdown
+							button.dropdown__button(type="button") Вакансия
+							
+							.dropdown__list
+								ul
+									li.dropdown__list-item(data-value="Текст1") Текст 1
+									li.dropdown__list-item(data-value="Текст2") Текст 2
+									li.dropdown__list-item(data-value="Текст3") Текст 3
+									li.dropdown__list-item(data-value="Текст4") Текст 4
+							
+							//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+							input.dropdown__input-hidden(type="hidden", name="")
+					
+					.form-item
+						textarea.form-textarea(name="message" placeholder="Почему хотите работать у нас?")
+					
+					.form-button.flex-center-y
+						button.btn-dark(type="submit") Оформить заказ
+						.agree-block
+							p Нажимая на кнопку, вы даете согласие на обработку персональных данных
+
+			//IMAGE
+			.feedback-form-image
+				img(src='./img/form-bg.webp', srcset='./img/form-bg@2x.webp 2x' width='659' height='744' loading='lazy' alt='img')

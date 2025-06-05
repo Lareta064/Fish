@@ -1,0 +1,19 @@
+.feedback-content{
+	display: flex;
+	column-gap:remy(75);
+	.feedback-form-wrapper{
+		padding-top: remy(150);
+		width: remy(789);
+		flex-shrink: 0;
+		@media (max-width: 767px) {
+			padding-top: 0;
+			width: 100%;
+		}
+	}
+	.feedback-form-image{
+		flex:1;
+		@media (max-width: 767px) {
+		display: none;
+		}
+	}
+}

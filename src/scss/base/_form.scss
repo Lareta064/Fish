@@ -18,6 +18,7 @@
 	textarea.form-textarea{
 		height: remy(160);
 		padding: 1rem;
+		resize: none;
 	}
 }
 .form-item.w-50{
@@ -243,3 +244,20 @@
   .dropdown__input-hidden {
 	display: none;
   }
+  .form-select   .dropdown{
+	.dropdown__button{
+		height: remy(52);
+		border-radius: remy(40);
+		letter-spacing: -0.02em;
+    	color: rgba(14, 21, 38, 0.8);
+		font-size: remy(16);
+	}
+	.dropdown__button::after{
+		width: remy(16);
+		height: remy(10);
+		background-size: remy(16) remy(10);
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.8844 7.61949L14.9474 0.00185977L16 1.10913L7.8844 10L0 1.10918L1.05263 0L7.8844 7.61949Z' fill='%23132439' /%3e%3c/svg%3e");
+	}
+  }
+
+  /*FEEDBACK*/
