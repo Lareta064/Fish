@@ -94,7 +94,13 @@ body {
 .lock{
 	overflow: hidden; 
 }
-
+.page-content{
+	display: flex;
+	flex-direction: column;
+	&>*{width: 100%;}
+	header.header, footer.footer{flex-shrink:0}
+	main{flex-grow: 1;}
+}
 a,
 a:hover {
 	text-decoration: none;

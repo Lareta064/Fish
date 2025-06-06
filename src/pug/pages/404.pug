@@ -1,0 +1,26 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header.pug
+	main.inner-page.page-404
+		.container
+			.breadcrumbs
+				a(href="index.html").breadcrumb-item Главная
+				a(href="#!").breadcrumb-item Доставка и оплата
+		.page-404__content
+			.container
+				.page-404-img
+					img(src='./img/error-page-bg.webp', srcset='./img/error-page-bg@2x.webp 2x' width='1523' height='1032' loading='lazy' alt='img')
+
+					.page-404-group
+						.page-404__num
+							span 4
+							span.rotate-num 0
+							span 4
+						.page-404__txt
+							p Страница не найдена
+							p К сожалению, неправильно набран адрес, или такой страницы не существует
+	include ../sections/_footer.pug
+
+block variables
+	-var title = "404";
