@@ -2,24 +2,24 @@ extends ../layouts/layout.pug
 
 block content
 	include ../sections/_header.pug
-	main.inner-page.page-404
+	main.inner-page.main-404
 		.container
 			.breadcrumbs
 				a(href="index.html").breadcrumb-item Главная
 				a(href="#!").breadcrumb-item Доставка и оплата
 		.page-404__content
-			.container
-				.page-404-img
-					img(src='./img/error-page-bg.webp', srcset='./img/error-page-bg@2x.webp 2x' width='1523' height='1032' loading='lazy' alt='img')
-
-					.page-404-group
-						.page-404__num
-							span 4
-							span.rotate-num 0
-							span 4
-						.page-404__txt
-							p Страница не найдена
-							p К сожалению, неправильно набран адрес, или такой страницы не существует
+			.page-404-img.pos-rel
+				img.hide-sm(src='./img/error-page-bg.webp', srcset='./img/error-page-bg@2x.webp 2x' width='1523' height='1032' loading='lazy' alt='img')
+				img.visible-sm(src='./img/error-bg-mob.webp', srcset='./img/error-bg-mob2@2x.webp 2x' width='800' height='680' loading='lazy' alt='img')
+				img.pos-abs(src='./img/fish-group.webp', srcset='./img/fish-group@2x.webp 2x' width='290' height='216' loading='lazy' alt='img')
+				.page-404-group
+					.page-404__num
+						span 4
+						span.rotate-num 0
+						span 4
+					.page-404__txt
+						p.fs-30 Страница не найдена
+						p К сожалению, неправильно набран адрес, или такой страницы не существует
 	include ../sections/_footer.pug
 
 block variables
