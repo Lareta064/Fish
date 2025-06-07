@@ -1,0 +1,24 @@
+section.order-content
+	.header-group.header-group--bb.flex-col.hide-sm
+		.h2 Оформление заказа
+		.header-subtitle
+			p Заполните простую форму, и наши менеджеры свяжутся с вами,<br>ответят на любые вопросы и подготовят счет для оплаты.
+	
+	form.order-form
+		.form-item.w-50
+			input.form-input(type="text" placeholder="Имя*" name="")
+		.form-item.w-50
+			input.form-input(type="text" placeholder="Фамилия*" name="")
+		.form-item
+			input.form-input(type="text" placeholder="Электронная почта*" name="")
+		.form-item
+			input.form-input(type="text" placeholder="Телефон" name="")
+		.form-item
+			input.form-input(type="text" placeholder="Адрес доставки" name="")
+		.form-item
+			textarea.form-textarea(name="message" placeholder="Комментарий")
+		
+		.form-button.flex-center-y
+			button.btn-dark(type="submit") Оформить заказ
+			.agree-block
+				p Нажимая на кнопку, вы даете согласие на обработку персональных данных

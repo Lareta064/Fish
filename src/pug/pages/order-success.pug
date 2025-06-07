@@ -1,0 +1,25 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header.pug
+	main.inner-page.order-page
+		.container
+			.breadcrumbs
+				a(href="index.html").breadcrumb-item Главная
+				a(href="catalogy.html").breadcrumb-item Каталог
+				a(href="basket-page.html").breadcrumb-item Корзина
+				a(href="#!").breadcrumb-item Оформление заказа
+			
+			.order-success-content
+				.header-group.flex-col
+					h1.h2 Ваш заказ №2061<br>был успешно размещен
+					.header-subtitle
+						p Благодарим вас за то, что выбрали нашу компанию. Наши менеджеры свяжутся с вами в ближайшее время, ответят на любые вопросы и подготовят счет для оплаты.
+
+					.btns-wrapper.flex-center-y
+						a(href="#!").btn-outline В каталог
+						a(href="#!").btn-dark Перейти на главную страницу
+	include ../sections/_footer.pug	
+			
+block variables
+	-var title = "Заказ принят!";

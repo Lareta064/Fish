@@ -12,3 +12,28 @@
 	}
 	}
 }
+.order-success-content{
+	text-align: center;
+	padding-top: remy(40);
+	max-width: remy(950);
+	margin-inline:auto;
+	.header-subtitle{max-width: remy(780);margin-inline:auto;}
+	.h2{color: var(--svetlo-siniy);}
+}
+.btns-wrapper{
+	margin-top: remy(16);
+	column-gap: remy(32);
+	&>*{
+		 width:100%;
+		font-size: remy(16);
+		@media (min-width: 768px) {
+			flex:1; width:50%;
+			font-size: remy(18);
+		}
+	}
+	@media (max-width: 767px) {
+		margin-top: 0;
+	   flex-direction: column;
+	   row-gap:15px;
+	}
+}
