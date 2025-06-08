@@ -143,6 +143,10 @@ i.carret-down{
 	width: remy(65);
 	height: (72);
     color: #132439;
+	@media (max-width: 767px) {
+	width: 44px;
+	height: 48px;
+	}
 }
 .btn-play{
 	
@@ -153,4 +157,14 @@ i.carret-down{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: .3s; 
+	&:hover{
+		background-color: var(--color-chernyy);
+		svg{color: var(--goluboy);}
+	}
+	@media (max-width: 767px) {
+	width: 100px;
+	height: 100px;
+	
+	}
 }

@@ -1,10 +1,18 @@
 .fancy-video-link{
 	position: relative;
+	width: 100%;
+	aspect-ratio: 152/76;
+	display: block;
 	.btn-play{
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: 3;
+	}
+	@media (max-width: 767px) {
+	   max-height:589px;
+	   width: 100%;
+	   aspect-ratio: 344/590;
 	}
 }
