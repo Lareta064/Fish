@@ -1,5 +1,5 @@
 
-.btn,.btn-dark, .btn-outline, .btn-light{
+.btn,.btn-dark, .btn-outline, .btn-light,.btn-white{
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -26,6 +26,12 @@
 	border: 1px solid var(--temno-siniy);
 	color: var(--temno-siniy);
 	&:hover{background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(19, 36, 57, 0.8); }
+}
+.btn-white{
+	background-color: #fff;
+	font-size: remy(20);
+	letter-spacing: 0.03em;
+	color: var(--temno-siniy);
 }
 .btn-dark{
 	
@@ -176,4 +182,8 @@
 	line-height: 100%;
 	letter-spacing: 0.06em;
 	color: var(--temno-siniy);
+}
+.btn-outline.fw-900{
+	font-weight: 900;
+	font-size: remy(20);
 }

@@ -342,31 +342,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  // const tabsContainers = document.querySelectorAll('.tabs-container');
+  const tabsContainers = document.querySelectorAll('.tabs-container');
   
-  //   tabsContainers.forEach(container => {
-  //     const tabs = container.querySelectorAll('.tab');
-  //     const contents = container.querySelectorAll('.tab-content');
+    tabsContainers.forEach(container => {
+      const tabs = container.querySelectorAll('.tab');
+      const contents = container.querySelectorAll('.tab-content');
   
-  //     tabs.forEach(tab => {
-  //       tab.addEventListener('click', () => {
-  //         tabs.forEach(innerTab => innerTab.classList.remove('active'));
-  //         tab.classList.add('active');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(innerTab => innerTab.classList.remove('active'));
+          tab.classList.add('active');
   
-  //         contents.forEach(content => content.classList.remove('active'));
-  //         const activeContent = container.querySelector(tab.getAttribute('data-tab-target'));
+          contents.forEach(content => content.classList.remove('active'));
+          const activeContent = container.querySelector(tab.getAttribute('data-tab-target'));
   
-  //         // Проверяем, существует ли элемент activeContent перед добавлением класса
-  //         if (activeContent) {
-  //           activeContent.classList.add('active');
-  //         } else {
-  //           console.error('Ошибка: Нет элемента соответствующего data-tab-target:', tab.getAttribute('data-tab-target'));
-  //         }
-  //       });
-  //     });
-  //   });
+          // Проверяем, существует ли элемент activeContent перед добавлением класса
+          if (activeContent) {
+            activeContent.classList.add('active');
+          } else {
+            console.error('Ошибка: Нет элемента соответствующего data-tab-target:', tab.getAttribute('data-tab-target'));
+          }
+        });
+      });
+    });
 
-   //
+   
   const catalogyItems = document.querySelectorAll('.catalogy-item');
 			if(catalogyItems.length>0){
 				catalogyItems.forEach((item)=>{

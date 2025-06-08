@@ -1,0 +1,23 @@
+mixin blogArticle(img)
+	article.blog-article
+		.blog-article__img
+			img.img-cover(src='./img/blog/'+ img +'.webp', srcset='./img/blog/'+ img +'@2x.webp 2x' width='1005' height='565' loading='lazy' alt='img')
+			
+		.blog-article__descrip
+			.promo-info-card
+				.border-tags
+					.border-tag.border-tag--accent
+						span Рецепты
+					.border-tag
+						svg.svg-recept
+							use(href="./img/sprite.svg#svg-recept")
+						span 30 мин
+				
+				h1.h-40 Соте из вонголе с&nbsp;просекко
+				.promo-info__txt
+					p Вонголе - нежный моллюск, который продается у нас в замороженном виде.
+					p Размораживать его нужно как и все морепродукты - в холодильнике.
+					p Не выливайте жидкость, образующуюся при оттаивании, она нам пригодится для соуса.
+					p Не выливайте жидкость, образующуюся при оттаивании, она нам пригодится для соуса.
+				
+				a(href="").btn-outline.fw-900 Прочитать статью

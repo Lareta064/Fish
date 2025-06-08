@@ -1,0 +1,104 @@
+extends ../layouts/layout.pug
+
+block content
+	
+	include ../sections/_header.pug
+	main.inner-page.template-main
+		.container
+			.breadcrumbs
+				a(href="index.html").breadcrumb-item Главная
+				a(href="#!").breadcrumb-item Блог/Рецепты
+				a(href="#!").breadcrumb-item Рецепты
+		.column-gap-80
+			//PROMO
+			section.about-page-promo.stretch-flex
+				.container
+					.has-bg-video
+						img.pos-abs(src='./img/blog/recept-promo.webp', srcset='./img/blog/recept-promo@2x.webp 2x' width='1523' height='611' loading='lazy' alt='img')
+						//TEXT CONTENT
+						.promo-info-card.has-border-top
+							.border-tags
+								.border-tag.border-tag--accent
+									span Рецепты
+								.border-tag
+									svg.svg-recept
+										use(href="./img/sprite.svg#svg-recept")
+									span 30 мин
+							.promo-info-tag
+							h1.h-40 Соте из вонголе с&nbsp;просекко
+							.promo-info__txt
+								p Вонголе - нежный моллюск, который продается у нас в замороженном виде.
+								p Размораживать его нужно как и все морепродукты - в холодильнике.
+								p Не выливайте жидкость, образующуюся при оттаивании, она нам пригодится для соуса.
+								p Не выливайте жидкость, образующуюся при оттаивании, она нам пригодится для соуса.
+
+							//LINK
+							a.round-arrow-link(href="#!")
+								span.round-arrow.round-arrow--dark
+									svg.svg-arrRight
+										use(href='../img/sprite.svg#svg-arrRight')
+
+			//BLOG	
+			section.blog-articles
+				.container
+					h2.h-64 Блог
+					.blog-tabs.tabs-container
+						.tabs-buttons
+							button.tab.border-tag.active(type='button' data-tab-target="#all") Все публикации
+							button.tab.border-tag(type='button' data-tab-target="#blogNew") Новости
+							button.tab.border-tag(type='button' data-tab-target="#masterClass") Мастер клаcсы
+							button.tab.border-tag(type='button' data-tab-target="#blogRecept") Рецепты
+						
+						.tab-content-wrapper
+							.tab-content#all.active
+								.blog-articles-wrapper
+									+blogArticle('article1')
+									+blogArticle('article2')
+									+blogArticle('article3')
+									+blogArticle('article4')
+									
+									.subscribe-form-block
+										.subscribe-form__title
+											.h-40 Еще больше рецептов вашей мечты — в нашей рассылке
+										
+										form.subscribe-form
+											.form-item
+												input.form-input(type="text" name="" placeholder="Your e-mail")
+											.form-button
+												button.btn-white.w-100(type="submit") Прочитать статью
+												.agree-block
+													label.agree-block-label
+														input(type="checkbox" name="")
+														p Подписываясь, я принимаю #[a(href="#!" ) условия эксплуатации]
+										
+										.subscribe-form__img
+											img.img-contain(src='./img/fish-group2.webp', srcset='./img/fish-group2@2x.webp 2x' width='470' height='224' loading='lazy' alt='img')
+
+							.tab-content#blogNew
+								.blog-articles-wrapper
+									+blogArticle('article4')
+									+blogArticle('article3')
+									+blogArticle('article1')
+									+blogArticle('article2')
+							
+							.tab-content#masterClass
+								.blog-articles-wrapper
+									+blogArticle('article3')
+									+blogArticle('article1')
+									+blogArticle('article4')
+									+blogArticle('article2')
+							
+							.tab-content#blogRecept
+								.blog-articles-wrapper
+									+blogArticle('article1')
+									+blogArticle('article2')
+									+blogArticle('article3')
+									+blogArticle('article4')
+					
+	
+	
+	include ../sections/_footer.pug
+
+
+block variables
+	-var title = "Блог";

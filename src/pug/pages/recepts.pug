@@ -3,7 +3,7 @@ extends ../layouts/layout.pug
 block content
 	
 	include ../sections/_header.pug
-	main.main-inner.template-main
+	main.inner-page.template-main
 		.container
 			.breadcrumbs
 				a(href="index.html").breadcrumb-item Главная
@@ -17,21 +17,30 @@ block content
 						img.pos-abs(src='./img/blog/recept-promo.webp', srcset='./img/blog/recept-promo@2x.webp 2x' width='1523' height='611' loading='lazy' alt='img')
 						//TEXT CONTENT
 						.promo-info-card.has-border-top
-							.info-tags
-								.info-tag.info-tag--accent Рецепты
-								.info-tag 30 мин 
+							.border-tags
+								.border-tag.border-tag--accent Рецепты
+								.border-tag 30 мин 
 							.promo-info-tag
-							h1.h2 О нас
+							h1.h-40 Соте из вонголе с&nbsp;просекко
 							.promo-info__txt
-								p Мы — команда настоящих энтузиастов, которые любят море и всё, что с ним связано. Наша цель — предложить вам только самые свежие и качественные морепродукты, чтобы вы могли наслаждаться вкусом Черного моря прямо у себя дома.
-								p Гордимся тем, что работаем напрямую с местными рыбаками и поставщиками, что позволяет нам гарантировать свежесть и высокое качество нашей продукции.
-								p Каждый наш клиент — это не просто покупатель, а часть нашей большой морской семьи.
+								p МВонголе - нежный моллюск, который продается у нас в замороженном виде.
+								p Размораживать его нужно как и все морепродукты - в холодильнике.
+								p Не выливайте жидкость, образующуюся при оттаивании, она нам пригодится для соуса.
+								p Не выливайте жидкость, образующуюся при оттаивании, она нам пригодится для соуса.
 
 							//LINK	
 							a.round-arrow-link(href="#!")
 								span.round-arrow.round-arrow--dark
 									svg.svg-arrRight
 										use(href='../img/sprite.svg#svg-arrRight')
+
+			//BLOG	
+			section.blog-articles
+				.container
+					article.blog-article
+						.blog-article__img
+
+						.blog-article__descrip
 	include ../sections/_footer.pug			
 block variables
 	-var title = "Рецепты";

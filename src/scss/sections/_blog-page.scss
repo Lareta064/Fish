@@ -1,0 +1,33 @@
+.blog-article{
+	display: flex;
+	column-gap: remy(20);
+	&__img{
+		width: remy(1005);
+		border-radius: remy(15);
+		aspect-ratio: 201/113;
+		overflow: hidden;
+	}
+	&__descrip{
+		flex: 1;
+	}
+	.btn-outline{
+		width: 100%;
+		max-width: remy(324);
+	}
+}
+.blog-articles-wrapper{
+	display: grid;
+	grid-template-columns: 1fr;
+	gap:remy(20);
+	&>*:nth-child(2n){
+		flex-direction: row-reverse;
+	}
+}
+.tabs-container .tabs-buttons{
+	margin-bottom: remy(42);
+	margin-top: remy(18);
+}
+.tab-content{
+	display: none;
+	&.active{display: block;}
+}
