@@ -139,3 +139,18 @@ i.carret-down{
 	transition: .2s; 
 }
 .svg-recept{width:remy(32); height: remy(16)}
+.svg-play{
+	width: remy(65);
+	height: (72);
+    color: #132439;
+}
+.btn-play{
+	
+	width: remy(143);
+	height: remy(143);
+	border-radius: 50%;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

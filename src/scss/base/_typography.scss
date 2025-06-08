@@ -108,7 +108,13 @@
 	}
 	&>*{color: var(--temno-siniy);}
 	&>*+*{margin-top: remy(24);}
-	.round-arrow-link{margin-left: auto;
+	.wrapper-align-right{
+		display: flex;
+		justify-content: flex-end;
+	}
+	.wrapper-align-left{
+		display: flex;
+		justify-content: flex-start;
 	}
 	@media (max-width: 767px) {
 		border-radius: 0;
