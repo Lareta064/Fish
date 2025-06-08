@@ -107,15 +107,14 @@
 }
 .agree-block{
 	&-label{
-		display: flex;
-		align-items: center;
-		column-gap: remy(12);
+		
 		input[type="checkbox"]{
-			width: remy(20);
-			height: remy(20);
+			width: remy(16);
+			height: remy(16);
 			border-radius: remy(4);
 			background-color: #fff;
 			border:1px solid grey;
+			margin-left: remy(12);
 		}
 	}
 }
@@ -335,6 +334,7 @@
 	.subscribe-form__img{
 		width: remy(470);
 		aspect-ratio: 470/224;
+		
 	}
 	.agree-block{
 		width: 100%;
@@ -348,6 +348,26 @@
 			color: white;
 			text-decoration: underline;
 			text-decoration-skip-ink: none;
+		}
+		&-label{
+			input, p{display: inline; vertical-align: middle;}
+		}
+	}
+	@media (max-width: 767px) {
+		flex-direction: column;
+		align-items: flex-start;
+		.subscribe-form__title{
+			padding: 20px;
+			padding-bottom: 60px;
+			max-width: 370px;
+			width: 100%;
+		}
+		.subscribe-form{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.subscribe-form__img{
+			width: auto;
 		}
 	}
 }

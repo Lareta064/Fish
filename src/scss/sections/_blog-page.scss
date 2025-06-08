@@ -6,6 +6,10 @@
 		border-radius: remy(15);
 		aspect-ratio: 201/113;
 		overflow: hidden;
+		@media (max-width: 767px) {
+			width: 100%;
+			aspect-ratio: 344/253;
+		}
 	}
 	&__descrip{
 		flex: 1;
@@ -14,18 +18,28 @@
 		width: 100%;
 		max-width: remy(324);
 	}
+	@media (max-width: 767px) {
+	  flex-direction: column;
+	  row-gap: 40px;
+	}
 }
 .blog-articles-wrapper{
 	display: grid;
 	grid-template-columns: 1fr;
 	gap:remy(20);
-	&>*:nth-child(2n){
+	&>*:nth-of-type(2n){
 		flex-direction: row-reverse;
+		@media (max-width: 767px) {
+			flex-direction: column;
+		}
 	}
 }
 .tabs-container .tabs-buttons{
 	margin-bottom: remy(42);
 	margin-top: remy(18);
+	display: flex;
+	column-gap:remy(16);
+	.tab{white-space: nowrap;}
 }
 .tab-content{
 	display: none;

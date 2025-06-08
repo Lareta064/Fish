@@ -43,7 +43,7 @@ block content
 				.container
 					h2.h-64 Блог
 					.blog-tabs.tabs-container
-						.tabs-buttons
+						.tabs-buttons.scroll-x
 							button.tab.border-tag.active(type='button' data-tab-target="#all") Все публикации
 							button.tab.border-tag(type='button' data-tab-target="#blogNew") Новости
 							button.tab.border-tag(type='button' data-tab-target="#masterClass") Мастер клаcсы
@@ -56,44 +56,35 @@ block content
 									+blogArticle('article2')
 									+blogArticle('article3')
 									+blogArticle('article4')
-									
-									.subscribe-form-block
-										.subscribe-form__title
-											.h-40 Еще больше рецептов вашей мечты — в нашей рассылке
-										
-										form.subscribe-form
-											.form-item
-												input.form-input(type="text" name="" placeholder="Your e-mail")
-											.form-button
-												button.btn-white.w-100(type="submit") Прочитать статью
-												.agree-block
-													label.agree-block-label
-														input(type="checkbox" name="")
-														p Подписываясь, я принимаю #[a(href="#!" ) условия эксплуатации]
-										
-										.subscribe-form__img
-											img.img-contain(src='./img/fish-group2.webp', srcset='./img/fish-group2@2x.webp 2x' width='470' height='224' loading='lazy' alt='img')
+									include ../blocks/_subscribe-form
+									+blogArticle('article1')
+									+blogArticle('article2')
 
 							.tab-content#blogNew
 								.blog-articles-wrapper
 									+blogArticle('article4')
 									+blogArticle('article3')
 									+blogArticle('article1')
+									include ../blocks/_subscribe-form
+									+blogArticle('article1')
 									+blogArticle('article2')
-							
+
 							.tab-content#masterClass
 								.blog-articles-wrapper
 									+blogArticle('article3')
 									+blogArticle('article1')
 									+blogArticle('article4')
 									+blogArticle('article2')
-							
+									include ../blocks/_subscribe-form
+									+blogArticle('article1')
+									+blogArticle('article2')
 							.tab-content#blogRecept
 								.blog-articles-wrapper
 									+blogArticle('article1')
 									+blogArticle('article2')
-									+blogArticle('article3')
-									+blogArticle('article4')
+									include ../blocks/_subscribe-form
+									+blogArticle('article1')
+									+blogArticle('article2')
 					
 	
 	
