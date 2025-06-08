@@ -37,3 +37,10 @@
 	   row-gap:15px;
 	}
 }
+.search-results-main{
+	@media (max-width: 767px) {
+	.h-40{margin-bottom: 20px;}
+	.catalogy-products-grid{padding-top: 30px;}	
+	
+	}
+}

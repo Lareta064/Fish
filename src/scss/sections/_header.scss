@@ -68,31 +68,7 @@
 		}
 	}
 }
-.header-search-form{
-	flex:1;
-	.svg-search{
-		position: absolute;
-		left: remy(24);
-		top: remy(18);
-		z-index: 2;
-	}
-	input.form-input{
-		background: var(--goluboy);
-		height: remy(56);
-		padding-left: remy(48);
-		color: var(--color-yarko-siniy-s-logo);
-		&::placeholder{
-			font-family: inherit;
-			font-size: inherit;
-			color: var(--color-yarko-siniy-s-logo);
-		}
-		@media (max-width: 767px) {
-			height: 52px;
-			background: var(--color-belyy);
-		}
-	}
-	
-}
+
 .header-mobile{
 	display: none;
 	background: var(--temno-siniy);

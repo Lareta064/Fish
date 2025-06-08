@@ -19,6 +19,10 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: remy(18);
+	@media (max-width: 767px) {
+		gap: 11px;
+		grid-template-columns: 1fr 1fr;
+	}
 }
 .grid-content-body__footer{
 	justify-content: space-between;
@@ -77,10 +81,7 @@
 		&>*{width: 100%;}
 	   }
 	   .catalogy-products-filters{row-gap: 8px;}
-	   .catalogy-products-grid{
-		gap:10px;
-		grid-template-columns: 1fr 1fr;
-	   }
+	   
 	   .grid-content-body__footer{
 		flex-direction: column;
 		align-items: center;

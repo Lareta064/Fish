@@ -1,7 +1,13 @@
-.grid-two-columns, .grid-three-columns{
+.grid-two-columns, .grid-three-columns,.grid-four-columns{
 	display: flex;
 	column-gap: remy(20);
 	
+}
+.grid-four-columns{
+	gap:remy(20);
+	@media (max-width: 767px) {
+	gap:11px;
+	}
 }
 .grid-two-columns {
 	align-items: flex-start;
@@ -14,6 +20,13 @@
 	}
 	
 }
+.grid-four-columns, *.grid-four-columns{
+	grid-template-columns: repeat(4, 1fr)!important;
+	@media (max-width: 767px) {
+		grid-template-columns: repeat(2, 1fr)!important
+	}
+}
+
 .grid-three-columns .grid-content {
 	display: flex;
 	column-gap: remy(32);

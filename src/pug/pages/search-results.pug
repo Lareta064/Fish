@@ -1,0 +1,46 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header.pug
+	main.inner-page.search-results-main
+		
+		.container
+			.breadcrumbs
+				a(href="index.html").breadcrumb-item Главная
+				a(href="catalogy.html").breadcrumb-item Каталог
+				a(href="basket-page.html").breadcrumb-item Корзина
+				a(href="#!").breadcrumb-item Оформление заказа
+			
+			.grid-two-columns
+				//LEFT COLUMN
+				.grid-content
+					h1.h-40 Найденые товары по вашему запросу 
+					//SEARCH FORM VISIBLE MOBILE
+					form.search-form.search-form--blue.visible-sm
+						.form-item.w-100
+							input.form-input(type="text" name="search_input" placeholder="Например: Раки вареные")
+							
+							svg.svg-search
+								use(href='./img/sprite.svg#svg-search')
+					//SEARCH PRODUCTS WRAPPER
+					.catalogy-products-grid.grid-four-columns
+						+product-card('product1')
+						+product-card('product2')
+						+product-card('product3')
+						+product-card('product1')
+						+product-card('product2')
+						+product-card('product3')
+						+product-card('product1')
+						+product-card('product2')
+						+product-card('product3')
+						+product-card('product1')
+						+product-card('product2')
+						+product-card('product3')
+				//RIGHT COLUMN
+				.grid-aside.aside-sticky.hide-sm
+					include ../blocks/_short-basket
+		
+	include ../sections/_footer.pug	
+			
+block variables
+	-var title = "Project";
