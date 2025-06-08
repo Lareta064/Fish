@@ -158,9 +158,16 @@
 	justify-content: center;
 	align-items: center;
 	flex-shrink:0;
+	background-color: #fff;
+}
+.round-arrow.round-arrow--dark{
+	background-color: var(--temno-siniy);
+	svg{color: white;}
+	&:hover{opacity: .5;}
 }
 .round-arrow-link{
 	display: flex;
+	width: fit-content;
 	align-items: center;
 	column-gap: remy(16);
 	font-family: var(--font-family);

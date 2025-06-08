@@ -84,6 +84,8 @@
 	background-color: #fff;
 	padding: remy(40);
 	margin-left: remy(40);
+	position: relative;
+	
 	.promo-info__txt{
 		font-family: var(--font-family);
 		font-weight: 400;
@@ -93,6 +95,8 @@
 	}
 	&>*{color: var(--temno-siniy);}
 	&>*+*{margin-top: remy(24);}
+	.round-arrow-link{margin-left: auto;
+	}
 	@media (max-width: 767px) {
 		border-radius: 0;
 		width: 100%;
@@ -100,3 +104,5 @@
 		margin-left: 0;
 	}
 }
+.has-border-top{border-top: 9px solid var(--temno-siniy);}
+

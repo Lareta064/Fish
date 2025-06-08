@@ -10,9 +10,18 @@
 	position: relative;
 	min-height: 100%;
 	// background-color: var(--color-temnyy-siniy);
-
 	overflow: hidden;
-	.bg-video{
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: linear-gradient(to right, rgba(0,0,0, .4), rgba(0,0,0, 0));
+		z-index: 3;
+	}
+	.pos-abs{
 		position: absolute;
 		z-index: 1;
 		top: 0;
@@ -23,7 +32,7 @@
 		height: 100%;
 		border-radius: remy(15);
 		&+*{
-			z-index: 2;
+			z-index: 4;
 			position: relative;
 		}
 		@media (max-width: 767px) {

@@ -1,0 +1,37 @@
+extends ../layouts/layout.pug
+
+block content
+	
+	include ../sections/_header.pug
+	main.main-inner.template-main
+		.container
+			.breadcrumbs
+				a(href="index.html").breadcrumb-item Главная
+				a(href="#!").breadcrumb-item Блог/Рецепты
+				a(href="#!").breadcrumb-item Рецепты
+		.column-gap-80
+			//PROMO
+			section.about-page-promo.stretch-flex
+				.container
+					.has-bg-video
+						img.pos-abs(src='./img/blog/recept-promo.webp', srcset='./img/blog/recept-promo@2x.webp 2x' width='1523' height='611' loading='lazy' alt='img')
+						//TEXT CONTENT
+						.promo-info-card.has-border-top
+							.info-tags
+								.info-tag.info-tag--accent Рецепты
+								.info-tag 30 мин 
+							.promo-info-tag
+							h1.h2 О нас
+							.promo-info__txt
+								p Мы — команда настоящих энтузиастов, которые любят море и всё, что с ним связано. Наша цель — предложить вам только самые свежие и качественные морепродукты, чтобы вы могли наслаждаться вкусом Черного моря прямо у себя дома.
+								p Гордимся тем, что работаем напрямую с местными рыбаками и поставщиками, что позволяет нам гарантировать свежесть и высокое качество нашей продукции.
+								p Каждый наш клиент — это не просто покупатель, а часть нашей большой морской семьи.
+
+							//LINK	
+							a.round-arrow-link(href="#!")
+								span.round-arrow.round-arrow--dark
+									svg.svg-arrRight
+										use(href='../img/sprite.svg#svg-arrRight')
+	include ../sections/_footer.pug			
+block variables
+	-var title = "Рецепты";
