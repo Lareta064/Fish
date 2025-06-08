@@ -48,53 +48,19 @@ block content
 							svg.svg-play
 								use(href='./img/sprite.svg#svg-play')
 			//BLOG	
-			section.blog-articles
+			section.recept-description
 				.container
-					h2.h-64 Блог
-					.blog-tabs.tabs-container
-						.tabs-buttons.scroll-x
-							button.tab.border-tag.active(type='button' data-tab-target="#all") Все публикации
-							button.tab.border-tag(type='button' data-tab-target="#blogNew") Новости
-							button.tab.border-tag(type='button' data-tab-target="#masterClass") Мастер клаcсы
-							button.tab.border-tag(type='button' data-tab-target="#blogRecept") Рецепты
-						
-						.tab-content-wrapper
-							.tab-content#all.active
-								.blog-articles-wrapper
-									+blogArticle('article1')
-									+blogArticle('article2')
-									+blogArticle('article3')
-									+blogArticle('article4')
-									include ../blocks/_subscribe-form
-									+blogArticle('article1')
-									+blogArticle('article2')
+					h2.h2 Способ приготовления:
+					.recept-steps
+						.recept-step
+							.recept-step__row.flex
+								.recept-step__num 01
+								.recept-step__txt 
+									.h-32 Подготовка креветок
+									p Очищаем 140 г креветок от панциря, удаляем кишечную в ену и разрезаем каждую креветку вдоль пополам. Солим креветки, добавляем 2 ч. л. кокосов ой муки и аккуратно перемешиваем, чт обы мука равномерно покрыла каждый кусочек.
 
-							.tab-content#blogNew
-								.blog-articles-wrapper
-									+blogArticle('article4')
-									+blogArticle('article3')
-									+blogArticle('article1')
-									include ../blocks/_subscribe-form
-									+blogArticle('article1')
-									+blogArticle('article2')
-
-							.tab-content#masterClass
-								.blog-articles-wrapper
-									+blogArticle('article3')
-									+blogArticle('article1')
-									+blogArticle('article4')
-									+blogArticle('article2')
-									include ../blocks/_subscribe-form
-									+blogArticle('article1')
-									+blogArticle('article2')
-							.tab-content#blogRecept
-								.blog-articles-wrapper
-									+blogArticle('article1')
-									+blogArticle('article2')
-									include ../blocks/_subscribe-form
-									+blogArticle('article1')
-									+blogArticle('article2')
-					
+							.recept-step__img
+								img.img-cover.br-15(src='./img/recepts/recept-step1.webp', srcset='./img/recepts/recept-step1@2x.webp 2x' width='1025' height='530' loading='lazy' alt='img')
 	
 	
 	include ../sections/_footer.pug
