@@ -52,6 +52,15 @@ svg.svg-cart{
 	height: remy(12);
 	color: #0E1526;
 }
+.svg-pin{
+	width: remy(58);
+	height: remy(76);
+	color: #011E64;
+	@media (max-width: 767px) {
+	  width: 44px;
+	  height: 33px;
+	}
+}
 .svg-minus{
 	width: remy(12);
 	height: remy(2);color: #0E1526;

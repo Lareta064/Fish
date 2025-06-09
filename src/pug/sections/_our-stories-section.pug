@@ -38,4 +38,19 @@ section.stores-contacts
 		//LEFT COLUMN
 		.contacts-map-content
 			.map-wrapper
-				img(src='./img/map.webp', srcset='./img/map@2x.webp 2x' width='1027' height='601' loading='lazy' alt='img')
+				img(src='./img/map-mini.webp', srcset='./img/map-mini@2x.webp 2x' width='622' height='601' loading='lazy' alt='img')
+				button.show-store-card(type="button" data-store="1")
+					svg.svg-pin
+						use(href='./img/sprite.svg#svg-pin')
+				button.show-store-card(type="button" data-store="2")
+					svg.svg-pin
+						use(href='./img/sprite.svg#svg-pin')
+				button.show-store-card(type="button" data-store="3")
+					svg.svg-pin
+						use(href='./img/sprite.svg#svg-pin')
+				button.show-store-card(type="button" data-store="4")
+					svg.svg-pin
+						use(href='./img/sprite.svg#svg-pin')
+
+				img.pos-abs.img-bot1(src='./img/bot.webp', srcset='./img/bot@2x.webp 2x' width='75' height='31' loading='lazy' alt='img')
+				img.pos-abs.img-bot2(src='./img/bot2.webp', srcset='./img/bot2@2x.webp 2x' width='75' height='31' loading='lazy' alt='img')
