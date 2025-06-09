@@ -81,6 +81,27 @@ document.addEventListener("DOMContentLoaded", function () {
       
     });
     
+    const showStoreCard = document.querySelectorAll('[data-store]');
+    if(showStoreCard.length > 0){
+      
+      showStoreCard.forEach((btn)=>{
+        btn.addEventListener('click', ()=>{
+           const activeStoreCard = document.querySelector('.active[data-adrs]');
+           const storeCards = document.querySelectorAll('[data-adrs]');
+          const activeStoreBtn = document.querySelector('.active[data-store]');
+          activeStoreCard.classList.remove('active');
+          activeStoreBtn.classList.remove('active');
+          btn.classList.add('active');
+          const btnData = btn.getAttribute('data-store');
+          storeCards.forEach((adr)=>{
+             const adrData = adr.getAttribute('data-adrs');
+             if(btnData == adrData){
+              adr.classList.add('active')
+             }
+          })
+        })
+      })
+    }
     //PRODUCT SLIDER
     const productSwipers = document.querySelectorAll('.product-swiper');
     productSwipers.forEach((swiperEl, index) => {

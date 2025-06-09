@@ -60,31 +60,3 @@
 		row-gap:8px;
 	}
 }
-.show-store-card{
-	width: remy(60);
-	height: remy(80);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	z-index: 2;
-}
-.map-wrapper{
-	position: relative;
-	[data-store="1"]{
-		top: 16%;
-        left: 85%;
-	}
-	[data-store="2"]{
-		top: 23%;
-        left: 69%;
-	}
-	[data-store="3"]{
-		top: 39%;
-		left: 56%;
-	}
-	[data-store="4"]{
-		top: 78%;
-		left: 7%;
-	}
-}

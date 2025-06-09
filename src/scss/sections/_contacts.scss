@@ -39,7 +39,7 @@
 .geo-app{
 	column-gap: remy(20);
 }
-.contacts-content.flex-col{
+.contacts-content.flex-col, .store-address-block.flex-col{
 	font-size: remy(10);
 	row-gap: 4em;
 	@media (max-width: 767px) {
@@ -83,5 +83,60 @@
 			object-position: left;
 			height: 100%;
 		}
+	}
+}.show-store-card{
+	width: remy(60);
+	height: remy(80);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	@media (max-width: 767px) {
+	 width: 50px;
+	 height: 50px;
+	}
+}
+.map-wrapper{
+	position: relative;
+	height: remy(611);
+	[data-store="1"]{
+		top: 16%;
+        left: 85%;
+		@media (max-width: 767px) {
+		 left: 80%;
+		}
+	}
+	[data-store="2"]{
+		top: 23%;
+        left: 69%;
+		@media (max-width: 767px) {
+		 left: 64%;
+		}
+	}
+	[data-store="3"]{
+		top: 39%;
+		left: 56%;
+		@media (max-width: 767px) {
+		 left: 50%;
+		}
+	}
+	[data-store="4"]{
+		top: 78%;
+		left: 7%;
+		@media (max-width: 767px) {
+		 left: 2%;
+		}
+	}
+	@media (max-width: 767px) {
+	   height: auto;
+	  aspect-ratio: 344/320;
+	}
+}
+.show-store-card.active .svg-pin{color: red;}
+.store-address-block{
+	display: none;
+	&.active{
+		display: flex;
 	}
 }
