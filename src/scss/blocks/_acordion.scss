@@ -76,3 +76,15 @@
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='26' height='27' viewBox='0 0 26 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='0.199219' y='12.5' width='25.59' height='2' fill='white' /%3e%3crect x='14' y='0.710938' width='25.59' height='2' transform='rotate(90 14 0.710938)' fill='transparent' /%3e%3c/svg%3e");
 	}
 }
+.acordion.acordion-transform{
+	.acordion-group {padding-inline:0}
+	.acordion-header{
+		padding-block:remy(20);
+		padding-inline: remy(20);
+	}
+	.acordion-arrow{display: none;}
+	.acordion-body{display: block;}
+	@media (max-width: 767px) {
+		.acordion-arrow{display: flex;}
+	}
+}

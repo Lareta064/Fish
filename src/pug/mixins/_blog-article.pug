@@ -32,3 +32,14 @@ mixin receptStep(num, title, img )
 
 		.recept-step__img
 			img.img-cover.br-15(src='./img/recepts/recept-step'+img+'.webp', srcset='./img/recepts/recept-step'+img+'@2x.webp 2x' width='1025' height='530' loading='lazy' alt='img')
+
+mixin ingridient(img, name, weight)
+	li.table-list__item
+		.table-list__left.flex
+			img(src='./img/recepts/ingr'+ img +'.webp', srcset='./img/recepts/ingr'+ img +'@2x.webp 2x' width='32' height='32' loading='lazy' alt='img')
+			p #{name}
+		
+		span.cell-divider
+		
+		.table-list__right
+			p #{weight}

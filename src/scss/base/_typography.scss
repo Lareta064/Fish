@@ -52,6 +52,17 @@
 	margin-bottom: remy(32);
 	}
 }
+.h-30{
+	font-family: var(--second-family);
+	font-weight: 700;
+	font-size: remy(30);
+	line-height: 90%;
+	letter-spacing: -0.01em;
+	color: var(--temno-siniy);
+	@media (max-width: 767px) {
+	
+	}
+}
 .fw-700{font-weight: 700;}
 .fw-900{font-weight: 900;}
 .txt-red{color:#DD3535 !important;}

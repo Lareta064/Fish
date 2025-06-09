@@ -76,6 +76,45 @@ block content
 	
 						//RIGHT ASIDE
 						.grid-aside.aside-sticky
+							.table-list.recept-ingridients.acordion.acordion-transform
+								//GROUP
+								.table-list__group.acordion-group
+									.acordion-header
+										.h-30 Состав:
+										span.acordion-arrow
+											svg.svg-carret
+												use(href='./img/sprite.svg#svg-carret')
+									
+									.acordion-body
+										ul.table-list__ul
+											//row
+											+ingridient(1, 'Креветки','140 г')
+											+ingridient(2, 'Хрустящий салат ','100 г')
+											+ingridient(3, 'Помидоры','120 г')
+											+ingridient(4, 'Огурцы','100 г')
+											+ingridient(5, 'Болгарский перец','100 г')
+											+ingridient(6, 'Кокосовая мука','2 ч. л.')
+											+ingridient(7, 'Оливковое масло','2 ч. л.')
+											+ingridient(8, 'Чеснок','3 зубчика')
+											+ingridient(9, 'Соль','По вкусу')
+
+								//GROUP
+								.table-list__group.acordion-group
+									.acordion-header
+										.h-30 Состав соуса
+										span.acordion-arrow
+											svg.svg-carret
+												use(href='./img/sprite.svg#svg-carret')
+									.acordion-body
+										ul.table-list__ul
+											+ingridient(10, 'Манговое пюре','100 г')
+											+ingridient(7, 'Оливковое масло','3 ч. л.')
+											+ingridient(6, 'Кокосовая мука','2 ч. л.')
+											+ingridient(4, 'Острый красный перец','По вкусу')
+											+ingridient(9, 'Соль','По вкусу')
+
+
+
 	include ../sections/_footer.pug
 
 

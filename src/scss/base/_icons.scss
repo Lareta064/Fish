@@ -123,6 +123,12 @@ svg.svg-cart{
 	height: remy(20);
 	color: #002A85;
 }
+.svg-carret{
+	width: remy(21);
+	height: remy(13);
+	color: #132439;
+	flex-shrink: 0;
+}
 svg[class^="svg-category"]{
 	color: #0e1526;
 }

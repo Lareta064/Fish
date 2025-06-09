@@ -16,6 +16,14 @@
 	   aspect-ratio: 344/590;
 	}
 }
+.recept-description{
+	.grid-two-columns{
+		@media (max-width: 767px) {
+		flex-direction: column-reverse;
+		row-gap:60px;
+		}
+	}
+}
 .recept-steps{
 	max-width: remy(1025);
 	display: grid;
@@ -54,4 +62,51 @@
 		width: fit-content;
 	}
 	.h-32{font-weight: 700; margin-bottom: remy(12);font-size: remy(32);letter-spacing: -0.01em;line-height: 1.25;}
+}
+
+.table-list{
+	
+	&__item{
+		display: flex;
+	    align-items: flex-end;
+		column-gap:remy(5);
+		margin-bottom: remy(7);
+
+	}
+	&__ul{
+		padding: remy(20);
+		padding-top: 0;
+		
+	}
+	&__left, &__right{
+		font-family: var(--font-family);
+		font-size: remy(16);
+		line-height: 100%;
+		letter-spacing: 0.06em;
+		color: var(--temno-siniy);
+	}
+	&__left{
+		max-width: remy(200);
+		width: fit-content;
+		align-items: flex-end;
+		column-gap:remy(10);
+		font-weight: 700;
+		
+		
+		img{
+			width: remy(32);
+			height: remy(32);
+			object-fit: contain;
+			flex-shrink: 0;
+		}
+	}
+	.cell-divider{
+		flex: 1;
+		border-bottom: 1px solid var(--temno-siniy);
+	}
+	&__right{
+		width: fit-content;
+		text-align: right;
+		font-weight: 800;
+	}
 }
