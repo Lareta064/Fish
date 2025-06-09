@@ -183,6 +183,17 @@
 	letter-spacing: 0.06em;
 	color: var(--temno-siniy);
 }
+.round-arrow-link.border-link{
+	border: 1px solid var(--goluboy);
+	border-radius: remy(15);
+    padding: remy(8);
+	.round-arrow{
+		width: remy(32);
+		height: remy(32);
+	}
+	svg{width: remy(14); height: remy(9);}
+
+}
 .btn-outline.fw-900{
 	font-weight: 900;
 	font-size: remy(20);
