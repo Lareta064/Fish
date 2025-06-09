@@ -110,3 +110,26 @@
 		font-weight: 800;
 	}
 }
+.blog-authors_content{
+	column-gap: remy(50);
+	.btn-outline{
+		margin-left: auto;
+		
+	}
+}
+.blog-author__item{
+	column-gap: remy(16);
+	img{
+		width: remy(56);
+		height: remy(56);
+		object-fit: cover;
+		flex-shrink: 0;
+		border-radius: 50%;
+	}
+	.txt-upper{
+		font-weight: 500;
+		font-size: remy(16);
+		text-transform: uppercase;
+		color: #000;
+	}
+}

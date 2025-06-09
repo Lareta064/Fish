@@ -69,6 +69,14 @@
 .txt-grey{color: var(--color-tekst-seryy)!important;;}
 .txt-center{text-align: center;}
 .txt-right{text-align: right;}
+.txt-upper{text-transform: uppercase;}
+.txt-12{
+	font-weight: 400;
+	font-size: remy(12);
+	line-height: 133%;
+	letter-spacing: -0.03em;
+	color: #000;
+}
 .header-group{
 	display: flex;
 	justify-content: space-between;

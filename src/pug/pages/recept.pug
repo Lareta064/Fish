@@ -52,7 +52,7 @@ block content
 				.container
 					.grid-two-columns
 						//LEFT COLUMN
-						.grid-content
+						.grid-content.column-gap-80
 							h2.h2 Способ приготовления:
 							.recept-steps
 								//step
@@ -74,6 +74,52 @@ block content
 								+receptStep('05','Сборка салата и подача', 5)
 									p Аккуратно перемешиваем нарезанные ов ощи с обжаренными креветками и заправляем салат приготовленным соусом. Выкладываем салат на тарелку и подаем сразу, наслаждаясь свежестью и экзотическим вкусом.
 	
+							//SWIPER PRODUCTS
+							section.poppulare
+								h2.h-40 Товары из статьи
+								.poppulare-swiper.product-swiper.swiper
+									.swiper-wrapper
+										.swiper-slide
+											+product-card('product1')
+										.swiper-slide
+											+product-card('product2')
+										.swiper-slide
+											+product-card('product3')
+										.swiper-slide
+											+product-card('product4')
+										.swiper-slide
+											+product-card('product1')
+										.swiper-slide
+											+product-card('product2')
+									
+									//SWIPER NAV
+									.swiper__nav
+										.product-swiper-prev.swiper-button-prev
+											svg.svg-arrLeft
+												use(href='../img/sprite.svg#svg-arrLeft')
+										.product-swiper-next.swiper-button-next
+											svg.svg-arrRight
+												use(href='../img/sprite.svg#svg-arrRight')
+						
+							section.blog-authors
+								.h-40 Кто работал над статьей
+								.blog-authors_content.flex-center-y
+									//AUTHOR
+									.blog-author__item.flex-center-y
+										img(src='./img/blog/author.webp', srcset='./img/blog/author@2x.webp 2x' width='56' height='56' loading='lazy' alt='img')
+										.blog-author__name
+											p.txt-upper ДЖенсен Тернер
+											p.txt-12 Основатель коворкинга 
+									
+									//AUTHOR
+									.blog-author__item.flex-center-y
+										img(src='./img/blog/author.webp', srcset='./img/blog/author@2x.webp 2x' width='56' height='56' loading='lazy' alt='img')
+										.blog-author__name
+											p.txt-upper ДЖенсен Тернер
+											p.txt-12 Основатель коворкинга 
+
+									a.btn-outline(href="blog.html") Назад в блог
+						
 						//RIGHT ASIDE
 						.grid-aside.aside-sticky
 							.table-list.recept-ingridients.acordion.acordion-transform
@@ -113,7 +159,64 @@ block content
 											+ingridient(4, 'Острый красный перец','По вкусу')
 											+ingridient(9, 'Соль','По вкусу')
 
-
+			//subscribe
+			section.subscribe-section
+				.container
+					include ../blocks/_subscribe-form
+			//BLOG SLIDER
+			section.blog
+				.container
+					h2.h2 Блог
+					.blog-swiper.swiper
+						.swiper-wrapper
+							//SLIDE
+							.swiper-slide
+								.blog-card
+									.blog-card__img
+										img(src='./img/blog/blog1.webp', srcset='./img/blog/blog1@2x.webp 2x' width='303' height='562' loading='lazy' alt='img')
+									
+									.blog-card__text
+										.blog-tag #рецепты
+										.blog-title Соте из вонголе с просекко
+										.blog-data 18 июля
+							//SLIDE
+							.swiper-slide
+								.blog-card
+									.blog-card__img
+										img(src='./img/blog/blog2.webp', srcset='./img/blog/blog2@2x.webp 2x' width='489' height='562' loading='lazy' alt='img')
+									
+									.blog-card__text
+										.blog-tag #сми
+										.blog-title стейки из Лосося<br>за&nbsp;5&nbsp;минут
+										.blog-data 18 июля
+							//SLIDE
+							.swiper-slide
+								.blog-card
+									.blog-card__img
+										img(src='./img/blog/blog3.webp', srcset='./img/blog/blog3@2x.webp 2x' width='303' height='562' loading='lazy' alt='img')
+									
+									.blog-card__text
+										.blog-tag ##рецепты
+										.blog-title рыба на костре<br>с итальянскими травами
+										.blog-data 18 июля
+							//SLIDE
+							.swiper-slide
+								.blog-card
+									.blog-card__img
+										img(src='https://farm6.staticflickr.com/5808/22690915754_6b043df788_b.jpg', srcset='https://farm6.staticflickr.com/5808/22690915754_6b043df788_b.jpg' width='303' height='562' loading='lazy' alt='img')
+									
+									.blog-card__text
+										.blog-tag #рецепты
+										.blog-title рыба на костре<br>с итальянскими травами
+										.blog-data 18 июля
+						//SWIPER NAV
+						.swiper__nav
+							.blog-swiper-prev.swiper-button-prev
+								svg.svg-arrLeft
+									use(href='../img/sprite.svg#svg-arrLeft')
+							.blog-swiper-next.swiper-button-next
+								svg.svg-arrRight
+									use(href='../img/sprite.svg#svg-arrRight')
 
 	include ../sections/_footer.pug
 
