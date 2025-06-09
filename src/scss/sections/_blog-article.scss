@@ -1,0 +1,21 @@
+.blog-links{
+	@media (max-width: 767px) {
+	 display: none;
+	}
+}
+.blog-links__group{
+	&>*+*{margin-top: remy(10);}
+}
+.grid-aside{
+	.fancy-video-link{
+		aspect-ratio: 365/589;
+		.btn-play {
+			width: remy(100);
+			height: remy(100);
+		}
+		.btn-play svg{
+			width: remy(44);
+			height: remy(48);
+		}
+	}
+}

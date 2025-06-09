@@ -46,6 +46,18 @@
 	   width: 100%;
 	}
 }
+.grid-two-columns.reverse-mobile{
+	@media (max-width: 767px) {
+		flex-direction: column-reverse;
+		row-gap: 60px;
+	}
+}
+.grid-aside{
+	height: fit-content;
+	row-gap: remy(20);
+	display: grid;
+	grid-template-columns: 1fr;
+}
 .column-gap-80,
 .column-gap-40,
 .row-gap-32{

@@ -110,12 +110,17 @@
 		font-weight: 800;
 	}
 }
-.blog-authors_content{
+.blog-authors__content{
 	column-gap: remy(50);
-	.btn-outline{
-		margin-left: auto;
+	.btn-outline{margin-left: auto;}
+	@media (max-width: 767px) {
+	  flex-direction: column;
+	  align-items: flex-start;
+	  row-gap:20px;
+	  .btn-outline{margin-left: 0; width: 100%; max-width: 344px;}
+	}	
 		
-	}
+	
 }
 .blog-author__item{
 	column-gap: remy(16);

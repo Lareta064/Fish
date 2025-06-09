@@ -38,7 +38,7 @@ block content
 			//BLOG	
 			section.masters-content
 				.container
-					.grid-two-columns
+					.grid-two-columns.reverse-mobile
 						//LEFT COLUMN
 						.grid-content.column-gap-80
 							//гксе из админки, который добавляется через редактор в админе, должен иметь родит див с классом "user-text"
@@ -96,7 +96,7 @@ block content
 						
 							section.blog-authors
 								.h-40 Кто работал над статьей
-								.blog-authors_content.flex-center-y
+								.blog-authors__content.flex-center-y
 									//AUTHOR
 									.blog-author__item.flex-center-y
 										img(src='./img/blog/author.webp', srcset='./img/blog/author@2x.webp 2x' width='56' height='56' loading='lazy' alt='img')
@@ -115,6 +115,7 @@ block content
 						
 						//RIGHT ASIDE
 						.grid-aside.aside-sticky
+							//LINKS BLOCK
 							.blog-links.border-round-card
 								.h-30.mb-24 Статьи и репортажи
 								.blog-links__group
@@ -133,7 +134,12 @@ block content
 										span.round-arrow.round-arrow--dark
 											svg.svg-arrRight
 												use(href='../img/sprite.svg#svg-arrRight')
-
+							//VIDEO
+							a(href="https://youtu.be/7wtfhZwyrcc?si=f4McZ7b0oVzjInn9" data-fancybox="blog_1").fancy-video-link
+								img.img-cover.br-15(src='./img/blog/recept-promo.webp', srcset='./img/blog/recept-promo@2x.webp 2x' width='365' height='589' loading='lazy' alt='img')
+								span.btn-play
+									svg.svg-play
+										use(href='./img/sprite.svg#svg-play')
 			//subscribe
 			section.subscribe-section
 				.container
