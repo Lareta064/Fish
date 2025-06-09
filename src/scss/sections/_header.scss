@@ -65,6 +65,7 @@
 		color: var(--color-belyy);
 		transition: .3s; 
 			&:hover{color: var(--goluboy);
+			
 		}
 	}
 }
@@ -92,6 +93,9 @@
 	@media (max-width: 767px) {
 	  display: flex;
 	  height: 65px;
+	  position: sticky;
+	  top: 0;
+	  z-index: 7;
 	  .container{
 		display: flex;
 		column-gap: remy(10);
@@ -130,6 +134,7 @@
 		letter-spacing: -0.02em;
 		color: var(--temno-siniy);
 		border-bottom: 1px solid var(--color-belyy);
+		&:hover{color: var(--temno-siniy); opacity: .7;}
 	}
 	&::-webkit-scrollbar{
 		display: none;
