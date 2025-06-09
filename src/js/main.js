@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
     });
     
+
     const showStoreCard = document.querySelectorAll('[data-store]');
     if(showStoreCard.length > 0){
       
@@ -100,8 +101,19 @@ document.addEventListener("DOMContentLoaded", function () {
              }
           })
         })
-      })
+      });
     }
+    // const zoomPlus = document.querySelector('.map-zoom-plus');
+    // const zoomMinus = document.querySelector('.map-zoom-minus');
+    // if(zoomPlus){
+    //   const zoomMap = document.querySelector('#map-image');
+    //   zoomPlus.addEventListener('click', ()=>{
+    //     zoomMap.classList.add('map-scale');
+    //   });
+    //   zoomMinus.addEventListener('click', ()=>{
+    //     zoomMap.classList.remove('map-scale');
+    //   });
+    // }
     //PRODUCT SLIDER
     const productSwipers = document.querySelectorAll('.product-swiper');
     productSwipers.forEach((swiperEl, index) => {

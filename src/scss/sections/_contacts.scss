@@ -6,6 +6,7 @@
 	padding: 1.2em;
 	padding-bottom: 2em;
 	background: var(--goluboy);
+	min-height: remy(160);
 	address{
 		font-family: var(--font-family);
 		font-weight: 700;
@@ -78,7 +79,7 @@
 	.stores-contacts .contacts-map-content{
 		max-width: remy(621);
 		display: flex;
-		img{
+		img.map-image{
 			object-fit: cover;
 			object-position: left;
 			height: 100%;
@@ -97,9 +98,57 @@
 	 height: 50px;
 	}
 }
+.stores-contacts  .map-wrapper{
+	width: remy(622);
+	@media (max-width: 767px) {
+	  width: 100%;
+	}
+}
+.contacts-page .map-wrapper{
+	width: remy(1025);
+	@media (max-width: 767px) {
+	  width: 100%;
+	}
+}
+.contacts-page .map-wrapper{
+	[data-store="1"]{
+		top: 5%;
+    	left: 68%;
+		@media (max-width: 767px) {
+		 left: 67%;
+		}
+	}
+	[data-store="2"]{
+		top: 13%;
+    	left: 58%;
+		@media (max-width: 767px) {
+		 left: 55%;
+		}
+	}
+	[data-store="3"]{
+		top: 29%;
+   		 left: 50%;
+		@media (max-width: 767px) {
+		 left: 42%;
+		}
+	}
+	[data-store="4"]{
+		top: 67%;
+        left: 20%;
+		@media (max-width: 767px) {
+		 left: 11%;
+		 
+		}
+	}
+	.img-cover{
+		object-position: left;
+	}
+}
 .map-wrapper{
 	position: relative;
 	height: remy(611);
+	overflow: hidden;
+	
 	[data-store="1"]{
 		top: 16%;
         left: 85%;
@@ -130,13 +179,34 @@
 	}
 	@media (max-width: 767px) {
 	   height: auto;
+	   width: 100%;
 	  aspect-ratio: 344/320;
 	}
 }
-.show-store-card.active .svg-pin{color: red;}
+.show-store-card.active .svg-pin{opacity: .5;}
 .store-address-block{
 	display: none;
 	&.active{
 		display: flex;
 	}
 }
+// .map-zoom-btns{
+// 	position: absolute;
+// 	bottom: remy(32);right: remy(32); z-index: 2;
+// 	column-gap:remy(12);
+// }
+// .map-zoom-plus, .map-zoom-minus{
+// 	width: remy(44);
+// 	height: remy(44);
+// 	border-radius: 50%;
+// 	background-color: var(--svetlo-siniy);
+// 	svg{
+// 		width: remy(18);
+// 		height: remy(18);
+// 		color: white;
+// 	}
+// }
+// .map-image{
+// 	transition: .3s;
+// 	&.map-scale{transform: scale(1.2);}
+// }

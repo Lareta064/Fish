@@ -130,7 +130,9 @@ section.stores-contacts
 		//LEFT COLUMN
 		.contacts-map-content
 			.map-wrapper
-				img(src='./img/map-mini.webp', srcset='./img/map-mini@2x.webp 2x' width='622' height='601' loading='lazy' alt='img')
+				img#map-image.map-image.img-cover(src='./img/map-mini.webp', srcset='./img/map-mini@2x.webp 2x' width='622' height='601' loading='lazy' alt='img')
+				
+				//Метки магазинов на карте
 				button.show-store-card.active(type="button" data-store="1")
 					svg.svg-pin
 						use(href='./img/sprite.svg#svg-pin')
@@ -144,5 +146,10 @@ section.stores-contacts
 					svg.svg-pin
 						use(href='./img/sprite.svg#svg-pin')
 
-				img.pos-abs.img-bot1(src='./img/bot.webp', srcset='./img/bot@2x.webp 2x' width='75' height='31' loading='lazy' alt='img')
-				img.pos-abs.img-bot2(src='./img/bot2.webp', srcset='./img/bot2@2x.webp 2x' width='75' height='31' loading='lazy' alt='img')
+				//- .map-zoom-btns.flex
+				//- 	button.map-zoom-plus
+				//- 		svg.svg-plus
+				//- 			use(href='./img/sprite.svg#svg-plus')
+				//- 	button.map-zoom-minus
+				//- 		svg.svg-minus
+				//- 			use(href='./img/sprite.svg#svg-minus')
