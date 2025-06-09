@@ -85,6 +85,12 @@
 	.acordion-arrow{display: none;}
 	.acordion-body{display: block;}
 	@media (max-width: 767px) {
-		.acordion-arrow{display: flex;}
+		.acordion-arrow{display: flex; margin-left: auto;}
+		.acordion-body{display: none;}
+		.acordion-group.active{
+			.acordion-arrow{transform: rotate(180deg);}
+			.acordion-body{display: block;}
+		}
+		
 	}
 }
