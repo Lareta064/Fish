@@ -7,6 +7,9 @@
 	  .swiper-slide{width: 166px!important;}
 	  .swiper__nav{display: none;}
 	}
+	@media (max-width: 389px) {
+		.swiper-slide{width: 160px!important;}
+	}
 }
 .product-swiper .swiper-wrapper{
 	display: flex;

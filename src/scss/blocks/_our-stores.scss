@@ -1,8 +1,14 @@
 
  .our-stores{
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: remy(18);
+	.swiper-slide{
+		width: remy(330)!important;
+		@media (max-width: 767px) {
+			width: remy(308)!important;
+		}
+	}
+	@media (max-width: 767px) {
+	width: calc(50% + 50vw);
+	}
 }
 .store-item{
 	font-size: remy(10);

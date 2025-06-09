@@ -23,8 +23,15 @@
 	border-radius: remy(15);
 	justify-content: space-between;
 	align-items: center;
-	column-gap:remy(24);
+	column-gap:remy(12);
+	&__type{align-items: center;}
 	.payment-icon{
 		flex-shrink: 0;
+	}
+	@media (max-width: 767px) {
+	   padding: remy(9) remy(12) remy(9) remy(20);
+	  .button-blue{
+		font-size: 10px;
+	  }
 	}
 }

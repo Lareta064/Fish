@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     productSwipers.forEach((swiperEl, index) => {
       new Swiper(swiperEl, {
         slidesPerView: 'auto',
-        spaceBetween: 12,
+        spaceBetween: 10,
         scrollToSlides:2,
         speed:600,
         navigation: {
@@ -114,8 +114,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const partnersSlider = new Swiper('.partners-swiper', {
         slidesPerView: 'auto',
         spaceBetween: 40,
-        speed:500,
+        speed:1500,
         loop: true,
+        autoplay:{
+          delay: 1500,
+        },
         navigation: {
           nextEl: ".partners-swiper-prev",
           prevEl: ".partners-swiper-next"
@@ -146,8 +149,17 @@ document.addEventListener("DOMContentLoaded", function () {
              
           },
         }
-  });
-  
+    });
+    const storesSlider = new Swiper('.our-stores', {
+      slidesPerView: 'auto',
+      loop: true,
+      spaceBetween:18,
+      speed:500,
+      navigation: {
+        nextEl: ".store-swiper-prev",
+        prevEl: ".store-swiper-next"
+      }
+    });
     // СЧЕТЧИК
     let counters = document.querySelectorAll('.counter');
 

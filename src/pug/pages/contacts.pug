@@ -2,7 +2,12 @@ extends ../layouts/layout.pug
 
 block content
 	include ../sections/_header.pug
-	main.main-inner
+	main.inner-page
+		.container
+			.breadcrumbs
+				a(href="index.html").breadcrumb-item Главная
+				a(href="#!").breadcrumb-item Контакты
+				span.breadcrumb-item Рецепты
 		section.contacts-page
 			.container
 				.stores-contacts-grid
@@ -17,9 +22,8 @@ block content
 						
 						//address-card
 						.address-card
-							address г. Сочи ул. Пипяево
-							a(href="tel:+79129786654").contact-link
-								span +7 912 978 66 54
+							address г. Сочи, ул. Яна Фабрициуса, 58/2, павильоны 96, 97, 98
+							
 							.work-mode
 								.fs-21 Режим работы:
 								.fs-19.flex
@@ -57,7 +61,14 @@ block content
 								.swiper-slide
 									.store-item
 										img.img-cover(src='./img/store3.webp', srcset='./img/store3@2x.webp 2x' width='330' height='195' loading='lazy' alt='img')
-
+							//SWIPER NAV
+							.swiper__nav
+								.product-swiper-prev.swiper-button-prev
+									svg.svg-arrLeft
+										use(href='./img/sprite.svg#svg-arrLeft')
+								.product-swiper-next.swiper-button-next
+									svg.svg-arrRight
+										use(href='./img/sprite.svg#svg-arrRight')
 	include ../sections/_footer.pug		
 			
 block variables
