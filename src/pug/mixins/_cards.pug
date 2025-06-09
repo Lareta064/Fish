@@ -9,7 +9,7 @@ mixin benefit-card(img, txt)
 mixin benefit-card-ui(img, txt)
 	.benefit-item
 		.benefit-item__icon
-			img(src='../img/icons/'+ img +'.webp', srcset='../img/icons/'+ img +'@2x.webp 2x' width='62' height='62' alt='img')
+			img(src='./img/icons/'+ img +'.webp', srcset='./img/icons/'+ img +'@2x.webp 2x' width='62' height='62' alt='img')
 		.benefit-item__txt.fw-700
 			p !{txt}
 
@@ -29,7 +29,7 @@ mixin step-card(img, title, txt)
 mixin step-card-ui(img, title, txt)
 	.step-card
 		.step-card__icon
-			img(src='../img/icons/'+ img +'.webp', srcset='../img/icons/'+ img +'@2x.webp 2x'  height='82' alt='img')
+			img(src='./img/icons/'+ img +'.webp', srcset='./img/icons/'+ img +'@2x.webp 2x'  height='82' alt='img')
 		.step-card__txt
 			.h-23 #{title}
 			p #{txt}
@@ -37,7 +37,7 @@ mixin step-card-ui(img, title, txt)
 mixin product-card(img, old)
 	.product-card&attributes(attributes)
 		.product-card__img
-			img.img-cover(src='../img/products/'+img+'.webp', srcset='../img/products/'+img+'@2x.webp 2x' width='' height='' alt='img')
+			img.img-cover(src='./img/products/'+img+'.webp', srcset='./img/products/'+img+'@2x.webp 2x' width='' height='' alt='img')
 		.product-card__body
 			.product-card__title Мидии 40/60, неочищенные
 			.product-card__price
@@ -50,7 +50,7 @@ mixin product-card(img, old)
 				
 				button.cart-btn.cart-btn--animate
 					svg.svg-cart
-						use(href='../img/sprite.svg#svg-cart')
+						use(href='./img/sprite.svg#svg-cart')
 					svg.plus-anim(viewBox='0 0 22 22' width='22' height='22')
 						line(x1='11' y1='1' x2='11' y2='11')
 						line(x1='11' y1='21' x2='11' y2='11')

@@ -181,6 +181,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	@media (max-width: 767px) {
 		width: calc(100vw - 40px);
 		max-width: 540px;
+		padding-inline:0;
 	}
 }
 main.inner-page{
