@@ -21,3 +21,14 @@ mixin blogArticle(img)
 					p Не выливайте жидкость, образующуюся при оттаивании, она нам пригодится для соуса.
 				
 				a(href="").btn-outline.fw-900 Прочитать статью
+
+mixin receptStep(num, title, img )
+	.recept-step
+		.recept-step__row.flex
+			.recept-step__num #{num}
+			.recept-step__txt 
+				.h-32 #{title}
+				block
+
+		.recept-step__img
+			img.img-cover.br-15(src='./img/recepts/recept-step'+img+'.webp', srcset='./img/recepts/recept-step'+img+'@2x.webp 2x' width='1025' height='530' loading='lazy' alt='img')
