@@ -1,6 +1,6 @@
 .step-card{
 	border-radius: remy(15);
-	background: #eff3ff;
+	background: var(--goluboy);
 	padding: remy(36) remy(14);
 	text-align: center;
 	display: flex;
@@ -24,7 +24,7 @@
 		line-height: 1;
 		letter-spacing: -0.02em;
 		text-align: center;
-		color: var(--color-chernyy);
+		color: var(--color-smuglyy);
 	}
 	.h-23{
 		font-weight: 900;

@@ -24,6 +24,7 @@
 	.swiper-wrapper {
 	width: fit-content;
 	margin: 0 auto;
+	margin-top: remy(20);
 	}
 	@media (max-width: 767px) {
 		margin-top: remy(20);

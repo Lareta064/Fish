@@ -29,6 +29,7 @@
 	gap:remy(20);
 	&>*:nth-of-type(2n){
 		flex-direction: row-reverse;
+		.promo-info-card{margin-left: 0;}
 		@media (max-width: 767px) {
 			flex-direction: column;
 		}
