@@ -7,3 +7,47 @@ footer.footer{
 		height: 500px;
 	}
 }
+footer.footer{
+	padding-top: remy(55);
+	padding-bottom: remy(55);
+	background: var(--color-smuglyy);
+	border-radius: remy(15) remy(15) 0 0;
+	background-image: url('../img/footer-bg.webp');
+	background-size: cover;
+	background-position: bottom 10%;
+	background-repeat: no-repeat;
+
+	.container{
+		max-width: reny(1480);
+	}
+	.footer-grid{
+		display: grid;
+		grid-template-columns: remy(346) 1fr;
+		column-gap: remy(83);
+	}
+	.footer-logo{
+		width: remy(346);
+		flex-shrink: 0;
+	}
+	.logo{
+		display: block;
+	}
+}
+.footer-subscribe-wrapper{
+	display: flex;
+	.h-40{
+		max-width: remy(396);
+		font-family: var(--second-family);
+		
+		line-height: 1;
+		letter-spacing: -0.01em;
+		color: var(--color-belyy);
+	}
+	.footer-subscribe-form{
+		flex:1;
+	}
+	.footer-subscribe-form .form-input{
+		width: 100%;
+		display: block;
+	}
+}

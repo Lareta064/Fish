@@ -4,6 +4,7 @@
 	background: var(--temno-siniy);
 	.logo{
 		flex-shrink: 0;
+		display: block;
 		img{
 			height: remy(128);
 			width: auto;

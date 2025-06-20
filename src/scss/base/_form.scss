@@ -371,3 +371,22 @@
 		}
 	}
 }
+.footer-subscribe-form{
+	.button-blue{
+		position: absolute;
+		top: remy(10);
+		bottom: remy(10);
+		right: remy(10);
+		border-radius: remy(30);
+		height: remy(46);
+	}
+}
+.footer-subscribe-form .form-item{
+	position: relative;
+}
+.footer-subscribe-form  input.form-input{
+	height:remy(66);
+	background-color: var(--color-belyy);
+	border-radius: remy(30);
+	padding-left: remy(30);
+}
