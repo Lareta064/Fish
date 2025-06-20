@@ -10,12 +10,13 @@
 			object-fit: contain;
 		}
 		svg{
-			width: remy(147);
-			height: remy(200);
+			width: remy(174);
+			height: remy(125);
 		}
 	}
 	@media (max-width: 767px) {
 	 display: none!important;
+	 
 	}
 }
 .header-content-wrapper{
@@ -32,7 +33,7 @@
 	
 }
 .header-bottom-row{
-	column-gap: remy(30);
+	column-gap: remy(22);
 	margin-top: remy(40);
 	align-items: center;
 	.btn-catalogy, .promotion-link, .cart-btn{
@@ -53,10 +54,10 @@
 
 .header-menu{
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
 	list-style-type: none;
 	flex:1;
-	column-gap: remy(75);
+	column-gap: remy(30);
 	.header-menu__link{
 		display: block;
 		font-family: var(--font-family);
@@ -79,6 +80,10 @@
 	padding-block: 11px;
 	.logo{
 		margin-right: auto;
+		svg{
+			height: 68px;
+			width: 50px;
+		}
 		
 	}
 	 .cart-btn{
