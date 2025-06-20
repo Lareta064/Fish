@@ -4,12 +4,15 @@
 	background: var(--temno-siniy);
 	.logo{
 		flex-shrink: 0;
-		img, svg{
+		img{
 			height: remy(128);
 			width: auto;
 			object-fit: contain;
 		}
-		
+		svg{
+			width: remy(147);
+			height: remy(200);
+		}
 	}
 	@media (max-width: 767px) {
 	 display: none!important;

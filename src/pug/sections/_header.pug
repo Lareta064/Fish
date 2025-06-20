@@ -1,7 +1,8 @@
 header.header-mobile
 	.container
 		a.logo(href="index.html")
-			img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='44' height='44'  alt='logo')
+			svg.svg-logo
+				use(href='./img/logo.svg#svg-logo')
 		
 		//cart-btn
 		a(href="basket-page.html").cart-btn.cart-btn--transform
@@ -43,7 +44,8 @@ header.header#header
 	.container
 		.header-content
 			a.logo(href="index.html")
-				img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='128' height='128'  alt='logo')
+				svg.svg-logo
+					use(href='./img/logo.svg#svg-logo')
 			
 			.header-content-wrapper
 				//TOP ROW

@@ -20,6 +20,11 @@
 	span:after{top: remy(-5);}
 	span:before{bottom: remy(-5);}
 }
+.svg-logo{
+	width: remy(345);
+	height: remy(428);
+	fill: transparent;
+}
 svg{display: inline-block;}
 svg.svg-cart{
 	width:remy(26);

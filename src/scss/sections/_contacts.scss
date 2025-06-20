@@ -115,7 +115,7 @@
 		top: 5%;
     	left: 68%;
 		@media (max-width: 767px) {
-		 left: 67%;
+		 left: 91%;
 		}
 	}
 	[data-store="2"]{
@@ -143,6 +143,7 @@
 	.img-cover{
 		object-position: left;
 	}
+	
 }
 .map-wrapper{
 	position: relative;
@@ -150,7 +151,7 @@
 	overflow: hidden;
 	
 	[data-store="1"]{
-		top: 16%;
+		top: 14%;
         left: 85%;
 		@media (max-width: 767px) {
 		 left: 80%;
@@ -181,6 +182,7 @@
 	   height: auto;
 	   width: 100%;
 	  aspect-ratio: 344/320;
+	  img.img-cover{object-position: remy(-50)}
 	}
 }
 .show-store-card.active .svg-pin{opacity: .5;}
