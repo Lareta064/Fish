@@ -14,7 +14,7 @@ footer.footer
 							input.form-input(type="email" name="subscribe_email" placeholder="Электронная почта")
 							button.button-blue(type="submit") Отправить
 				
-				.footer-row
+				.footer-row.flex
 					ul.footer-menu
 						li.footer-menu-item
 							a(href="").footer-menu-link Главная
@@ -33,5 +33,19 @@ footer.footer
 						li.footer-menu-item
 							a(href="").footer-menu-link Контакты
 
+					.footer-contacts
+						.footer-contacts__mess
+							a(href="" target="_blank").text-link в  whatsapp
+							a(href=""  target="_blank").text-link в telegram
+						.footer-contacts__list
+							a(href="mailto:info@fish.ru"  target="_blank").text-link info@fish.ru
+							a(href="tel:+79184051058"  target="_blank").contact-link
+								svg.svg-phone
+									use(href='./img/sprite.svg#svg-phone')
+								span +7 (918) 405-10-58
+							
+							a(href=""  target="_blank").contact-link
+								img(src="./img/social/wa.webp",loading="lazy" width="21" height="22" alt="") 
+								span +7 (918) 405-10-58
 
 

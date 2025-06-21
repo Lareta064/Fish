@@ -62,3 +62,9 @@
 	position: relative;
 }
 .br-15{border-radius: remy(15)}
+.pb-105{
+	padding-bottom: remy(105);
+	@media (max-width: 767px) {
+		padding-bottom: remy(55);
+	}
+}
