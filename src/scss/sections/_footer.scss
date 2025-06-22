@@ -1,11 +1,9 @@
 
 footer.footer{
-	height: remy(570);
+	
 	background-color: var(--temno-siniy);
 	border-radius: 15px 15px 0 0;
-	@media (max-width: 767px) {
-		height: 500px;
-	}
+	
 }
 footer.footer{
 	padding-top: remy(55);
@@ -107,6 +105,35 @@ footer.footer{
 	text-transform: capitalize;
 	color: var(--color-tekst-seryy);
 	&:hover{color:  #a4a6a9;}
-			
-		
+}
+.footer-bottom{
+	justify-content: space-between;
+	&>*{
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: remy(14);
+		line-height: 129%;
+		letter-spacing: -0.03em;
+		color: rgba(214, 214, 214, .8);
+		margin-top: remy(64);
+	}
+}
+.bank-details{
+	display: flex;
+	column-gap: remy(10);
+	li+li{
+		position: relative;
+		&:before{
+			content: '/';
+			margin-right: 10px;
+
+		}
+	}
+}
+.footer-politic{
+	font-size: remy(14);
+	line-height: 129%;
+	letter-spacing: -0.03em;
+	color: rgba(164, 166, 169, .8);
+	margin-top: remy(24);
 }
