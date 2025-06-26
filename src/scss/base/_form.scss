@@ -237,7 +237,6 @@
   
   .dropdown__list--visible {
 	display: block;
-	
   }
   
   .dropdown__list-item {
@@ -379,6 +378,9 @@
 		right: remy(10);
 		border-radius: remy(30);
 		height: remy(46);
+		@media (max-width: 767px) {
+		   height: 32px;
+		}
 	}
 }
 .footer-subscribe-form .form-item{
@@ -389,4 +391,7 @@
 	background-color: var(--color-belyy);
 	border-radius: remy(30);
 	padding-left: remy(30);
+	@media (max-width: 767px) {
+	height: 52px;
+	}	
 }

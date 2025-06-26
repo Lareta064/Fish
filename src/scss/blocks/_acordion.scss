@@ -8,6 +8,9 @@
 		border-radius: remy(15);
 		padding-inline: remy(32);
 		padding-top: 0;
+		@media (max-width: 767px) {
+		padding-inline: remy(16);
+		}
 	}
 	&-header{
 		padding-block: remy(24);

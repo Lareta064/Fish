@@ -198,3 +198,17 @@
 	font-weight: 900;
 	font-size: remy(20);
 }
+.round-btn{
+	width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--goluboy);
+    flex-shrink: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	transition: .3s; 
+	svg{color: white;}
+	&:hover{opacity: .8;}
+}

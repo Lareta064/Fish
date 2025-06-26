@@ -3,8 +3,7 @@ footer.footer
 		.footer-grid
 			.footer-logo
 				a.logo(href="index.html")
-					svg.svg-logo
-						use(href='./img/logo.svg#svg-logo')
+					img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='246' height='169' loading='lazy' alt='img')
 			
 			.footer-column
 				.footer-subscribe-wrapper
@@ -14,39 +13,40 @@ footer.footer
 							input.form-input(type="email" name="subscribe_email" placeholder="Электронная почта")
 							button.button-blue(type="submit") Отправить
 				
-				.footer-row.flex
+				.footer-group.flex
 					ul.footer-menu
 						li.footer-menu-item
-							a(href="").footer-menu-link Главная
+							a(href="index.html").footer-menu-link Главная
 						li.footer-menu-item
-							a(href="").footer-menu-link Каталог
+							a(href="catalogy.html").footer-menu-link Каталог
 						li.footer-menu-item
-							a(href="").footer-menu-link О нас
+							a(href="about.html").footer-menu-link О нас
 						li.footer-menu-item
-							a(href="").footer-menu-link Магазины
+							a(href="stories.html").footer-menu-link Магазины
 						li.footer-menu-item
-							a(href="").footer-menu-link Покупателям
+							a(href="delivery.html").footer-menu-link Покупателям
 						li.footer-menu-item
-							a(href="").footer-menu-link Блог/Рецепты
+							a(href="blog.html").footer-menu-link Блог/Рецепты
 						li.footer-menu-item
-							a(href="").footer-menu-link Акции
-						li.footer-menu-item
-							a(href="").footer-menu-link Контакты
+							a(href="promotions.html").footer-menu-link Акции
+						//- li.footer-menu-item
+						//- 	a(href="").footer-menu-link Контакты
 
 					.footer-contacts
 						.footer-contacts__mess
-							a(href="" target="_blank").text-link в  whatsapp
-							a(href=""  target="_blank").text-link в telegram
+							a(href="https://wa.me/79184051058" target="_blank").text-link в  Whatsapp
+							a(href="https://t.me/@fishingsochime"  target="_blank").text-link в Telegram
 						.footer-contacts__list
-							a(href="mailto:info@fish.ru"  target="_blank").text-link info@fish.ru
+							a(href="mailto:panarina.1tv@yandex.ru"  target="_blank").text-link panarina.1tv@yandex.ru
 							a(href="tel:+79184051058"  target="_blank").contact-link
 								svg.svg-phone
 									use(href='./img/sprite.svg#svg-phone')
 								span +7 (918) 405-10-58
+							a(href="tel:+78622777142"  target="_blank").contact-link
+								svg.svg-phone
+									use(href='./img/sprite.svg#svg-phone')
+								span +7 (862)-2-777-142
 							
-							a(href=""  target="_blank").contact-link
-								img(src="./img/social/wa.webp",loading="lazy" width="21" height="22" alt="") 
-								span +7 (918) 405-10-58
 						
 
 		.footer-bottom.flex
@@ -56,7 +56,7 @@ footer.footer
 				li ИНН 231126207627
 				li ОГРНИП 324237500435312
 			
-			.design-company Design by SAVOV
+			a(href="https://savov.ru" target="_blank").design-company Design by SAVOV
 		
 		.footer-politic.txt-center
 			p Использование материалов с данного сайта разрешено только по согласию с владельцем. Владелец оставляет за собой право воспользоваться 146 статьей УК РФ при нарушении авторских и смежных прав. Вся предоставленная на сайте информация ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ.

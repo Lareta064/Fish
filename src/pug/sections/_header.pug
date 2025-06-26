@@ -1,9 +1,13 @@
 header.header-mobile
 	.container
 		a.logo(href="index.html")
-			svg.svg-logo
-				use(href='./img/logo.svg#svg-logo')
+			img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='59' height='42' loading='lazy' alt='img')
 		
+		//phone-btn
+		a(href="tel:+79184051058").round-btn
+			svg.svg-phone
+				use(href='./img/sprite.svg#svg-phone')
+			
 		//cart-btn
 		a(href="basket-page.html").cart-btn.cart-btn--transform
 			svg.svg-cart
@@ -36,16 +40,16 @@ header.header-mobile
 					a.header-menu__link(href="promotions.html") %  Акции и скидки 
 				li.header-menu-item
 					a.header-menu__link(href="blog.html") Блог / рецепты
-				li.header-menu-item
+				//- li.header-menu-item
 					a.header-menu__link(href="contacts.html") Контакты
+			
 
 //HEADER DESKTOP
 header.header#header
 	.container
 		.header-content
 			a.logo(href="index.html")
-				svg.svg-logo
-					use(href='./img/logo.svg#svg-logo')
+				img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='174' height='125' loading='lazy' alt='img')
 			
 			.header-content-wrapper
 				//TOP ROW
@@ -63,8 +67,8 @@ header.header#header
 							a.header-menu__link(href="blog.html") Блог / рецепты
 						li.header-menu-item
 							a.header-menu__link(href="promotions.html") % Акции и скидки 
-						li.header-menu-item
-							a.header-menu__link(href="contacts.html") Контакты
+						//- li.header-menu-item
+						//- 	a.header-menu__link(href="contacts.html") Контакты
 					//SOCIAL
 					+social-roung
 				
