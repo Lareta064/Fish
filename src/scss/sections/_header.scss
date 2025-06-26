@@ -128,9 +128,12 @@
 		transform: translateX(0);
 	}
 	.contacts-content__links{
-		padding-bottom: 40px;
+		
 		padding-top: 40px;
 		a+a{margin-top: 10px;}
+		svg{color: var(--color-chernyy);}
+		.svg-email{position: relative;
+		top: 2px;}
 	}
 }
 .header-mobile .header-menu{
