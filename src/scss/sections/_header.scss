@@ -127,11 +127,16 @@
 	&.active{
 		transform: translateX(0);
 	}
+	.contacts-content__links{
+		padding-bottom: 40px;
+		padding-top: 40px;
+		a+a{margin-top: 10px;}
+	}
 }
 .header-mobile .header-menu{
 	flex-direction: column;
 	justify-content: flex-start;
-	height: calc(100vh - 200px);
+	height: calc(100dvh - 280px);
 	overflow: hidden;
 	overflow-y: auto;
 	scrollbar-width: none;

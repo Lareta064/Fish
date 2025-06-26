@@ -42,7 +42,16 @@ header.header-mobile
 					a.header-menu__link(href="blog.html") Блог / рецепты
 				//- li.header-menu-item
 					a.header-menu__link(href="contacts.html") Контакты
-			
+			.contacts-content__links
+				a(href="mailto:panarina.1tv@yandex.ru").contact-link
+					svg.svg-email
+						use(href='./img/sprite.svg#svg-email')
+					span panarina.1tv@yandex.ru
+				a(href="tel:+79129786654").contact-link
+					svg.svg-phone
+						use(href='./img/sprite.svg#svg-phone')
+					span +7 912 978 66 54
+				
 
 //HEADER DESKTOP
 header.header#header
