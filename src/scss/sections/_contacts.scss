@@ -59,9 +59,11 @@
 	font-size: remy(10);
 	column-gap: 3em;
 	justify-content: space-between;
+	.social-block{margin-top: remy(40);}
     @media (max-width: 767px) {
 	  flex-direction: column;
 	  row-gap:remy(60);
+	  .social-block{margin-top: remy(36);}
 	}
 }
 .contacts-content{
@@ -143,6 +145,9 @@
 	}
 	.img-cover{
 		object-position: left;
+		@media (max-width: 767px) {
+		object-position: 55%;
+		}
 	}
 	
 }
