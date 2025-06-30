@@ -192,7 +192,7 @@
 	}
 }
 .show-store-card.active .svg-pin{opacity: .5;}
-.store-address-block{
+.store-address-block[data-adrs]{
 	display: none;
 	&.active{
 		display: flex;
