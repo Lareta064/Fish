@@ -19,3 +19,21 @@
 		aspect-ratio:330/195;
 	}
 }
+.contacts-page{
+	.h2{margin-bottom: remy(40);}
+	.contacts-page-content{row-gap:remy(40);}
+	.store-address-block.flex-col{row-gap:remy(16);}
+	
+	.contacts-content__links{
+		border-radius: 1.8em;
+		padding: remy(12);
+		
+		background: var(--goluboy);
+		.social-block{margin-top: 20px;}
+	}
+	.address-card .work-mode{margin-top: remy(10);}
+	.address-card .work-mode .fs-21{margin-bottom: remy(10);}
+	.address-card{background-color: #fff;}
+	.address-card:hover{background-color: var(--goluboy);}
+	.social-block__title{margin-bottom: 4px;}
+}
