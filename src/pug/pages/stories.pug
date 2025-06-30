@@ -24,7 +24,7 @@ block content
 							
 							.store-address-block.flex-col
 								//Карточка магазина #1
-								.address-card
+								.address-card(data-adrs="1")
 									address г. Сочи, ул. Яна Фабрициуса, 58/2, павильоны 96, 97, 98
 									
 									.work-mode
@@ -34,8 +34,8 @@ block content
 											span без выходных
 								
 								//Карточка магазина #2
-								.address-card
-									address г. Сочи, ул. Яна Фабрициуса, 58/2
+								.address-card(data-adrs="2")
+									address г. Сочи, ул. Яна Фабрициуса, 58/2, магазин «153 рыбы» 
 										span (напротив живой рыбы Кубани)
 									
 									.work-mode
@@ -46,33 +46,21 @@ block content
 								
 								
 								//Карточка магазина #3
-								.address-card
-									address г. Сочи, ул. Яна Фабрициуса, 58/2 (напротив живой рыбы Кубани)
+								.address-card(data-adrs="3")
+									address г. Адлер, ул. Демократическая, 3
 									
 									.work-mode
 										.fs-21 Режим работы:
 										.fs-19.flex
 											span с 10:00 до 20:00 
 											span без выходных
-									
-									
-								//Карточка магазина #4
-								.address-card
-									address г. Адлер, центральный рынок, ул. Демократическая 38
-									
-									.work-mode
-										.fs-21 Режим работы:
-										.fs-19.flex
-											span с 10:00 до 20:00 
-											span без выходных
-									
 								
 							//social
 							.contacts-content__links
-								a(href="tel:+79129786654").contact-link
+								a(href="tel:+79184051058").contact-link
 									svg.svg-phone
 										use(href='./img/sprite.svg#svg-phone')
-									span +7 912 978 66 54
+									span +7 (918) 405-10-58
 								
 								a(href="mailto:panarina.1tv@yandex.ru").contact-link
 									svg.svg-email
@@ -89,15 +77,15 @@ block content
 							
 							
 							//Метки магазинов на карте
-							//- button.show-store-card.active(type="button")
-							//- 	svg.svg-pin
-							//- 		use(href='./img/sprite.svg#svg-pin')
-							//- button.show-store-card(type="button")
-							//- 	svg.svg-pin
-							//- 		use(href='./img/sprite.svg#svg-pin')
-							//- button.show-store-card(type="button")
-							//- 	svg.svg-pin
-							//- 		use(href='./img/sprite.svg#svg-pin')
+							button.show-store-card.active(type="button" data-store="1")
+								svg.svg-pin
+									use(href='./img/sprite.svg#svg-pin')
+							button.show-store-card(type="button" data-store="2")
+								svg.svg-pin
+									use(href='./img/sprite.svg#svg-pin' )
+							button.show-store-card(type="button" data-store="3")
+								svg.svg-pin
+									use(href='./img/sprite.svg#svg-pin')
 							//- button.show-store-card(type="button")
 							//- 	svg.svg-pin
 							//- 		use(href='./img/sprite.svg#svg-pin')
