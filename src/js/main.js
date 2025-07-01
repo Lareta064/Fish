@@ -189,8 +189,8 @@ document.addEventListener("DOMContentLoaded", function () {
       spaceBetween:18,
       speed:500,
       navigation: {
-        nextEl: ".store-swiper-prev",
-        prevEl: ".store-swiper-next"
+        nextEl: ".stores-swiper-prev",
+        prevEl: ".stores-swiper-next"
       }
     });
     // СЧЕТЧИК

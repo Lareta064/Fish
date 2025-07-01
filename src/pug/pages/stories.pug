@@ -24,7 +24,7 @@ block content
 							
 							.store-address-block.flex-col
 								//Карточка магазина #1
-								.address-card(data-adrs="1")
+								.address-card.active(data-adrs="1")
 									address г. Сочи, ул. Яна Фабрициуса, 58/2, павильоны 96, 97, 98
 									
 									.work-mode
@@ -73,22 +73,22 @@ block content
 						.map-wrapper
 							picture
 								//- source(srcset="")
-								img.img-cover(src='./img/page-stories-map.webp', srcset='./img/page-stories-map@2x.webp 2x' width='1027' height='601' loading='lazy' alt='img')
+								img.img-cover(src='./img/map.webp', srcset='./img/map@2x.webp 2x' width='1027' height='601' loading='lazy' alt='img')
 							
 							
 							//Метки магазинов на карте
+							//- button.show-store-card.active(type="button" data-store="1")
+							//- 	svg.svg-pin
+							//- 		use(href='./img/sprite.svg#svg-pin')
 							button.show-store-card.active(type="button" data-store="1")
 								svg.svg-pin
-									use(href='./img/sprite.svg#svg-pin')
+									use(href='./img/sprite.svg#svg-pin' )
 							button.show-store-card(type="button" data-store="2")
 								svg.svg-pin
-									use(href='./img/sprite.svg#svg-pin' )
+									use(href='./img/sprite.svg#svg-pin')
 							button.show-store-card(type="button" data-store="3")
 								svg.svg-pin
 									use(href='./img/sprite.svg#svg-pin')
-							//- button.show-store-card(type="button")
-							//- 	svg.svg-pin
-							//- 		use(href='./img/sprite.svg#svg-pin')
 						//stores
 						.our-stores.swiper
 							.swiper-wrapper
@@ -103,10 +103,10 @@ block content
 										img.img-cover(src='./img/store3.webp', srcset='./img/store3@2x.webp 2x' width='330' height='195' loading='lazy' alt='img')
 							//SWIPER NAV
 							.swiper__nav
-								.product-swiper-prev.swiper-button-prev
+								.stores-swiper-next.swiper-button-next
 									svg.svg-arrLeft
 										use(href='./img/sprite.svg#svg-arrLeft')
-								.product-swiper-next.swiper-button-next
+								.stores-swiper-prev.swiper-button-prev
 									svg.svg-arrRight
 										use(href='./img/sprite.svg#svg-arrRight')
 	include ../sections/_footer.pug		

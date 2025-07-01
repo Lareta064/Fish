@@ -34,6 +34,6 @@
 	.address-card .work-mode{margin-top: remy(10);}
 	.address-card .work-mode .fs-21{margin-bottom: remy(10);}
 	.address-card{background-color: #fff;}
-	.address-card:hover{background-color: var(--goluboy);}
+	.address-card:hover, .address-card.active{background-color: var(--goluboy);}
 	.social-block__title{margin-bottom: 4px;}
 }
