@@ -9,6 +9,7 @@
 		width: auto!important;
 		justify-content: center;
 		align-items: center;
+		user-select: none;
 	}
 	@media (max-width: 767px) {
 		.swiper__nav{display: none;}

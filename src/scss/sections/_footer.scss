@@ -73,14 +73,14 @@ footer.footer{
 	column-count: auto;
 	column-width:remy(110);
 	column-gap: remy(90);
-	width: remy(321);
+	width: remy(350);
 }
 .footer-menu-link{
 	font-family: var(--font-family);
 	font-weight: 400;
 	font-size: remy(20);
 	letter-spacing: -0.02em;
-	color: var(--color-tekst-seryy);
+	color: var(--color-svetlyy-);
 	padding-top: 5px;
 	padding-bottom: 5px;
 	display: inline-block;
@@ -95,14 +95,14 @@ footer.footer{
 	margin-bottom: remy(16);
 }
 .footer-contacts{
-	padding-top: remu(5);
+	padding-top: remy(5);
 	.text-link{
 		font-family: var(--font-family);
 		font-weight: 400;
 		font-size: remy(20);
 		letter-spacing: -0.02em;
 		
-		color: var(--color-tekst-seryy);
+		color: var(--color-svetlyy-);
 		transition: .3s; 
 		&:hover{
 			color:  #a4a6a9;
@@ -133,7 +133,8 @@ footer.footer{
 	font-size: remy(20);
 	letter-spacing: -0.02em;
 	// text-transform: capitalize;
-	color: var(--color-tekst-seryy);
+	color: var(--color-svetlyy-);
+	svg{color: var(--color-svetlyy-);}
 	&:hover{color:  #a4a6a9;}
 }
 .footer-bottom{
