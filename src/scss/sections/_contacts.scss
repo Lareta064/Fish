@@ -81,6 +81,9 @@
 		margin-top: 3em;
 	}
 }
+.contacts-map-content.large-map{
+	max-width: unset;
+}
 .main-page{
 	.stores-contacts .contacts-map-content{
 		max-width: remy(621);

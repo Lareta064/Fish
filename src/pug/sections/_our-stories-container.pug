@@ -5,38 +5,114 @@ section.stores-contacts
 			//RIGHT COLUMN
 			.contacts-content.flex-col
 				h2.h2 Популярные товары
-				// ya gis
-				.geo-app.flex
-					a(href="#!").geo-app__item
-						img(src='./img/geo-ya.webp', srcset='./img/geo-ya@2x.webp 2x' width='213' height='29' loading='lazy' alt='img')
-					a(href="#!").geo-app__item
-						img(src='./img/geo-gis.webp', srcset='./img/geo-gis@2x.webp 2x' width='110' height='29' loading='lazy' alt='img')
-				
-				//address-card
-				.address-card
-					address г. Сочи, ул. Яна Фабрициуса, 58/2, павильоны 96, 97, 98
+				//Карточка магазина #1
+				.store-address-block.active.flex-col(data-adrs="1")
+					// ya gis
+					.geo-app.flex
+						a(href="#!").geo-app__item
+							img(src='./img/geo-ya.webp', srcset='./img/geo-ya@2x.webp 2x' width='213' height='29' loading='lazy' alt='img')
+						a(href="#!").geo-app__item
+							img(src='./img/geo-gis.webp', srcset='./img/geo-gis@2x.webp 2x' width='110' height='29' loading='lazy' alt='img')
 					
-					.work-mode
-						.fs-21 Режим работы:
-						.fs-19.flex
-							span с 10:00 до 20:00 
-							span без выходных
-				
-				.contacts-content__links
-					a(href="tel:+79129786654").contact-link
-						svg.svg-phone
-							use(href='./img/sprite.svg#svg-phone')
-						span +7 912 978 66 54
+					//address-card
+					.address-card
+						address г. Сочи, ул. Яна Фабрициуса, 58/2, павильоны 96, 97, 98 
+						
+						.work-mode
+							.fs-21 Режим работы:
+							.fs-19.flex
+								span с 8:00 до 19:00 
+								span без выходных
 					
-					a(href="mailto:panarina.1tv@yandex.ru").contact-link
-						svg.svg-email
-							use(href='./img/sprite.svg#svg-email')
-						span panarina.1tv@yandex.ru
+					.contacts-content__links
+						a(href="tel:+79184051058").contact-link
+							svg.svg-phone
+								use(href='./img/sprite.svg#svg-phone')
+							span  +7 (918) 405-10-58
+						
+						a(href="mailto:panarina.1tv@yandex.ru").contact-link
+							svg.svg-email
+								use(href='./img/sprite.svg#svg-email')
+							span panarina.1tv@yandex.ru
 				
+				
+				
+				//Карточка магазина #2
+				.store-address-block.flex-col(data-adrs="2")
+					// ya gis
+					.geo-app.flex
+						a(href="#!").geo-app__item
+							img(src='./img/geo-ya.webp', srcset='./img/geo-ya@2x.webp 2x' width='213' height='29' loading='lazy' alt='img')
+						a(href="#!").geo-app__item
+							img(src='./img/geo-gis.webp', srcset='./img/geo-gis@2x.webp 2x' width='110' height='29' loading='lazy' alt='img')
+					
+					//address-card
+					.address-card
+						address г. Сочи, ул. Яна Фабрициуса, 58/2, магазин «153 рыбы»
+							span(напротив живой рыбы Кубани)
+						
+						.work-mode
+							.fs-21 Режим работы:
+							.fs-19.flex
+								span с 10:00 до 20:00 
+								span без выходных
+					
+					.contacts-content__links
+						a(href="tel:+79184051058").contact-link
+							svg.svg-phone
+								use(href='./img/sprite.svg#svg-phone')
+							span  +7 (918) 405-10-58
+						
+						a(href="mailto:panarina.1tv@yandex.ru").contact-link
+							svg.svg-email
+								use(href='./img/sprite.svg#svg-email')
+							span panarina.1tv@yandex.ru
+				
+				//Карточка магазина #4
+				.store-address-block.flex-col(data-adrs="3")
+					// ya gis
+					.geo-app.flex
+						a(href="#!").geo-app__item
+							img(src='./img/geo-ya.webp', srcset='./img/geo-ya@2x.webp 2x' width='213' height='29' loading='lazy' alt='img')
+						a(href="#!").geo-app__item
+							img(src='./img/geo-gis.webp', srcset='./img/geo-gis@2x.webp 2x' width='110' height='29' loading='lazy' alt='img')
+					
+					//address-card
+					.address-card
+						address г. Адлер, ул. Демократическая, 3
+						
+						.work-mode
+							.fs-21 Режим работы:
+							.fs-19.flex
+								span с 10:00 до 20:00 
+								span без выходных
+					
+					.contacts-content__links
+						a(href="tel:+79184051058").contact-link
+							svg.svg-phone
+								use(href='./img/sprite.svg#svg-phone')
+							span +7 (918) 405-10-58
+						
+						a(href="mailto:panarina.1tv@yandex.ru").contact-link
+							svg.svg-email
+								use(href='./img/sprite.svg#svg-email')
+							span panarina.1tv@yandex.ru
 				//social
 				+social
 			
 			//LEFT COLUMN
-			.contacts-map-content
+			.contacts-map-content.large-map
 				.map-wrapper
-					img(src='./img/map.webp', srcset='./img/map@2x.webp 2x' width='1027' height='601' loading='lazy' alt='img')
+					img#map-image.map-image.img-cover(src='./img/map-large.webp', srcset='./img/map-large@2x.webp 2x' width='1027' height='601' loading='lazy' alt='img')
+					
+					//Метки магазинов на карте
+					
+					button.show-store-card.active(type="button" data-store="1")
+						svg.svg-pin
+							use(href='./img/sprite.svg#svg-pin')
+					button.show-store-card(type="button" data-store="2")
+						svg.svg-pin
+							use(href='./img/sprite.svg#svg-pin')
+					button.show-store-card(type="button" data-store="3")
+						svg.svg-pin
+							use(href='./img/sprite.svg#svg-pin')
