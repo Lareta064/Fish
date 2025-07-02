@@ -81,9 +81,7 @@
 		margin-top: 3em;
 	}
 }
-.contacts-map-content.large-map{
-	max-width: unset;
-}
+
 .main-page{
 	.stores-contacts .contacts-map-content{
 		max-width: remy(621);
@@ -113,13 +111,13 @@
 	  width: 100%;
 	}
 }
-.contacts-page .map-wrapper{
+.stores-large-map .map-wrapper{
 	width: remy(1025);
 	@media (max-width: 767px) {
 	  width: 100%;
 	}
 }
-.contacts-page .map-wrapper{
+.stores-large-map .map-wrapper{
 	[data-store="1"]{
 		top: 5%;
     	left: 68%;
@@ -204,23 +202,3 @@
 		display: flex;
 	}
 }
-// .map-zoom-btns{
-// 	position: absolute;
-// 	bottom: remy(32);right: remy(32); z-index: 2;
-// 	column-gap:remy(12);
-// }
-// .map-zoom-plus, .map-zoom-minus{
-// 	width: remy(44);
-// 	height: remy(44);
-// 	border-radius: 50%;
-// 	background-color: var(--svetlo-siniy);
-// 	svg{
-// 		width: remy(18);
-// 		height: remy(18);
-// 		color: white;
-// 	}
-// }
-// .map-image{
-// 	transition: .3s;
-// 	&.map-scale{transform: scale(1.2);}
-// }
