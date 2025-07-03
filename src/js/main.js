@@ -103,17 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
       });
     }
-    // const zoomPlus = document.querySelector('.map-zoom-plus');
-    // const zoomMinus = document.querySelector('.map-zoom-minus');
-    // if(zoomPlus){
-    //   const zoomMap = document.querySelector('#map-image');
-    //   zoomPlus.addEventListener('click', ()=>{
-    //     zoomMap.classList.add('map-scale');
-    //   });
-    //   zoomMinus.addEventListener('click', ()=>{
-    //     zoomMap.classList.remove('map-scale');
-    //   });
-    // }
+
     //PRODUCT SLIDER
     const productSwipers = document.querySelectorAll('.product-swiper');
     productSwipers.forEach((swiperEl, index) => {
@@ -146,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //partners swiper
     const partnersSlider = new Swiper('.partners-swiper', {
         slidesPerView: 'auto',
+        slidesPerGroup: 1,
         spaceBetween: 40,
         speed:1500,
         loop: true,
@@ -160,9 +151,11 @@ document.addEventListener("DOMContentLoaded", function () {
           1024: {
             spaceBetween: 60,
              
+             
           },
           1440: {
             spaceBetween: 60,
+            
              
           },
         }
@@ -189,8 +182,8 @@ document.addEventListener("DOMContentLoaded", function () {
       spaceBetween:18,
       speed:500,
       navigation: {
-        nextEl: ".store-swiper-prev",
-        prevEl: ".store-swiper-next"
+        nextEl: ".stores-swiper-prev",
+        prevEl: ".stores-swiper-next"
       }
     });
     // СЧЕТЧИК

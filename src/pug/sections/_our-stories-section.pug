@@ -15,24 +15,25 @@ section.stores-contacts
 				
 				//address-card
 				.address-card
-					address г. Сочи, ул. Яна Фабрициуса, 58/2, павильоны 96, 97, 98
+					address г. Сочи, ул. Яна Фабрициуса, 58/2, павильоны 96, 97, 98 
 					
 					.work-mode
 						.fs-21 Режим работы:
 						.fs-19.flex
-							span с 10:00 до 20:00 
+							span с 8:00 до 19:00 
 							span без выходных
 				
 				.contacts-content__links
-					a(href="tel:+79129786654").contact-link
+					a(href="tel:+79184051058").contact-link
 						svg.svg-phone
 							use(href='./img/sprite.svg#svg-phone')
-						span +7 912 978 66 54
+						span  +7 (918) 405-10-58
 					
 					a(href="mailto:panarina.1tv@yandex.ru").contact-link
 						svg.svg-email
 							use(href='./img/sprite.svg#svg-email')
 						span panarina.1tv@yandex.ru
+			
 			
 			
 			//Карточка магазина #2
@@ -46,7 +47,8 @@ section.stores-contacts
 				
 				//address-card
 				.address-card
-					address г. Сочи,ул. 98-й Железнодорожный километр, 6
+					address г. Сочи, ул. Яна Фабрициуса, 58/2, магазин «153 рыбы»
+						span(напротив живой рыбы Кубани)
 					
 					.work-mode
 						.fs-21 Режим работы:
@@ -55,17 +57,17 @@ section.stores-contacts
 							span без выходных
 				
 				.contacts-content__links
-					a(href="tel:+79129786654").contact-link
+					a(href="tel:+79184051058").contact-link
 						svg.svg-phone
 							use(href='./img/sprite.svg#svg-phone')
-						span +7 912 978 66 54
+						span  +7 (918) 405-10-58
 					
 					a(href="mailto:panarina.1tv@yandex.ru").contact-link
 						svg.svg-email
 							use(href='./img/sprite.svg#svg-email')
 						span panarina.1tv@yandex.ru
 			
-			//Карточка магазина #3
+			//Карточка магазина #4
 			.store-address-block.flex-col(data-adrs="3")
 				// ya gis
 				.geo-app.flex
@@ -76,7 +78,7 @@ section.stores-contacts
 				
 				//address-card
 				.address-card
-					address г. Сочи, ул. Яна Фабрициуса, 58/2 (напротив живой рыбы Кубани)
+					address г. Адлер, ул. Демократическая, 3
 					
 					.work-mode
 						.fs-21 Режим работы:
@@ -85,40 +87,10 @@ section.stores-contacts
 							span без выходных
 				
 				.contacts-content__links
-					a(href="tel:+79129786654").contact-link
+					a(href="tel:+79184051058").contact-link
 						svg.svg-phone
 							use(href='./img/sprite.svg#svg-phone')
-						span +7 912 978 66 54
-					
-					a(href="mailto:panarina.1tv@yandex.ru").contact-link
-						svg.svg-email
-							use(href='./img/sprite.svg#svg-email')
-						span panarina.1tv@yandex.ru
-			
-			//Карточка магазина #4
-			.store-address-block.flex-col(data-adrs="4")
-				// ya gis
-				.geo-app.flex
-					a(href="#!").geo-app__item
-						img(src='./img/geo-ya.webp', srcset='./img/geo-ya@2x.webp 2x' width='213' height='29' loading='lazy' alt='img')
-					a(href="#!").geo-app__item
-						img(src='./img/geo-gis.webp', srcset='./img/geo-gis@2x.webp 2x' width='110' height='29' loading='lazy' alt='img')
-				
-				//address-card
-				.address-card
-					address г. Адлер, центральный рынок, ул. Демократическая 38
-					
-					.work-mode
-						.fs-21 Режим работы:
-						.fs-19.flex
-							span с 10:00 до 20:00 
-							span без выходных
-				
-				.contacts-content__links
-					a(href="tel:+79129786654").contact-link
-						svg.svg-phone
-							use(href='./img/sprite.svg#svg-phone')
-						span +7 912 978 66 54
+						span +7 (918) 405-10-58
 					
 					a(href="mailto:panarina.1tv@yandex.ru").contact-link
 						svg.svg-email
@@ -130,10 +102,11 @@ section.stores-contacts
 		//LEFT COLUMN
 		.contacts-map-content
 			.map-wrapper
-				img#map-image.map-image.img-cover(src='./img/map-mini.webp', srcset='./img/map-mini@2x.webp 2x' width='622' height='601' loading='lazy' alt='img')
+				img.map-image.img-cover(src='./img/map-mini.webp', srcset='./img/map-mini@2x.webp 2x' width='622' height='601' loading='lazy' alt='img')
 				
 				//Метки магазинов на карте
-				button.show-store-card.active(type="button" data-store="1")
+				
+				button.show-store-card(type="button" data-store="1")
 					svg.svg-pin
 						use(href='./img/sprite.svg#svg-pin')
 				button.show-store-card(type="button" data-store="2")
@@ -142,14 +115,3 @@ section.stores-contacts
 				button.show-store-card(type="button" data-store="3")
 					svg.svg-pin
 						use(href='./img/sprite.svg#svg-pin')
-				button.show-store-card(type="button" data-store="4")
-					svg.svg-pin
-						use(href='./img/sprite.svg#svg-pin')
-
-				//- .map-zoom-btns.flex
-				//- 	button.map-zoom-plus
-				//- 		svg.svg-plus
-				//- 			use(href='./img/sprite.svg#svg-plus')
-				//- 	button.map-zoom-minus
-				//- 		svg.svg-minus
-				//- 			use(href='./img/sprite.svg#svg-minus')

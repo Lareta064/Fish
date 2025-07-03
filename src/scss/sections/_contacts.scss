@@ -6,14 +6,20 @@
 	padding: 1.2em;
 	padding-bottom: 2em;
 	background: var(--goluboy);
-	min-height: remy(160);
+	// min-height: remy(160);
 	address{
 		font-family: var(--font-family);
 		font-weight: 700;
-		font-size: 2.1em;
+		font-size: remy(20);
 		line-height: 1.22;
 		letter-spacing: 0.03em;
 		margin-bottom: 3px;
+		span{
+			font-weight: 400;
+			font-size: remy(18);
+			margin-top: 3px;
+			display: block;
+		}
 		
 	}
 
@@ -39,7 +45,7 @@
 }
 .geo-app{
 	column-gap: remy(20);
-	margin-bottom:remy(40);
+	// margin-bottom:remy(40);
 }
 .contacts-content.flex-col, .store-address-block.flex-col{
 	font-size: remy(10);
@@ -78,6 +84,7 @@
 		margin-top: 3em;
 	}
 }
+
 .main-page{
 	.stores-contacts .contacts-map-content{
 		max-width: remy(621);
@@ -107,47 +114,44 @@
 	  width: 100%;
 	}
 }
-.contacts-page .map-wrapper{
+.stores-large-map .map-wrapper{
 	width: remy(1025);
 	@media (max-width: 767px) {
 	  width: 100%;
 	}
 }
-.contacts-page .map-wrapper{
+.stores-large-map .map-wrapper{
 	[data-store="1"]{
 		top: 5%;
     	left: 68%;
 		@media (max-width: 767px) {
-		 left: 91%;
+		 left: 76%;
+		 top:14%;
 		}
 	}
 	[data-store="2"]{
 		top: 13%;
     	left: 58%;
 		@media (max-width: 767px) {
-		 left: 55%;
+		 left: 64%;
+		 top: 27%;
 		}
 	}
+	
 	[data-store="3"]{
-		top: 29%;
-   		 left: 50%;
-		@media (max-width: 767px) {
-		 left: 42%;
-		}
-	}
-	[data-store="4"]{
 		top: 67%;
         left: 20%;
 		@media (max-width: 767px) {
-		 left: 11%;
+		 left: 13%;
+		 top:72%;
 		 
 		}
 	}
 	.img-cover{
-		object-position: left;
-		@media (max-width: 767px) {
-		object-position: 55%;
-		}
+		// object-position: left;
+		// @media (max-width: 767px) {
+		// object-position: 55%;
+		// }
 	}
 	
 }
@@ -170,14 +174,8 @@
 		 left: 64%;
 		}
 	}
+	
 	[data-store="3"]{
-		top: 39%;
-		left: 56%;
-		@media (max-width: 767px) {
-		 left: 50%;
-		}
-	}
-	[data-store="4"]{
 		top: 78%;
 		left: 7%;
 		@media (max-width: 767px) {
@@ -192,29 +190,9 @@
 	}
 }
 .show-store-card.active .svg-pin{opacity: .5;}
-.store-address-block{
+.store-address-block[data-adrs]{
 	display: none;
 	&.active{
 		display: flex;
 	}
 }
-// .map-zoom-btns{
-// 	position: absolute;
-// 	bottom: remy(32);right: remy(32); z-index: 2;
-// 	column-gap:remy(12);
-// }
-// .map-zoom-plus, .map-zoom-minus{
-// 	width: remy(44);
-// 	height: remy(44);
-// 	border-radius: 50%;
-// 	background-color: var(--svetlo-siniy);
-// 	svg{
-// 		width: remy(18);
-// 		height: remy(18);
-// 		color: white;
-// 	}
-// }
-// .map-image{
-// 	transition: .3s;
-// 	&.map-scale{transform: scale(1.2);}
-// }
